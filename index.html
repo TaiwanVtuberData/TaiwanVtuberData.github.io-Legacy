@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwan Vtuber Data</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+    <script>
+        function ShowEmbed(id, embedVideoId) {
+            var elementId = "frame" + id;
+            var e = document.getElementById(elementId);
+
+            if (e.style.visibility === "hidden") {
+                e.style.visibility = "visible";
+                e.style.display = "";
+                e.src = "https://www.youtube.com/embed/" + embedVideoId;
+            }
+            else {
+                e.style.visibility = "hidden";
+                e.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p><strong>此網站仍在建置中</strong></p>
+
+    <table>
+        <tr>
+            <th>名稱</th>
+            <th>訂閱人數</th>
+            <th>最近最高觀看影片</th>
+            <th>團體</th>
+        </tr>
+        <tr>
+            <td>杏仁ミル</td>
+            <td>361000</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('000','Cu-kAqggUvQ')" />
+                <div><iframe id="frame000" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>高雄林小姐</td>
+            <td>103000</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('001','TuUfZp5pWPM')" />
+                <div><iframe id="frame001" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>璐洛洛</td>
+            <td>87100</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('002','glSWHWrqFq0')" />
+                <div><iframe id="frame002" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>浠Mizuki</td>
+            <td>76000</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('003','mS0MT0Y_VP8')" />
+                <div><iframe id="frame003" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>李李鈴蘭</td>
+            <td>72000</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('004','RkfzhWcSX2I')" />
+                <div><iframe id="frame004" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td>雲際線工作室</td>
+        </tr>
+        <tr>
+            <td>鳥羽樂奈</td>
+            <td>52300</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('005','rPPo-eBJC3A')" />
+                <div><iframe id="frame005" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td>靛之森</td>
+        </tr>
+        <tr>
+            <td>露恰露恰</td>
+            <td>52300</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('006','qE0yT0RclDM')" />
+                <div><iframe id="frame006" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td>SquareLive</td>
+        </tr>
+        <tr>
+            <td>灰名</td>
+            <td>52200</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('007','w3p3fI7fkdQ')" />
+                <div><iframe id="frame007" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>悠白</td>
+            <td>51600</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('008','XLNYGFH_Fj0')" />
+                <div><iframe id="frame008" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td>雲際線工作室</td>
+        </tr>
+        <tr>
+            <td>香草奈若</td>
+            <td>50300</td>
+            <td>
+                <input type="button" value="Show Embed" onclick="ShowEmbed('009','RV95tCSacwc')" />
+                <div><iframe id="frame009" style="visibility: hidden; display:none;" width="480" height="270" src="">
+                    </iframe>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
