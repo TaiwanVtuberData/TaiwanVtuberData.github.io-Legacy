@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表第 34 頁</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		input[type=number] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+			margin-right: 3px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+		const thisPageIndex = 34;
+
+		function RedirectIndexPage(newPage)
+		{
+			if (newPage !== thisPageIndex) {
+				window.location.href = "/index" + newPage + ".html";
+			}
+		}
+
+		function RedirectToPrevPage() {
+			var newPage = Math.max(1, thisPageIndex - 1);
+			RedirectIndexPage(newPage);
+		}
+
+		function RedirectToNextPage() {
+			var newPage = Math.min(45, thisPageIndex + 1);
+			RedirectIndexPage(newPage);
+		}
+
+		function RedirectToAllPage() {
+			window.location.href = "/all.html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 列表第 34 頁(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/01 07:37:08</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage()" />
+		<div><input type="number" id="numberBox" value="34" min="1" max="45"/>/45 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage()" />
+		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UCbi8guSAh6hGpX4DU-2rpAQ" target="_blank" rel="noopener noreferrer">依筆</a></a></td>
+	<td>223</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCdekm6MVTBWof6u0vkQwyPA" target="_blank" rel="noopener noreferrer">紅梅</a></a></td>
+	<td>220</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('661','AWpJnVh7YpI')" />
+<div><iframe id="frame661" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCut3ezULZJ_bix-HAl-jHZg" target="_blank" rel="noopener noreferrer">草加子</a></a></td>
+	<td>218</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('662','uEXNzauh-KM')" />
+<div><iframe id="frame662" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCALfFzv4mnmNbQ_mkyYntjw" target="_blank" rel="noopener noreferrer">天照 幸</a></a></td>
+	<td>218</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('663','21Zn85Qftrs')" />
+<div><iframe id="frame663" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCgyTjAfhb5puy4tqLbFdynA" target="_blank" rel="noopener noreferrer">棕響</a></a></td>
+	<td>217</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('664','g_fhVnRgLy4')" />
+<div><iframe id="frame664" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCIU9KgQbf9W3G6FhS-wSqsQ" target="_blank" rel="noopener noreferrer">根墨 • ムラ</a></a></td>
+	<td>217</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('665','nvTcwKeeB1I')" />
+<div><iframe id="frame665" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCfmNekTzPoFKfBev8xbCh_Q" target="_blank" rel="noopener noreferrer">栗音明歌</a></a></td>
+	<td>215</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('666','dya7eU2AxvE')" />
+<div><iframe id="frame666" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCKYB-wAACpLu30qp1cYDjYQ" target="_blank" rel="noopener noreferrer">綾璃子</a></a></td>
+	<td>214</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('667','Z97-jEuS1fg')" />
+<div><iframe id="frame667" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCZQBYYSTvkq8Mw5Z8rbdwVw" target="_blank" rel="noopener noreferrer">日向咪悠</a></a></td>
+	<td>211</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('668','CCklV1vtAMQ')" />
+<div><iframe id="frame668" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCLJurBYLAnuMJgF5YLbxJdg" target="_blank" rel="noopener noreferrer">小楓 もみじ</a></a></td>
+	<td>210</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('669','dO-BwgjYb7o')" />
+<div><iframe id="frame669" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td>VPS製幻工作室</td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC65QLBFWSkDLfMwxCoT4Bvg" target="_blank" rel="noopener noreferrer">夜眠ぐるみ</a></a></td>
+	<td>209</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCohb9UuR4Y6LTBgrRJSLXZg" target="_blank" rel="noopener noreferrer">金金子</a></a></td>
+	<td>208</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('671','mpjv8kNyNh8')" />
+<div><iframe id="frame671" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCp7gKip0GAhGjpjpB0Xy06g" target="_blank" rel="noopener noreferrer">白川凜音</a></a></td>
+	<td>207</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('672','BaICQFwuK3o')" />
+<div><iframe id="frame672" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC4luBvryEOgbV-HNOwpU0Cw" target="_blank" rel="noopener noreferrer">百瀬ヤスミ</a></a></td>
+	<td>207</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('673','SCqD4l3ll9w')" />
+<div><iframe id="frame673" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td>土芒果社</td>
+	<td>JP</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCieSvtx9yma2r-WXjybjC4Q" target="_blank" rel="noopener noreferrer">雪牙XueYa</a></a></td>
+	<td>206</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('674','T-S1utyiykk')" />
+<div><iframe id="frame674" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCsqdTnZg8WWfllZStBE0L0g" target="_blank" rel="noopener noreferrer">雪球噗嚕嚕</a></a></td>
+	<td>204</td>
+	<td></td>
+	<td>wander²</td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCtJVDpP2sFkftPWlvfFBPKA" target="_blank" rel="noopener noreferrer">陸吾Riko</a></a></td>
+	<td>200</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('676','q1OypPjbw9c')" />
+<div><iframe id="frame676" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td>MiaLive</td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCV9Qu8yPSY2X5tQ_lE14ZEg" target="_blank" rel="noopener noreferrer">DeeDoo</a></a></td>
+	<td>199</td>
+	<td></td>
+	<td>V-CLUB</td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC-Niey71pc-Y9JDxv1-CtWQ" target="_blank" rel="noopener noreferrer">白秋澤</a></a></td>
+	<td>199</td>
+	<td></td>
+	<td>Miragion Studio</td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCkGLJWP8pEa22yIrDBEkmoQ" target="_blank" rel="noopener noreferrer">但但</a></a></td>
+	<td>197</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('679','1FOWmgjZggk')" />
+<div><iframe id="frame679" style="visibility: hidden; display:none;" src="" width="640" height="480" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td>異種族集會所</td>
+	<td>TW</td>
+</tr>
+
+	</table>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage()" />
+		<div><input type="number" id="numberBoxBottom" value="34" min="1" max="45"/>/45 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage()" />
+		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
+	</div>
+</body>
+
+<script>
+	const numberBox = document.getElementById("numberBox");
+	numberBox.addEventListener('change', (event) => {
+		RedirectIndexPage(event.target.value);
+	});
+	
+	const numberBoxBottom = document.getElementById("numberBoxBottom");
+	numberBoxBottom.addEventListener('change', (event) => {
+		RedirectIndexPage(event.target.value);
+	});
+</script>
+
+</html>
