@@ -45,6 +45,10 @@
 		function RedirectToFirstPage() {
 			window.location.href = "/index.html";
 		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
 
 		function ShowYouTubeEmbed(id, embedVideoId) {
 			var elementId = "frame" + id;
