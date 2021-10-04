@@ -50,8 +50,7 @@
 	<script>
 		const thisPageIndex = ###CurrentPageNumber;
 
-		function RedirectIndexPage(newPage)
-		{
+		function RedirectIndexPage(newPage) {
 			if (newPage !== thisPageIndex) {
 				window.location.href = "/index" + newPage + ".html";
 			}
@@ -124,6 +123,14 @@
 			<th>團體</th>
 			<th>國家</th>
 		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
 		###TableContent
 	</table>
 
