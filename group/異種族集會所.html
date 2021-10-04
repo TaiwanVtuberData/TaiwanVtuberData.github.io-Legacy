@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+
+		function RedirectToFirstPage() {
+			window.location.href = "/index.html";
+		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 團體 異種族集會所 成員列表(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/04 07:37:07</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="返回" onclick="RedirectToFirstPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UCkGLJWP8pEa22yIrDBEkmoQ" target="_blank" rel="noopener noreferrer">但但</a></a></td>
+	<td>205</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('0','1FOWmgjZggk')" />
+<div><iframe id="frame0" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="異種族集會所" onclick="RedirectToGroupPage('%E7%95%B0%E7%A8%AE%E6%97%8F%E9%9B%86%E6%9C%83%E6%89%80')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCbnj_3bVnD6MZJbXSZlTkFQ" target="_blank" rel="noopener noreferrer">古林沃夫</a></a></td>
+	<td>201</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('1','e0V_kgfu7mE')" />
+<div><iframe id="frame1" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="異種族集會所" onclick="RedirectToGroupPage('%E7%95%B0%E7%A8%AE%E6%97%8F%E9%9B%86%E6%9C%83%E6%89%80')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCQ8XcGqUl9omhe0L12t6d0g" target="_blank" rel="noopener noreferrer">六夢祈奈</a></a></td>
+	<td>101</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('2','8FSj1rZ_QQ4')" />
+<div><iframe id="frame2" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="異種族集會所" onclick="RedirectToGroupPage('%E7%95%B0%E7%A8%AE%E6%97%8F%E9%9B%86%E6%9C%83%E6%89%80')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCbktNCR917PUlZEqZXfWIcQ" target="_blank" rel="noopener noreferrer">Kobayashi ch.小林</a></a></td>
+	<td>100</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('3','l5rAFkKIcU0')" />
+<div><iframe id="frame3" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="異種族集會所" onclick="RedirectToGroupPage('%E7%95%B0%E7%A8%AE%E6%97%8F%E9%9B%86%E6%9C%83%E6%89%80')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCR4676iLwJnYQmznnZKINCQ" target="_blank" rel="noopener noreferrer">麻糬貝里</a></a></td>
+	<td>83</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('4','xTlfk-4KQOg')" />
+<div><iframe id="frame4" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="異種族集會所" onclick="RedirectToGroupPage('%E7%95%B0%E7%A8%AE%E6%97%8F%E9%9B%86%E6%9C%83%E6%89%80')" /></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+</html>

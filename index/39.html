@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		input[type=number] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+			margin-right: 3px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+		const thisPageIndex = 39;
+
+		function RedirectIndexPage(newPage) {
+			if (newPage !== thisPageIndex) {
+				window.location.href = "/index/" + newPage + ".html";
+			}
+		}
+
+		function RedirectToPrevPage() {
+			var newPage = Math.max(1, thisPageIndex - 1);
+			RedirectIndexPage(newPage);
+		}
+
+		function RedirectToNextPage() {
+			var newPage = Math.min(46, thisPageIndex + 1);
+			RedirectIndexPage(newPage);
+		}
+
+		function RedirectToAllPage() {
+			window.location.href = "/all.html";
+		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 列表第 39 頁(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/04 07:37:07</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage()" />
+		<div><input type="number" id="numberBox" value="39" min="1" max="46"/>/46 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage()" />
+		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UCYeT6leg9ViOcnu4K9w_6QQ" target="_blank" rel="noopener noreferrer">Zatsuon雜音</a></a></td>
+	<td>126</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('760','NcyDaHrTOrM')" />
+<div><iframe id="frame760" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCXHHic43JjcMyWdgq5--QvQ" target="_blank" rel="noopener noreferrer">雪稻きめよ</a></a></td>
+	<td>126</td>
+	<td></td>
+	<td><input type="button" value="Granto" onclick="RedirectToGroupPage('Granto')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCcy8H8yumUTUTqfKtoAoaPg" target="_blank" rel="noopener noreferrer">奇洛 芙耶卡</a></a></td>
+	<td>125</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('762','YY7Qx3Vh5Rg')" />
+<div><iframe id="frame762" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCvtmHHnnclN5Qxx4WBmMQkA" target="_blank" rel="noopener noreferrer">松風豪</a></a></td>
+	<td>125</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('763','y2ODkrBPpRE')" />
+<div><iframe id="frame763" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCZt_1bWYfgL9TcaRYFRGgzQ" target="_blank" rel="noopener noreferrer">肉粒</a></a></td>
+	<td>125</td>
+	<td></td>
+	<td><input type="button" value="粟米肉粒" onclick="RedirectToGroupPage('%E7%B2%9F%E7%B1%B3%E8%82%89%E7%B2%92')" /></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCeJRJlt-azTW5nVxGejggOA" target="_blank" rel="noopener noreferrer">姬紅</a></a></td>
+	<td>124</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('765','FaGi9Gi7Cgc')" />
+<div><iframe id="frame765" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="超異界通信+" onclick="RedirectToGroupPage('%E8%B6%85%E7%95%B0%E7%95%8C%E9%80%9A%E4%BF%A1%2B')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCWFI8XRhT_00xp3QdlN7cOA" target="_blank" rel="noopener noreferrer">沁如夏</a></a></td>
+	<td>124</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('766','LbPRNbG56SY')" />
+<div><iframe id="frame766" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCbzjSjUKgqxbmYQca2Hmy3w" target="_blank" rel="noopener noreferrer">豚田誠太</a></a></td>
+	<td>123</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('767','ho64prMMf_w')" />
+<div><iframe id="frame767" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCytoAdAYF9yalqzoc_akZBQ" target="_blank" rel="noopener noreferrer">鰭鱗漉</a></a></td>
+	<td>122</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('768','MVS9U9WBZq4')" />
+<div><iframe id="frame768" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCNZOuBt0RFkJV0kC_fqfoGw" target="_blank" rel="noopener noreferrer">艾波</a></a></td>
+	<td>122</td>
+	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('769','1162351522')" />
+<div><iframe id="frame769" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC7YijJTaXAfAz_E7cDR8TNw" target="_blank" rel="noopener noreferrer">愛野光</a></a></td>
+	<td>122</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('770','_YRwbOuXX0Y')" />
+<div><iframe id="frame770" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCwSM1h0NmnmSuHVBFBIomXg" target="_blank" rel="noopener noreferrer">狗狗汐醬</a></a></td>
+	<td>120</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('771','Y1ROB8YoEjI')" />
+<div><iframe id="frame771" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="甘甜糖罐頭" onclick="RedirectToGroupPage('%E7%94%98%E7%94%9C%E7%B3%96%E7%BD%90%E9%A0%AD')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJJz6kyWzLd0WDCb-zEp_YQ" target="_blank" rel="noopener noreferrer">緋空納可</a></a></td>
+	<td>117</td>
+	<td></td>
+	<td><input type="button" value="Granto" onclick="RedirectToGroupPage('Granto')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCxEq6llds_jFJajAsPlvrNg" target="_blank" rel="noopener noreferrer">米糕不能吃</a></a></td>
+	<td>117</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('773','7mN38QMJvY0')" />
+<div><iframe id="frame773" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCy5ZoyicnyHLXsPppkIZV1w" target="_blank" rel="noopener noreferrer">蛸波ヤエカ</a></a></td>
+	<td>117</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('774','D6t8sgf-_dQ')" />
+<div><iframe id="frame774" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCsbCCK4-Z8J3PSjpk8AY3_Q" target="_blank" rel="noopener noreferrer">鬼崎魁</a></a></td>
+	<td>114</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCq7qWkeHm5Qpjn8-jHkczDQ" target="_blank" rel="noopener noreferrer">雨女ゆいい</a></a></td>
+	<td>114</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('776','0FRXtSUcj8Y')" />
+<div><iframe id="frame776" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="晨星與月" onclick="RedirectToGroupPage('%E6%99%A8%E6%98%9F%E8%88%87%E6%9C%88')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCIEnuJ196SambhqjkwmYxYw" target="_blank" rel="noopener noreferrer">村下緋雨</a></a></td>
+	<td>113</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('777','Z1mBAAgKUYc')" />
+<div><iframe id="frame777" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCIL7oQY9DtR4wX7XGMgCxxw" target="_blank" rel="noopener noreferrer">昴和</a></a></td>
+	<td>113</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('778','UcezAV__dpk')" />
+<div><iframe id="frame778" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCkqv0tYRqP9KoffsO74CB_g" target="_blank" rel="noopener noreferrer">焦糖雪比</a></a></td>
+	<td>113</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('779','6byyL0Sw5IA')" />
+<div><iframe id="frame779" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage()" />
+		<div><input type="number" id="numberBoxBottom" value="39" min="1" max="46"/>/46 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage()" />
+		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
+	</div>
+</body>
+
+<script>
+	const numberBox = document.getElementById("numberBox");
+	numberBox.addEventListener('change', (event) => {
+		RedirectIndexPage(event.target.value);
+	});
+	
+	const numberBoxBottom = document.getElementById("numberBoxBottom");
+	numberBoxBottom.addEventListener('change', (event) => {
+		RedirectIndexPage(event.target.value);
+	});
+</script>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+
+		function RedirectToFirstPage() {
+			window.location.href = "/index.html";
+		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 團體 AirLife 成員列表(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/04 07:37:07</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="返回" onclick="RedirectToFirstPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UC_AMWhTw597EVk4EQdok7_Q" target="_blank" rel="noopener noreferrer">朝日陽奈</a></a></td>
+	<td>2440</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('0','5_uR6mUjCgA')" />
+<div><iframe id="frame0" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="AirLife" onclick="RedirectToGroupPage('AirLife')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCYzYYJ0xBdNSXm5I0BWEqJA" target="_blank" rel="noopener noreferrer">清水望歌</a></a></td>
+	<td>1660</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('1','crk8L2fWFDc')" />
+<div><iframe id="frame1" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="AirLife" onclick="RedirectToGroupPage('AirLife')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCOx3dxUckYJlsYFZGoRsfRQ" target="_blank" rel="noopener noreferrer">達克恩</a></a></td>
+	<td>1470</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('2','N84g-FmuRfw')" />
+<div><iframe id="frame2" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="AirLife" onclick="RedirectToGroupPage('AirLife')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCTrebXJdsxDHg41T0qAXD7A" target="_blank" rel="noopener noreferrer">東風谷奏</a></a></td>
+	<td>899</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('3','6gX3AWoAQ1Q')" />
+<div><iframe id="frame3" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="AirLife" onclick="RedirectToGroupPage('AirLife')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCpsElpnUji_pEVp8_Mo82YA" target="_blank" rel="noopener noreferrer">小森未央</a></a></td>
+	<td>810</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('4','V4_zxfpu2sU')" />
+<div><iframe id="frame4" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="AirLife" onclick="RedirectToGroupPage('AirLife')" /></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+</html>

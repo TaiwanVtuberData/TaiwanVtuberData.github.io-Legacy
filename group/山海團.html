@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+
+		function RedirectToFirstPage() {
+			window.location.href = "/index.html";
+		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 團體 山海團 成員列表(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/04 07:37:07</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="返回" onclick="RedirectToFirstPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UCKdPcPmrNjdTIsRQLxpgzwA" target="_blank" rel="noopener noreferrer">史萊姆·希薇姆</a></a></td>
+	<td>258</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('0','HpUXMdzCdUg')" />
+<div><iframe id="frame0" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCMA_WpzEd5EQoN_FkZvwoZw" target="_blank" rel="noopener noreferrer">丹楓君</a></a></td>
+	<td>134</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('1','UbBW6I4aBac')" />
+<div><iframe id="frame1" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC8yy2F8uezJ4uOVLTWWqsQQ" target="_blank" rel="noopener noreferrer">狐依琉璃</a></a></td>
+	<td>131</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('2','WOg0D_btdfM')" />
+<div><iframe id="frame2" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC8Wl20iEmxTYk20-rUZfjrA" target="_blank" rel="noopener noreferrer">安特薩斯</a></a></td>
+	<td>102</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('3','lH-L8dW9ftc')" />
+<div><iframe id="frame3" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCNmnDodoP9ikVTGXYS30pDg" target="_blank" rel="noopener noreferrer">wilita 薇丽塔</a></a></td>
+	<td>85</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('4','iRLDWGLCjCc')" />
+<div><iframe id="frame4" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>US</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCZg-yXRKh3OliaVMHsVrkVg" target="_blank" rel="noopener noreferrer">九龍</a></a></td>
+	<td>65</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('5','kDDHX208gcA')" />
+<div><iframe id="frame5" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCoAazyPiWP0BuuS45w_UV9Q" target="_blank" rel="noopener noreferrer">蘿姆Rom</a></a></td>
+	<td>43</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('6','NOxZNhgCd4w')" />
+<div><iframe id="frame6" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCEXm66Ir_G959wJxHZivxEg" target="_blank" rel="noopener noreferrer">黑狐玄冥</a></a></td>
+	<td>33</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('7','j4hN8oumSP4')" />
+<div><iframe id="frame7" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC3-9xxFivNcK2h8IGkkSEew" target="_blank" rel="noopener noreferrer">小樹</a></a></td>
+	<td>0</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('8','zPrTGXlMO4Q')" />
+<div><iframe id="frame8" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="山海團" onclick="RedirectToGroupPage('%E5%B1%B1%E6%B5%B7%E5%9C%98')" /></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+</html>

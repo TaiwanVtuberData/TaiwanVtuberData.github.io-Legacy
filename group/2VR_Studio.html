@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+
+		function RedirectToFirstPage() {
+			window.location.href = "/index.html";
+		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 團體 2VR_Studio 成員列表(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/04 07:37:07</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="返回" onclick="RedirectToFirstPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UC6OYYBmyn-7vnWeZtPzeWbw" target="_blank" rel="noopener noreferrer">飯團泉</a></a></td>
+	<td>464</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('0','PjFXnoOp95U')" />
+<div><iframe id="frame0" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>MO</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCDZzpEatiy7s8qCankKW0fQ" target="_blank" rel="noopener noreferrer">草妳莓</a></a></td>
+	<td>452</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('1','WeC-oDTNeoI')" />
+<div><iframe id="frame1" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCV5p5X-NmnQV7QoWJTdLkPw" target="_blank" rel="noopener noreferrer">貓村‧艾斯特</a></a></td>
+	<td>171</td>
+	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('2','1152125547')" />
+<div><iframe id="frame2" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCRHLUPggc0eIOGBk7xjTNOQ" target="_blank" rel="noopener noreferrer">七草焔鬼</a></a></td>
+	<td>139</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('3','iNkDzmYZqJw')" />
+<div><iframe id="frame3" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCPBtb_vUbLduPNsNhHMJ_PA" target="_blank" rel="noopener noreferrer">闇雲あくり</a></a></td>
+	<td>84</td>
+	<td></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCWnQY4o7Hn1LxmGQQNCQPUA" target="_blank" rel="noopener noreferrer">天気卡月</a></a></td>
+	<td><font color="red">已停止活動</font></td>
+	<td></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCN4jFjTbtW7z7nBMOHaZo-Q" target="_blank" rel="noopener noreferrer">黑暗</a></a></td>
+	<td><font color="red">已停止活動</font></td>
+	<td></td>
+	<td><input type="button" value="2VR_Studio" onclick="RedirectToGroupPage('2VR_Studio')" /></td>
+	<td>HK</td>
+</tr>
+
+	</table>
+</body>
+
+</html>

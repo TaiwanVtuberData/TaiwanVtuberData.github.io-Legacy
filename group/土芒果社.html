@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<style>
+		input[type=button] {
+			padding: 5px;
+			border: 3px solid rgb(100, 100, 100);
+			border-radius: 5px;
+		}
+
+		.navigateButtons {
+			display: flex;
+			margin: auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 75%;
+			padding: auto;
+			justify-content: space-around;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<script>
+
+		function RedirectToFirstPage() {
+			window.location.href = "/index.html";
+		}
+		
+		function RedirectToGroupPage(groupUrl) {
+			window.location.href = "/group/" + groupUrl + ".html";
+		}
+
+		function ShowYouTubeEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://www.youtube.com/embed/" + embedVideoId;
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+
+		function ShowTwitchEmbed(id, embedVideoId) {
+			var elementId = "frame" + id;
+			var e = document.getElementById(elementId);
+
+			if (e.style.visibility === "hidden") {
+				e.style.visibility = "visible";
+				e.style.display = "";
+				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+			}
+			else {
+				e.style.visibility = "hidden";
+				e.style.display = "none";
+				e.src = "";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p><strong>臺灣 Vtuber 團體 土芒果社 成員列表(此網站仍在建置中)</strong></p>
+	<p>更新日期：2021/10/04 07:37:07</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="返回" onclick="RedirectToFirstPage()" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+			<colgroup>
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+				<col span="1" style="width: 50%;">
+				<col span="1" style="width: 15%;">
+				<col span="1" style="width: 10%;">
+			</colgroup>
+
+		<tr>
+	<td><a href="https://www.youtube.com/channel/UCnSa7dnmEf6bmyS_34yqE_A" target="_blank" rel="noopener noreferrer">蘆棠布奈</a></a></td>
+	<td>11700</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('0','Z_Kluv7yM6g')" />
+<div><iframe id="frame0" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCR0jqDkiTPm6kCbHeKQw2WQ" target="_blank" rel="noopener noreferrer">G-Bao</a></a></td>
+	<td>1320</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('1','WI7ODy2oBvg')" />
+<div><iframe id="frame1" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC9pXpmr_eYeVMGS0lVt5vuw" target="_blank" rel="noopener noreferrer">小金碧碧</a></a></td>
+	<td>642</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('2','QGBjca-JnBk')" />
+<div><iframe id="frame2" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCLVIxrXH6oWTcrT1-2C8x3A" target="_blank" rel="noopener noreferrer">坊冬</a></a></td>
+	<td>269</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('3','McL2Mlt72NA')" />
+<div><iframe id="frame3" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC13kIQww3Nb15AaVbNgoSkQ" target="_blank" rel="noopener noreferrer">斕想</a></a></td>
+	<td>247</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('4','ZQa0w99974o')" />
+<div><iframe id="frame4" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC4luBvryEOgbV-HNOwpU0Cw" target="_blank" rel="noopener noreferrer">百瀬ヤスミ</a></a></td>
+	<td>217</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('5','SCqD4l3ll9w')" />
+<div><iframe id="frame5" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>JP</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCi6HZuQJ1QHN3LJ779X1EAA" target="_blank" rel="noopener noreferrer">蘭卡夏</a></a></td>
+	<td>180</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('6','hw1K3CAekYY')" />
+<div><iframe id="frame6" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCytoAdAYF9yalqzoc_akZBQ" target="_blank" rel="noopener noreferrer">鰭鱗漉</a></a></td>
+	<td>122</td>
+	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('7','MVS9U9WBZq4')" />
+<div><iframe id="frame7" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC_pQrqWJKPsFu7b2mGk1X2Q" target="_blank" rel="noopener noreferrer">芮德‧哈特‧希斯特</a></a></td>
+	<td>49</td>
+	<td></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td>夜想</a></td>
+	<td>0</td>
+	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('9','1148434507')" />
+<div><iframe id="frame9" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
+	</iframe>
+</div></td>
+	<td><input type="button" value="土芒果社" onclick="RedirectToGroupPage('%E5%9C%9F%E8%8A%92%E6%9E%9C%E7%A4%BE')" /></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+</html>
