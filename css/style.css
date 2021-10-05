@@ -1,0 +1,38 @@
+input[type=button] {
+    padding: 5px;
+    border: 3px solid rgb(100, 100, 100);
+    border-radius: 5px;
+}
+
+input[type=number] {
+    padding: 5px;
+    border: 3px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.navigateButtons {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    padding: auto;
+    justify-content: space-around;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
