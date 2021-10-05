@@ -1,3 +1,7 @@
+function CloseThisTab() {
+	window.close();
+}
+
 function RedirectToFirstPage() {
     window.location.href = "/index.html";
 }
