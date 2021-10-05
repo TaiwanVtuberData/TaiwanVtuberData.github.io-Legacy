@@ -44,7 +44,7 @@
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(###CurrentPageNumber)" />
 		<div><input type="number" id="numberBoxBottom" value="###CurrentPageNumber" min="1" max="###MaxPageNumber"/>/###MaxPageNumber 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(###CurrentPageNumber)" />
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(###CurrentPageNumber, ###MaxPageNumber)" />
 		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
 	</div>
 </body>
