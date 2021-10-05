@@ -6,106 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>臺灣 Vtuber 列表</title>
 
-	<style>
-		input[type=button] {
-			padding: 5px;
-			border: 3px solid rgb(100, 100, 100);
-			border-radius: 5px;
-		}
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 
-		input[type=number] {
-			padding: 5px;
-			border: 3px solid rgb(100, 100, 100);
-			border-radius: 5px;
-			margin-right: 3px;
-		}
-
-		.navigateButtons {
-			display: flex;
-			margin: auto;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			width: 75%;
-			padding: auto;
-			justify-content: space-around;
-		}
-
-		table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-
-		td,
-		th {
-			border: 1px solid #dddddd;
-			text-align: left;
-			padding: 8px;
-		}
-
-		tr:nth-child(even) {
-			background-color: #dddddd;
-		}
-	</style>
-
-	<script>
-		const thisPageIndex = 42;
-
-		function RedirectIndexPage(newPage) {
-			if (newPage !== thisPageIndex) {
-				window.location.href = "/index/" + newPage + ".html";
-			}
-		}
-
-		function RedirectToPrevPage() {
-			var newPage = Math.max(1, thisPageIndex - 1);
-			RedirectIndexPage(newPage);
-		}
-
-		function RedirectToNextPage() {
-			var newPage = Math.min(46, thisPageIndex + 1);
-			RedirectIndexPage(newPage);
-		}
-
-		function RedirectToAllPage() {
-			window.location.href = "/all.html";
-		}
-		
-		function RedirectToGroupPage(groupUrl) {
-			window.location.href = "/group/" + groupUrl + ".html";
-		}
-
-		function ShowYouTubeEmbed(id, embedVideoId) {
-			var elementId = "frame" + id;
-			var e = document.getElementById(elementId);
-
-			if (e.style.visibility === "hidden") {
-				e.style.visibility = "visible";
-				e.style.display = "";
-				e.src = "https://www.youtube.com/embed/" + embedVideoId;
-			}
-			else {
-				e.style.visibility = "hidden";
-				e.style.display = "none";
-				e.src = "";
-			}
-		}
-
-		function ShowTwitchEmbed(id, embedVideoId) {
-			var elementId = "frame" + id;
-			var e = document.getElementById(elementId);
-
-			if (e.style.visibility === "hidden") {
-				e.style.visibility = "visible";
-				e.style.display = "";
-				e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
-			}
-			else {
-				e.style.visibility = "hidden";
-				e.style.display = "none";
-				e.src = "";
-			}
-		}
-	</script>
+	<script src="/script/commonScript.js"> </script>
 </head>
 
 <body>
@@ -113,9 +16,9 @@
 	<p>更新日期：2021/10/05 07:37:09</p>
 
 	<div class="navigateButtons">
-		<input type="button" value="上一頁" onclick="RedirectToPrevPage()" />
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage(42)" />
 		<div><input type="number" id="numberBox" value="42" min="1" max="46"/>/46 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage()" />
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(42, 46)" />
 		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
 	</div>
 
@@ -315,9 +218,9 @@
 	</table>
 
 	<div class="navigateButtons">
-		<input type="button" value="上一頁" onclick="RedirectToPrevPage()" />
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage(42)" />
 		<div><input type="number" id="numberBoxBottom" value="42" min="1" max="46"/>/46 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage()" />
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(42)" />
 		<input type="button" value="顯示全部" onclick="RedirectToAllPage()" />
 	</div>
 </body>
@@ -325,12 +228,12 @@
 <script>
 	const numberBox = document.getElementById("numberBox");
 	numberBox.addEventListener('change', (event) => {
-		RedirectIndexPage(event.target.value);
+		RedirectIndexPageWithCheck(event.target.value, 46);
 	});
 	
 	const numberBoxBottom = document.getElementById("numberBoxBottom");
 	numberBoxBottom.addEventListener('change', (event) => {
-		RedirectIndexPage(event.target.value);
+		RedirectIndexPageWithCheck(event.target.value, 46);
 	});
 </script>
 
