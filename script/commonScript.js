@@ -2,10 +2,6 @@ function CloseThisTab() {
 	window.close();
 }
 
-function RedirectToFirstPage() {
-    window.location.href = "/index.html";
-}
-
 function RedirectIndexPageWithCheck(newPage, maxPageNumber) {
 	if (1 <= newPage && newPage <= maxPageNumber) {
     window.location.href = "/index/" + newPage + ".html";
@@ -30,14 +26,6 @@ function RedirectToNextPage(thisPageIndex, maxPageNumber) {
     if (newPage !== thisPageIndex) {
         RedirectIndexPage(newPage);
     }
-}
-
-function RedirectToAllPage() {
-    window.location.href = "/all.html";
-}
-
-function RedirectToGroupPage(groupUrl) {
-    window.location.href = "/group/" + groupUrl + ".html";
 }
 
 function ShowYouTubeEmbed(id, embedVideoId) {
