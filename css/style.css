@@ -19,6 +19,7 @@ input[type=number] {
     width: 75%;
     padding: auto;
     justify-content: space-around;
+    align-items: center;
 }
 
 table {
