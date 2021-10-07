@@ -16,7 +16,7 @@ input[type=number] {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 75%;
+    width: 80%;
     padding: auto;
     justify-content: space-around;
     align-items: center;
@@ -37,3 +37,16 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.verticalList {
+    width: auto;
+    padding: 5px;
+    border: 3px solid rgb(100, 100, 100);
+    border-radius: 5px;
+  }
+  
+  .verticalList a {
+    display: block; /* Make the links appear below each other */
+    padding: 3px; /* Add some padding */
+  }
+  

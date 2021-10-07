@@ -59,3 +59,17 @@ function ShowTwitchEmbed(id, embedVideoId) {
         e.src = "";
     }
 }
+
+function ShowList(id) {
+    var elementId = "list" + id;
+    var e = document.getElementById(elementId);
+
+    if (e.style.visibility === "hidden") {
+        e.style.visibility = "visible";
+        e.style.display = "";
+    }
+    else {
+        e.style.visibility = "hidden";
+        e.style.display = "none";
+    }
+}

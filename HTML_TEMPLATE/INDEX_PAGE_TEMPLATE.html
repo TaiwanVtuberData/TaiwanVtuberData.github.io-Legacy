@@ -12,14 +12,19 @@
 </head>
 
 <body>
-	<p><strong>臺灣 Vtuber 列表第 ###CurrentPageNumber 頁(此網站仍在建置中)</strong></p>
-	<p>更新日期：###UpdateDateTime</p>
+	<div class="navigateButtons">
+		<p><strong>臺灣 Vtuber 列表第 ###CurrentPageNumber 頁(此網站仍在建置中)</strong></p>
+		<a href="/all.html" target="_blank" rel="noopener noreferrer">顯示所有 Vtuber(跳出式頁面)</a>
+		<a href="/index.html">Vtuber 列表</a>
+		<a href="/groupList.html">團體列表</a>
+	</div>
+	
+	<p>資料更新日期：###UpdateDateTime</p>
 
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(###CurrentPageNumber)" />
 		<div><input type="number" id="numberBox" value="###CurrentPageNumber" min="1" max="###MaxPageNumber"/>/###MaxPageNumber 頁</div>
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(###CurrentPageNumber, ###MaxPageNumber)" />
-		<a href="/all.html" target="_blank" rel="noopener noreferrer">顯示所有 Vtuber</a>
 	</div>
 
 	<table>
@@ -45,7 +50,6 @@
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(###CurrentPageNumber)" />
 		<div><input type="number" id="numberBoxBottom" value="###CurrentPageNumber" min="1" max="###MaxPageNumber"/>/###MaxPageNumber 頁</div>
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(###CurrentPageNumber, ###MaxPageNumber)" />
-		<a href="/all.html" target="_blank" rel="noopener noreferrer">顯示所有 Vtuber</a>
 	</div>
 </body>
 
