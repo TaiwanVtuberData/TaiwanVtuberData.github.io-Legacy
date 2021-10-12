@@ -18,6 +18,8 @@
 		<a href="/all.html" target="_blank" rel="noopener noreferrer">顯示所有 Vtuber(跳出式頁面)</a>
 		<a href="/index.html">Vtuber 列表</a>
 		<a href="/groupList.html">團體列表</a>
+		<a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose" target="_blank"
+			rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
 
 		<div>
 			<div>
@@ -30,12 +32,13 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<p>資料更新日期：2021/10/12 07:37:27</p>
 
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(29)" />
-		<div><input type="number" id="numberBox" value="29" min="1" max="47"/>/47 頁</div>
+		<div><input type="number" id="numberBox" value="29" min="1"
+				max="47" />/47 頁</div>
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(29, 47)" />
 	</div>
 
@@ -47,13 +50,13 @@
 			<th>團體</th>
 			<th>國家</th>
 		</tr>
-			<colgroup>
-				<col span="1" style="width: 15%;">
-				<col span="1" style="width: 10%;">
-				<col span="1" style="width: 50%;">
-				<col span="1" style="width: 15%;">
-				<col span="1" style="width: 10%;">
-			</colgroup>
+		<colgroup>
+			<col span="1" style="width: 15%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 50%;">
+			<col span="1" style="width: 15%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
 
 		<tr>
 	<td><a href="https://www.youtube.com/channel/UCnlSbkStVCsk75eaBCrVKNg" target="_blank" rel="noopener noreferrer">蒼神こねこ</a></td>
@@ -251,7 +254,8 @@
 
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(29)" />
-		<div><input type="number" id="numberBoxBottom" value="29" min="1" max="47"/>/47 頁</div>
+		<div><input type="number" id="numberBoxBottom" value="29" min="1"
+				max="47" />/47 頁</div>
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(29, 47)" />
 	</div>
 </body>
@@ -261,11 +265,16 @@
 	numberBox.addEventListener('change', (event) => {
 		RedirectIndexPageWithCheck(event.target.value, 47);
 	});
-	
+
 	const numberBoxBottom = document.getElementById("numberBoxBottom");
 	numberBoxBottom.addEventListener('change', (event) => {
 		RedirectIndexPageWithCheck(event.target.value, 47);
 	});
 </script>
+
+<footer>
+	<div>Question mark icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+			href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
 
 </html>
