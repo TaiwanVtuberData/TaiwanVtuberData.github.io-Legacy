@@ -5,24 +5,39 @@ h1 {
 
 input[type=button] {
     padding: 5px;
-    border: 3px solid rgb(100, 100, 100);
+    border: 3px solid #636363;
     border-radius: 5px;
 }
 
 input[type=number] {
     padding: 5px;
-    border: 3px solid rgb(100, 100, 100);
+    border: 3px solid #636363;
     border-radius: 5px;
     margin-right: 3px;
 }
 
-.horizontalHeader {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 2px solid #dddddd;
-}
+.headerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
+  }
+
+  .gridItem a{
+      display:flex;
+      color: #000000;
+      background-color: #e1e1e1;
+      border: 1px solid #808080;
+      text-align: center;
+      align-items:center;
+      text-decoration: none;
+      margin: 2px;
+      padding: 15px;
+  }
+
+  .gridItem a:hover {
+    background-color: #cccccc;
+  }
+  
 
 footer{
     display: flex;
@@ -54,11 +69,42 @@ td,
 th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 6px;
+    height: 20px;
+}
+
+tr:nth-child(odd) a{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+    align-items:center;
+    text-decoration: none;
+}
+
+tr:nth-child(odd) a:hover{
+    background-color: #dddddd;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+tr:nth-child(even) a{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    color: #000000;
+    background-color: #dddddd;
+    text-align: center;
+    align-items:center;
+    text-decoration: none;
+}
+
+tr:nth-child(even) a:hover{
+    background-color: #ffffff;
 }
 
 .verticalList {
