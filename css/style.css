@@ -76,11 +76,11 @@ th {
 tr:nth-child(odd) a{
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
     color: #000000;
     background-color: #ffffff;
-    text-align: center;
-    align-items:center;
+    text-align: left;
+    align-items: center;
     text-decoration: none;
 }
 
@@ -95,11 +95,11 @@ tr:nth-child(even) {
 tr:nth-child(even) a{
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
     color: #000000;
     background-color: #dddddd;
-    text-align: center;
-    align-items:center;
+    text-align: left;
+    align-items: center;
     text-decoration: none;
 }
 
