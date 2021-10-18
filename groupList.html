@@ -30,6 +30,34 @@
 
 	<p>資料更新日期：2021/10/18 07:27:23</p>
 
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
 	<table>
 		<tr>
 			<th>團體名稱</th>
@@ -46,10 +74,7 @@
 
 		<tr>
 	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('0','BCCNOpfJaoE')" />
-<div><iframe id="frame0" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BCCNOpfJaoE')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('0')" />
 <div class="verticalList" id="list0" style="visibility: hidden; display:none;">
@@ -58,10 +83,7 @@
 </tr>
 <tr>
 	<td><a href="/group/SquareLive.html">SquareLive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('1','nkQY9sYw_lA')" />
-<div><iframe id="frame1" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'nkQY9sYw_lA')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('1')" />
 <div class="verticalList" id="list1" style="visibility: hidden; display:none;">
@@ -70,10 +92,7 @@
 </tr>
 <tr>
 	<td><a href="/group/MLNAM.html">MLNAM</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('2','xR-_P2hwlYE')" />
-<div><iframe id="frame2" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xR-_P2hwlYE')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('2')" />
 <div class="verticalList" id="list2" style="visibility: hidden; display:none;">
@@ -82,10 +101,7 @@
 </tr>
 <tr>
 	<td><a href="/group/ReLive Project.html">ReLive Project</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('3','tfJtVrjUXIc')" />
-<div><iframe id="frame3" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'tfJtVrjUXIc')" /></td>
 	<td>7</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('3')" />
 <div class="verticalList" id="list3" style="visibility: hidden; display:none;">
@@ -94,10 +110,7 @@
 </tr>
 <tr>
 	<td><a href="/group/KAHO-FAMI.html">KAHO-FAMI</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('4','bFllYVGVNuU')" />
-<div><iframe id="frame4" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bFllYVGVNuU')" /></td>
 	<td>6</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('4')" />
 <div class="verticalList" id="list4" style="visibility: hidden; display:none;">
@@ -106,10 +119,7 @@
 </tr>
 <tr>
 	<td><a href="/group/七二二軍團.html">七二二軍團</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('5','qigoIlut7Vs')" />
-<div><iframe id="frame5" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qigoIlut7Vs')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('5')" />
 <div class="verticalList" id="list5" style="visibility: hidden; display:none;">
@@ -118,10 +128,7 @@
 </tr>
 <tr>
 	<td><a href="/group/土芒果社.html">土芒果社</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('6','O6wo2YQ6bSc')" />
-<div><iframe id="frame6" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'O6wo2YQ6bSc')" /></td>
 	<td>10</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('6')" />
 <div class="verticalList" id="list6" style="visibility: hidden; display:none;">
@@ -130,10 +137,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Mirolive.html">Mirolive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('7','n6tmOwNqRyA')" />
-<div><iframe id="frame7" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'n6tmOwNqRyA')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('7')" />
 <div class="verticalList" id="list7" style="visibility: hidden; display:none;">
@@ -142,10 +146,7 @@
 </tr>
 <tr>
 	<td><a href="/group/靛之森.html">靛之森</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('8','7wmxFBcZzbc')" />
-<div><iframe id="frame8" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'7wmxFBcZzbc')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('8')" />
 <div class="verticalList" id="list8" style="visibility: hidden; display:none;">
@@ -154,10 +155,7 @@
 </tr>
 <tr>
 	<td><a href="/group/MOMOMO團.html">MOMOMO團</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('9','1Urta8_Snfw')" />
-<div><iframe id="frame9" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'1Urta8_Snfw')" /></td>
 	<td>14</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('9')" />
 <div class="verticalList" id="list9" style="visibility: hidden; display:none;">
@@ -166,10 +164,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Psycho Fantasy.html">Psycho Fantasy</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('10','EuiRlmiQr38')" />
-<div><iframe id="frame10" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'EuiRlmiQr38')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('10')" />
 <div class="verticalList" id="list10" style="visibility: hidden; display:none;">
@@ -178,10 +173,7 @@
 </tr>
 <tr>
 	<td><a href="/group/ACGlive.html">ACGlive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('11','cD4rupmaAYM')" />
-<div><iframe id="frame11" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'cD4rupmaAYM')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('11')" />
 <div class="verticalList" id="list11" style="visibility: hidden; display:none;">
@@ -190,10 +182,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Lamplighter5.html">Lamplighter5</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('12','4mPIF8g8Mqw')" />
-<div><iframe id="frame12" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4mPIF8g8Mqw')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('12')" />
 <div class="verticalList" id="list12" style="visibility: hidden; display:none;">
@@ -202,10 +191,7 @@
 </tr>
 <tr>
 	<td><a href="/group/VOICEMITH.html">VOICEMITH</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('13','OyHTKiqel8c')" />
-<div><iframe id="frame13" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OyHTKiqel8c')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('13')" />
 <div class="verticalList" id="list13" style="visibility: hidden; display:none;">
@@ -214,10 +200,7 @@
 </tr>
 <tr>
 	<td><a href="/group/RenewLive.html">RenewLive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('14','3ppuT32qumc')" />
-<div><iframe id="frame14" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3ppuT32qumc')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('14')" />
 <div class="verticalList" id="list14" style="visibility: hidden; display:none;">
@@ -226,10 +209,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Kiseki Plain.html">Kiseki Plain</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('15','F2b_xdpjO-8')" />
-<div><iframe id="frame15" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'F2b_xdpjO-8')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('15')" />
 <div class="verticalList" id="list15" style="visibility: hidden; display:none;">
@@ -238,10 +218,7 @@
 </tr>
 <tr>
 	<td><a href="/group/小倉電子企業社.html">小倉電子企業社</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('16','41071xwsxbk')" />
-<div><iframe id="frame16" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'41071xwsxbk')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('16')" />
 <div class="verticalList" id="list16" style="visibility: hidden; display:none;">
@@ -250,10 +227,7 @@
 </tr>
 <tr>
 	<td><a href="/group/比鄰星域.html">比鄰星域</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('17','x31sgmJSKo0')" />
-<div><iframe id="frame17" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'x31sgmJSKo0')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('17')" />
 <div class="verticalList" id="list17" style="visibility: hidden; display:none;">
@@ -262,10 +236,7 @@
 </tr>
 <tr>
 	<td><a href="/group/超異界通信+.html">超異界通信+</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('18','GuyqrrMc9oU')" />
-<div><iframe id="frame18" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'GuyqrrMc9oU')" /></td>
 	<td>14</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('18')" />
 <div class="verticalList" id="list18" style="visibility: hidden; display:none;">
@@ -274,10 +245,7 @@
 </tr>
 <tr>
 	<td><a href="/group/ナヤ家.html">ナヤ家</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('19','5AC_OiTWHzs')" />
-<div><iframe id="frame19" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5AC_OiTWHzs')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('19')" />
 <div class="verticalList" id="list19" style="visibility: hidden; display:none;">
@@ -286,10 +254,7 @@
 </tr>
 <tr>
 	<td><a href="/group/RaZerStar.html">RaZerStar</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('20','ZxH1VvJt1H8')" />
-<div><iframe id="frame20" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ZxH1VvJt1H8')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('20')" />
 <div class="verticalList" id="list20" style="visibility: hidden; display:none;">
@@ -298,10 +263,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Twodot.html">Twodot</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('21','-rdYS2rJfN0')" />
-<div><iframe id="frame21" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'-rdYS2rJfN0')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('21')" />
 <div class="verticalList" id="list21" style="visibility: hidden; display:none;">
@@ -310,10 +272,7 @@
 </tr>
 <tr>
 	<td><a href="/group/GS＠Virtual.html">GS＠Virtual</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('22','0PgCV61JFTU')" />
-<div><iframe id="frame22" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'0PgCV61JFTU')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('22')" />
 <div class="verticalList" id="list22" style="visibility: hidden; display:none;">
@@ -322,10 +281,7 @@
 </tr>
 <tr>
 	<td><a href="/group/AirLife.html">AirLife</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('23','crk8L2fWFDc')" />
-<div><iframe id="frame23" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'crk8L2fWFDc')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('23')" />
 <div class="verticalList" id="list23" style="visibility: hidden; display:none;">
@@ -334,10 +290,7 @@
 </tr>
 <tr>
 	<td><a href="/group/RECTALE.html">RECTALE</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('24','C81WI_SbK7c')" />
-<div><iframe id="frame24" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'C81WI_SbK7c')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('24')" />
 <div class="verticalList" id="list24" style="visibility: hidden; display:none;">
@@ -346,10 +299,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Mic On Project.html">Mic On Project</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('25','zDBhrCHH5-g')" />
-<div><iframe id="frame25" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'zDBhrCHH5-g')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('25')" />
 <div class="verticalList" id="list25" style="visibility: hidden; display:none;">
@@ -358,10 +308,7 @@
 </tr>
 <tr>
 	<td><a href="/group/魔王城.html">魔王城</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('26','1158792159')" />
-<div><iframe id="frame26" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1158792159')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('26')" />
 <div class="verticalList" id="list26" style="visibility: hidden; display:none;">
@@ -370,10 +317,7 @@
 </tr>
 <tr>
 	<td><a href="/group/星奏工作室.html">星奏工作室</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('27','CTJE6M2u5ew')" />
-<div><iframe id="frame27" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CTJE6M2u5ew')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('27')" />
 <div class="verticalList" id="list27" style="visibility: hidden; display:none;">
@@ -382,10 +326,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Lilie.html">Lilie</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('28','dCTJ4PyMWFY')" />
-<div><iframe id="frame28" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'dCTJ4PyMWFY')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('28')" />
 <div class="verticalList" id="list28" style="visibility: hidden; display:none;">
@@ -394,10 +335,7 @@
 </tr>
 <tr>
 	<td><a href="/group/夢遊天使Myu.html">夢遊天使Myu</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('29','CkthtwLgb3E')" />
-<div><iframe id="frame29" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CkthtwLgb3E')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('29')" />
 <div class="verticalList" id="list29" style="visibility: hidden; display:none;">
@@ -406,10 +344,7 @@
 </tr>
 <tr>
 	<td><a href="/group/狼谷娛樂.html">狼谷娛樂</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('30','lmK9u8Y3hoc')" />
-<div><iframe id="frame30" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'lmK9u8Y3hoc')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('30')" />
 <div class="verticalList" id="list30" style="visibility: hidden; display:none;">
@@ -418,10 +353,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Granto.html">Granto</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('31','5ZwZfjZl1Fo')" />
-<div><iframe id="frame31" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5ZwZfjZl1Fo')" /></td>
 	<td>6</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('31')" />
 <div class="verticalList" id="list31" style="visibility: hidden; display:none;">
@@ -430,10 +362,7 @@
 </tr>
 <tr>
 	<td><a href="/group/V-CLUB.html">V-CLUB</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('32','f0AzpXjJVtM')" />
-<div><iframe id="frame32" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'f0AzpXjJVtM')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('32')" />
 <div class="verticalList" id="list32" style="visibility: hidden; display:none;">
@@ -442,10 +371,7 @@
 </tr>
 <tr>
 	<td><a href="/group/異星觀測站.html">異星觀測站</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('33','1169980303')" />
-<div><iframe id="frame33" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1169980303')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('33')" />
 <div class="verticalList" id="list33" style="visibility: hidden; display:none;">
@@ -454,10 +380,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Small Shine工作室.html">Small Shine工作室</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('34','DEDL0MGySCI')" />
-<div><iframe id="frame34" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'DEDL0MGySCI')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('34')" />
 <div class="verticalList" id="list34" style="visibility: hidden; display:none;">
@@ -466,10 +389,7 @@
 </tr>
 <tr>
 	<td><a href="/group/萌元氣.html">萌元氣</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('35','nmiUkSg-pxM')" />
-<div><iframe id="frame35" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'nmiUkSg-pxM')" /></td>
 	<td>6</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('35')" />
 <div class="verticalList" id="list35" style="visibility: hidden; display:none;">
@@ -478,10 +398,7 @@
 </tr>
 <tr>
 	<td><a href="/group/VPS製幻工作室.html">VPS製幻工作室</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('36','rjbm2li04gU')" />
-<div><iframe id="frame36" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'rjbm2li04gU')" /></td>
 	<td>8</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('36')" />
 <div class="verticalList" id="list36" style="visibility: hidden; display:none;">
@@ -490,10 +407,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Blossom Live.html">Blossom Live</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('37','b9zGQDEetLo')" />
-<div><iframe id="frame37" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'b9zGQDEetLo')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('37')" />
 <div class="verticalList" id="list37" style="visibility: hidden; display:none;">
@@ -502,10 +416,7 @@
 </tr>
 <tr>
 	<td><a href="/group/埃及少女組.html">埃及少女組</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('38','03Tg_rw_Cwo')" />
-<div><iframe id="frame38" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'03Tg_rw_Cwo')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('38')" />
 <div class="verticalList" id="list38" style="visibility: hidden; display:none;">
@@ -514,10 +425,7 @@
 </tr>
 <tr>
 	<td><a href="/group/UMiLive.html">UMiLive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('39','pEUvorKEb64')" />
-<div><iframe id="frame39" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pEUvorKEb64')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('39')" />
 <div class="verticalList" id="list39" style="visibility: hidden; display:none;">
@@ -526,10 +434,7 @@
 </tr>
 <tr>
 	<td><a href="/group/椛花夜露.html">椛花夜露</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('40','1173915012')" />
-<div><iframe id="frame40" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1173915012')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('40')" />
 <div class="verticalList" id="list40" style="visibility: hidden; display:none;">
@@ -538,10 +443,7 @@
 </tr>
 <tr>
 	<td><a href="/group/VTCF Project.html">VTCF Project</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('41','TO_rz42BVto')" />
-<div><iframe id="frame41" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'TO_rz42BVto')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('41')" />
 <div class="verticalList" id="list41" style="visibility: hidden; display:none;">
@@ -550,10 +452,7 @@
 </tr>
 <tr>
 	<td><a href="/group/山海團.html">山海團</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('42','HpUXMdzCdUg')" />
-<div><iframe id="frame42" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'HpUXMdzCdUg')" /></td>
 	<td>9</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('42')" />
 <div class="verticalList" id="list42" style="visibility: hidden; display:none;">
@@ -562,10 +461,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Jump20²⁰.html">Jump20²⁰</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('43','WhNwW76dTr8')" />
-<div><iframe id="frame43" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WhNwW76dTr8')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('43')" />
 <div class="verticalList" id="list43" style="visibility: hidden; display:none;">
@@ -574,10 +470,7 @@
 </tr>
 <tr>
 	<td><a href="/group/wander².html">wander²</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('44','wQEpFEMxJwA')" />
-<div><iframe id="frame44" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'wQEpFEMxJwA')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('44')" />
 <div class="verticalList" id="list44" style="visibility: hidden; display:none;">
@@ -586,10 +479,7 @@
 </tr>
 <tr>
 	<td><a href="/group/異種族集會所.html">異種族集會所</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('45','8FSj1rZ_QQ4')" />
-<div><iframe id="frame45" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'8FSj1rZ_QQ4')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('45')" />
 <div class="verticalList" id="list45" style="visibility: hidden; display:none;">
@@ -598,10 +488,7 @@
 </tr>
 <tr>
 	<td><a href="/group/理想燃料店.html">理想燃料店</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('46','a6r8J965t10')" />
-<div><iframe id="frame46" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'a6r8J965t10')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('46')" />
 <div class="verticalList" id="list46" style="visibility: hidden; display:none;">
@@ -610,10 +497,7 @@
 </tr>
 <tr>
 	<td><a href="/group/拍咪呀.html">拍咪呀</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('47','Xl-BBV5xGgk')" />
-<div><iframe id="frame47" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Xl-BBV5xGgk')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('47')" />
 <div class="verticalList" id="list47" style="visibility: hidden; display:none;">
@@ -622,10 +506,7 @@
 </tr>
 <tr>
 	<td><a href="/group/萊葉工作室.html">萊葉工作室</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('48','TVDPWI9bCEk')" />
-<div><iframe id="frame48" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'TVDPWI9bCEk')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('48')" />
 <div class="verticalList" id="list48" style="visibility: hidden; display:none;">
@@ -634,10 +515,7 @@
 </tr>
 <tr>
 	<td><a href="/group/NPC.html">NPC</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('49','yaUvaESRCXw')" />
-<div><iframe id="frame49" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'yaUvaESRCXw')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('49')" />
 <div class="verticalList" id="list49" style="visibility: hidden; display:none;">
@@ -646,10 +524,7 @@
 </tr>
 <tr>
 	<td><a href="/group/晨星與月.html">晨星與月</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('50','ow9ODrNp-6c')" />
-<div><iframe id="frame50" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ow9ODrNp-6c')" /></td>
 	<td>4</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('50')" />
 <div class="verticalList" id="list50" style="visibility: hidden; display:none;">
@@ -658,10 +533,7 @@
 </tr>
 <tr>
 	<td><a href="/group/甘甜糖罐頭.html">甘甜糖罐頭</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('51','S6ryIG_vzgA')" />
-<div><iframe id="frame51" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'S6ryIG_vzgA')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('51')" />
 <div class="verticalList" id="list51" style="visibility: hidden; display:none;">
@@ -670,10 +542,7 @@
 </tr>
 <tr>
 	<td><a href="/group/織女星project.html">織女星project</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('52','dJu-RLmo1Vg')" />
-<div><iframe id="frame52" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'dJu-RLmo1Vg')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('52')" />
 <div class="verticalList" id="list52" style="visibility: hidden; display:none;">
@@ -682,10 +551,7 @@
 </tr>
 <tr>
 	<td><a href="/group/黑矮星.html">黑矮星</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('53','vt0mbs-MKM0')" />
-<div><iframe id="frame53" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'vt0mbs-MKM0')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('53')" />
 <div class="verticalList" id="list53" style="visibility: hidden; display:none;">
@@ -694,10 +560,7 @@
 </tr>
 <tr>
 	<td><a href="/group/夜貓森友會.html">夜貓森友會</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('54','2-8DukFijSs')" />
-<div><iframe id="frame54" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2-8DukFijSs')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('54')" />
 <div class="verticalList" id="list54" style="visibility: hidden; display:none;">
@@ -706,10 +569,7 @@
 </tr>
 <tr>
 	<td><a href="/group/冰萌.html">冰萌</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('55','Er2o4Qbhjjw')" />
-<div><iframe id="frame55" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Er2o4Qbhjjw')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('55')" />
 <div class="verticalList" id="list55" style="visibility: hidden; display:none;">
@@ -718,10 +578,7 @@
 </tr>
 <tr>
 	<td><a href="/group/EchoRecall.html">EchoRecall</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('56','BCVaysrRHhM')" />
-<div><iframe id="frame56" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BCVaysrRHhM')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('56')" />
 <div class="verticalList" id="list56" style="visibility: hidden; display:none;">
@@ -730,10 +587,7 @@
 </tr>
 <tr>
 	<td><a href="/group/YueLive.html">YueLive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('57','pzhTOytJMXU')" />
-<div><iframe id="frame57" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pzhTOytJMXU')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('57')" />
 <div class="verticalList" id="list57" style="visibility: hidden; display:none;">
@@ -742,10 +596,7 @@
 </tr>
 <tr>
 	<td><a href="/group/CACV.html">CACV</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('58','3i4maX0QQXw')" />
-<div><iframe id="frame58" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3i4maX0QQXw')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('58')" />
 <div class="verticalList" id="list58" style="visibility: hidden; display:none;">
@@ -754,10 +605,7 @@
 </tr>
 <tr>
 	<td><a href="/group/MiaLive.html">MiaLive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('59','KI4I9aslxWs')" />
-<div><iframe id="frame59" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'KI4I9aslxWs')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('59')" />
 <div class="verticalList" id="list59" style="visibility: hidden; display:none;">
@@ -766,10 +614,7 @@
 </tr>
 <tr>
 	<td><a href="/group/艋舺會社.html">艋舺會社</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('60','odz0yG3D7rU')" />
-<div><iframe id="frame60" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'odz0yG3D7rU')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('60')" />
 <div class="verticalList" id="list60" style="visibility: hidden; display:none;">
@@ -778,10 +623,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Synn Studio.html">Synn Studio</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('61','c9XL3_9uTU4')" />
-<div><iframe id="frame61" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'c9XL3_9uTU4')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('61')" />
 <div class="verticalList" id="list61" style="visibility: hidden; display:none;">
@@ -790,10 +632,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Destiny Live.html">Destiny Live</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('62','8Oouemp2eHY')" />
-<div><iframe id="frame62" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'8Oouemp2eHY')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('62')" />
 <div class="verticalList" id="list62" style="visibility: hidden; display:none;">
@@ -802,10 +641,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Miragion Studio.html">Miragion Studio</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('63','OeH7g6OHjos')" />
-<div><iframe id="frame63" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OeH7g6OHjos')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('63')" />
 <div class="verticalList" id="list63" style="visibility: hidden; display:none;">
@@ -814,10 +650,7 @@
 </tr>
 <tr>
 	<td><a href="/group/回家部.html">回家部</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('64','ABU-uIuPspI')" />
-<div><iframe id="frame64" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ABU-uIuPspI')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('64')" />
 <div class="verticalList" id="list64" style="visibility: hidden; display:none;">
@@ -826,10 +659,7 @@
 </tr>
 <tr>
 	<td><a href="/group/AsokO.html">AsokO</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('65','XsGsytQN7-I')" />
-<div><iframe id="frame65" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'XsGsytQN7-I')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('65')" />
 <div class="verticalList" id="list65" style="visibility: hidden; display:none;">
@@ -838,10 +668,7 @@
 </tr>
 <tr>
 	<td><a href="/group/SPD 工作室.html">SPD 工作室</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('66','IHSt-jW14fI')" />
-<div><iframe id="frame66" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'IHSt-jW14fI')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('66')" />
 <div class="verticalList" id="list66" style="visibility: hidden; display:none;">
@@ -850,10 +677,7 @@
 </tr>
 <tr>
 	<td><a href="/group/鎮魂鐘.html">鎮魂鐘</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('67','DNyTYEcQhZA')" />
-<div><iframe id="frame67" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'DNyTYEcQhZA')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('67')" />
 <div class="verticalList" id="list67" style="visibility: hidden; display:none;">
@@ -862,10 +686,7 @@
 </tr>
 <tr>
 	<td><a href="/group/2VR_Studio.html">2VR_Studio</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('68','1167185805')" />
-<div><iframe id="frame68" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1167185805')" /></td>
 	<td>7</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('68')" />
 <div class="verticalList" id="list68" style="visibility: hidden; display:none;">
@@ -874,10 +695,7 @@
 </tr>
 <tr>
 	<td><a href="/group/That Must Golive.html">That Must Golive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('69','ng8LypWuD4I')" />
-<div><iframe id="frame69" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ng8LypWuD4I')" /></td>
 	<td>5</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('69')" />
 <div class="verticalList" id="list69" style="visibility: hidden; display:none;">
@@ -886,10 +704,7 @@
 </tr>
 <tr>
 	<td><a href="/group/Virtual Dorm.html">Virtual Dorm</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('70','8UP_X52EBf8')" />
-<div><iframe id="frame70" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'8UP_X52EBf8')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('70')" />
 <div class="verticalList" id="list70" style="visibility: hidden; display:none;">
@@ -898,10 +713,7 @@
 </tr>
 <tr>
 	<td><a href="/group/勞工花枝.html">勞工花枝</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('71','FrajBl7bsLo')" />
-<div><iframe id="frame71" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'FrajBl7bsLo')" /></td>
 	<td>1</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('71')" />
 <div class="verticalList" id="list71" style="visibility: hidden; display:none;">
@@ -910,10 +722,7 @@
 </tr>
 <tr>
 	<td><a href="/group/幻雪琉璃的夢境.html">幻雪琉璃的夢境</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('72','_Ro9qO9D2jM')" />
-<div><iframe id="frame72" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_Ro9qO9D2jM')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('72')" />
 <div class="verticalList" id="list72" style="visibility: hidden; display:none;">
@@ -922,10 +731,7 @@
 </tr>
 <tr>
 	<td><a href="/group/VirtualLive.html">VirtualLive</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('73','lb-IAicCE4A')" />
-<div><iframe id="frame73" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'lb-IAicCE4A')" /></td>
 	<td>3</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('73')" />
 <div class="verticalList" id="list73" style="visibility: hidden; display:none;">
@@ -934,10 +740,7 @@
 </tr>
 <tr>
 	<td><a href="/group/動物好朋友.html">動物好朋友</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowTwitchEmbed('74','1177366655')" />
-<div><iframe id="frame74" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1177366655')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('74')" />
 <div class="verticalList" id="list74" style="visibility: hidden; display:none;">
@@ -946,10 +749,7 @@
 </tr>
 <tr>
 	<td><a href="/group/ReBirth.html">ReBirth</a></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('75','m7PFlLtBATI')" />
-<div><iframe id="frame75" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'m7PFlLtBATI')" /></td>
 	<td>2</td>
 	<td><input type="button" value="顯示成員" onclick="ShowList('75')" />
 <div class="verticalList" id="list75" style="visibility: hidden; display:none;">

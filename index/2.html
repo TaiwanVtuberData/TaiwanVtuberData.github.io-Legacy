@@ -37,6 +37,34 @@
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(2, 48)" />
 	</div>
 
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
 	<table>
 		<tr>
 			<th>名稱</th>
@@ -56,200 +84,140 @@
 		<tr>
 	<td><a href="https://www.youtube.com/channel/UCW5O-tjdwofBwfispeMSPfw" target="_blank" rel="noopener noreferrer">歐貝爾</a></td>
 	<td>25800</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('20','hyH0rATtNQc')" />
-<div><iframe id="frame20" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'hyH0rATtNQc')" /></td>
 	<td><a href="/group/SquareLive.html">SquareLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCr1m3SYxD89MHQmh8EynAVg" target="_blank" rel="noopener noreferrer">喵太</a></td>
 	<td>25500</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('21','Zw3F1vuK2VA')" />
-<div><iframe id="frame21" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Zw3F1vuK2VA')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCy5l7iZCTy-alDJ9rL5kuXQ" target="_blank" rel="noopener noreferrer">醬油Joyu</a></td>
 	<td>25000</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('22','RrrR28lwbWA')" />
-<div><iframe id="frame22" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'RrrR28lwbWA')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCtN3gU012OXuT4BJIaq4W6A" target="_blank" rel="noopener noreferrer">迷子羽根</a></td>
 	<td>24400</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('23','rN30a6qRVTU')" />
-<div><iframe id="frame23" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'rN30a6qRVTU')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCPqYxut8IQxG4HAMrJx5ffQ" target="_blank" rel="noopener noreferrer">三毛</a></td>
 	<td>23700</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('24','CsdFSxjuLLE')" />
-<div><iframe id="frame24" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CsdFSxjuLLE')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCJcKh9mwJH4zhHsU4NDs54g" target="_blank" rel="noopener noreferrer">如月ルミィ</a></td>
 	<td>23700</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('25','4HHtTShANeg')" />
-<div><iframe id="frame25" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4HHtTShANeg')" /></td>
 	<td></td>
 	<td>HK</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ" target="_blank" rel="noopener noreferrer">須多夜花</a></td>
 	<td>22800</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('26','3ppuT32qumc')" />
-<div><iframe id="frame26" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3ppuT32qumc')" /></td>
 	<td><a href="/group/RenewLive.html">RenewLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCyZZMKRn-mUEkPzaqa9b6bg" target="_blank" rel="noopener noreferrer">空</a></td>
 	<td>22600</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('27','41071xwsxbk')" />
-<div><iframe id="frame27" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'41071xwsxbk')" /></td>
 	<td><a href="/group/小倉電子企業社.html">小倉電子企業社</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCLHSj-ZnzmpQlZuUcnXMoVg" target="_blank" rel="noopener noreferrer">語風薯薯與愛紗公主</a></td>
 	<td>22300</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('28','BkGXheGZTxA')" />
-<div><iframe id="frame28" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BkGXheGZTxA')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCykgAuIjn70_CXLNjZ8zppQ" target="_blank" rel="noopener noreferrer">祈菈‧貝希毛絲</a></td>
 	<td>20600</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('29','5OPFNtlTcf0')" />
-<div><iframe id="frame29" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5OPFNtlTcf0')" /></td>
 	<td><a href="/group/SquareLive.html">SquareLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCLTe-8-BQUDdKPcJx_DmLgw" target="_blank" rel="noopener noreferrer">Naya</a></td>
 	<td>19400</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('30','JFr7EieePag')" />
-<div><iframe id="frame30" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'JFr7EieePag')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCmyDLzP9ZBAK2JO4kUuJMRQ" target="_blank" rel="noopener noreferrer">藤乃熊</a></td>
 	<td>19200</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('31','yzHtKPZ-wwM')" />
-<div><iframe id="frame31" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'yzHtKPZ-wwM')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCFjL9hrhIxJyskUdGI6nCeg" target="_blank" rel="noopener noreferrer">Yu</a></td>
 	<td>18200</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('32','rR6njkyX-CE')" />
-<div><iframe id="frame32" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'rR6njkyX-CE')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCsvSrfDReAqYM32_VW8t09w" target="_blank" rel="noopener noreferrer">鼠屋栗太</a></td>
 	<td>17900</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('33','IC89d00uCmo')" />
-<div><iframe id="frame33" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'IC89d00uCmo')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCVDrzfo7NnOvNx8dU-Ebitg" target="_blank" rel="noopener noreferrer">米亞</a></td>
 	<td>16300</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('34','vlx_wH7yWAg')" />
-<div><iframe id="frame34" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'vlx_wH7yWAg')" /></td>
 	<td></td>
 	<td>HK</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCT1kajmUhayQ4QaLlDbK23g" target="_blank" rel="noopener noreferrer">洛可洛斯特</a></td>
 	<td>15900</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('35','qbRyzJ1-Dtg')" />
-<div><iframe id="frame35" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qbRyzJ1-Dtg')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCM1nL55m_QImE0ZRqvGmWWQ" target="_blank" rel="noopener noreferrer">希靈</a></td>
 	<td>15600</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('36','5AiAGeGTSsY')" />
-<div><iframe id="frame36" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5AiAGeGTSsY')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCJ4VZaUiVC2vpN7TXG85M5g" target="_blank" rel="noopener noreferrer">瑪格麗特．溫特斯</a></td>
 	<td>14300</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('37','TagUfsE_Zn0')" />
-<div><iframe id="frame37" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'TagUfsE_Zn0')" /></td>
 	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCwO7OC8he-XAkrDNvGe5kXA" target="_blank" rel="noopener noreferrer">銀鈴‧希爾貝露</a></td>
 	<td>13500</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('38','QzvKtVaNjoY')" />
-<div><iframe id="frame38" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'QzvKtVaNjoY')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCXe8hqIk_Yap31y7EOCMdzg" target="_blank" rel="noopener noreferrer">塔芭絲可</a></td>
 	<td>13400</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('39','n6tmOwNqRyA')" />
-<div><iframe id="frame39" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'n6tmOwNqRyA')" /></td>
 	<td><a href="/group/Mirolive.html">Mirolive</a></td>
 	<td>TW</td>
 </tr>

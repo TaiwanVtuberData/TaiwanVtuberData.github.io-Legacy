@@ -37,6 +37,34 @@
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(43, 48)" />
 	</div>
 
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
 	<table>
 		<tr>
 			<th>名稱</th>
@@ -63,40 +91,28 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCPae7ETCymJqGFMmArS-Y6A" target="_blank" rel="noopener noreferrer">御村米夏</a></td>
 	<td>71</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('841','Y0-cZaztTLM')" />
-<div><iframe id="frame841" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Y0-cZaztTLM')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCFPzS5_OW8vM5UE7rTVV-Xg" target="_blank" rel="noopener noreferrer">那個獅</a></td>
 	<td>70</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('842','WLoSZ9Do6hM')" />
-<div><iframe id="frame842" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WLoSZ9Do6hM')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCI_BQk_prghf_F7WoUpy-fQ" target="_blank" rel="noopener noreferrer">狛犬丸丸</a></td>
 	<td>70</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('843','kPdaMAey9OQ')" />
-<div><iframe id="frame843" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'kPdaMAey9OQ')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UC-Y8-G3Bme0dxYnMFjPHDkQ" target="_blank" rel="noopener noreferrer">菈納</a></td>
 	<td>69</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('844','Zu4cFoiZzGk')" />
-<div><iframe id="frame844" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Zu4cFoiZzGk')" /></td>
 	<td><a href="/group/Small Shine工作室.html">Small Shine工作室</a></td>
 	<td>TW</td>
 </tr>
@@ -110,10 +126,7 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UChcHXueUUWVlpxlHx1d9F3g" target="_blank" rel="noopener noreferrer">予憐</a></td>
 	<td>67</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('846','CiSa8GqFdXw')" />
-<div><iframe id="frame846" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CiSa8GqFdXw')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
@@ -127,20 +140,14 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UC0x-5VOqb_NW85mlxeCoOjA" target="_blank" rel="noopener noreferrer">八重花火</a></td>
 	<td>66</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('848','NgngqLSOdvY')" />
-<div><iframe id="frame848" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'NgngqLSOdvY')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCZg-yXRKh3OliaVMHsVrkVg" target="_blank" rel="noopener noreferrer">九龍</a></td>
 	<td>65</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('849','8rcpUoBZwFQ')" />
-<div><iframe id="frame849" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'8rcpUoBZwFQ')" /></td>
 	<td><a href="/group/山海團.html">山海團</a></td>
 	<td>TW</td>
 </tr>
@@ -161,10 +168,7 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UC6ZGfoDp3amEWY1aZfFVxmw" target="_blank" rel="noopener noreferrer">Marthin Bathin</a></td>
 	<td>60</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('852','e_cPpJ2kxzQ')" />
-<div><iframe id="frame852" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'e_cPpJ2kxzQ')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
@@ -178,10 +182,7 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UC-Uf-Z1XMS34pXM1M7vXjjQ" target="_blank" rel="noopener noreferrer">門奈佳 玉月</a></td>
 	<td>55</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('854','7bCItI9sjD8')" />
-<div><iframe id="frame854" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'7bCItI9sjD8')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
@@ -195,40 +196,28 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCYzIH8nuxrrs2FSFNFeSN6g" target="_blank" rel="noopener noreferrer">羽川莓</a></td>
 	<td>54</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('856','6jg-GxO7g0U')" />
-<div><iframe id="frame856" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'6jg-GxO7g0U')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCv6CBDHoMc4p7yZprKdgi2w" target="_blank" rel="noopener noreferrer">Jou</a></td>
 	<td>52</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('857','OeLy32dWtl4')" />
-<div><iframe id="frame857" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OeLy32dWtl4')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCj0kR1UXEuROcOkGm6PsLZg" target="_blank" rel="noopener noreferrer">牡白Aminra</a></td>
 	<td>51</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('858','WxbvkNcmA7Q')" />
-<div><iframe id="frame858" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WxbvkNcmA7Q')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCBI313vfa0ynUKpoFBj1NVg" target="_blank" rel="noopener noreferrer">吉恩Jin</a></td>
 	<td>50</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('859','0zCZ9LzDBuQ')" />
-<div><iframe id="frame859" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'0zCZ9LzDBuQ')" /></td>
 	<td><a href="/group/甘甜糖罐頭.html">甘甜糖罐頭</a></td>
 	<td>TW</td>
 </tr>

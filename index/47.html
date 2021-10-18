@@ -37,6 +37,34 @@
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(47, 48)" />
 	</div>
 
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
 	<table>
 		<tr>
 			<th>名稱</th>
@@ -56,10 +84,7 @@
 		<tr>
 	<td><a href="https://www.youtube.com/channel/UCrPKWIZs1iTaqBF-_5aN6Sg" target="_blank" rel="noopener noreferrer">阿梨梨</a></td>
 	<td>0</td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('920','wy4qMtx2oWc')" />
-<div><iframe id="frame920" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'wy4qMtx2oWc')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
@@ -73,10 +98,7 @@
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCtWuTDvZeZ09COJ2SjfESzQ" target="_blank" rel="noopener noreferrer">祈霓</a></td>
 	<td><font color="red">已停止活動</font></td>
-	<td><input type="button" value="顯示影片" onclick="ShowYouTubeEmbed('922','qigoIlut7Vs')" />
-<div><iframe id="frame922" style="visibility: hidden; display:none;" src="" width="640" height="360" allowfullscreen="true">
-	</iframe>
-</div></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qigoIlut7Vs')" /></td>
 	<td><a href="/group/七二二軍團.html">七二二軍團</a></td>
 	<td>TW</td>
 </tr>

@@ -28,36 +28,27 @@ function RedirectToNextPage(thisPageIndex, maxPageNumber) {
     }
 }
 
-function ShowYouTubeEmbed(id, embedVideoId) {
-    var elementId = "frame" + id;
-    var e = document.getElementById(elementId);
+const Site = {
+    YouTube: 1,
+    Twitch: 2
+ };
 
-    if (e.style.visibility === "hidden") {
-        e.style.visibility = "visible";
-        e.style.display = "";
-        e.src = "https://www.youtube.com/embed/" + embedVideoId;
-    }
-    else {
-        e.style.visibility = "hidden";
-        e.style.display = "none";
-        e.src = "";
-    }
-}
+function ShowEmbedVideo(site, embedVideoId) {
+    var modal = document.getElementById("videoModal");
+    modal.style.display = "block";
 
-function ShowTwitchEmbed(id, embedVideoId) {
-    var elementId = "frame" + id;
-    var e = document.getElementById(elementId);
+    var frame = document.getElementById("videoFrame");
 
-    if (e.style.visibility === "hidden") {
-        e.style.visibility = "visible";
-        e.style.display = "";
-        e.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
-    }
-    else {
-        e.style.visibility = "hidden";
-        e.style.display = "none";
-        e.src = "";
-    }
+    switch(site) {
+        case Site.YouTube:
+            frame.src = "https://www.youtube.com/embed/" + embedVideoId;
+            break;
+        case Site.Twitch:
+            frame.src = "https://player.twitch.tv/?video=" + embedVideoId + "&parent=" + window.location.hostname + "&autoplay=false";
+            break;
+        default:
+            break;
+        }
 }
 
 function ShowList(id) {
