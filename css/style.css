@@ -20,14 +20,30 @@ input[type=number] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row: auto;
-  }
+}
+
+@media screen and (max-width:700px){
+    .headerGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: auto;
+    }
+}
+
+@media screen and (min-width:10000px){
+    .headerGrid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-row: auto;
+    }
+}
 
   .gridItem a{
       display:flex;
       color: #000000;
       background-color: #e1e1e1;
       border: 1px solid #808080;
-      text-align: center;
+      text-align: left;
       align-items:center;
       text-decoration: none;
       margin: 2px;
