@@ -31,6 +31,34 @@
 
 	<p>資料更新日期：2021/10/18 07:27:23</p>
 
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modal-content">
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+			<span class="close">&times;</span>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
 	<table>
 		<tr>
 			<th>名稱</th>
@@ -147,7 +175,7 @@
 </tr>
 <tr>
 	<td><a href="https://www.youtube.com/channel/UCYXtBPnxZPX_cm6AZlRETYA" target="_blank" rel="noopener noreferrer">米良アイル</a></td>
-	<td>0</td>
+	<td>59(Twitch 追隨人數)</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'PjWwJc9D3Bw')" /></td>
 	<td><a href="/group/MOMOMO團.html">MOMOMO團</a></td>
 	<td>HK</td>

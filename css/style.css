@@ -140,7 +140,7 @@ tr:nth-child(even) a:hover{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -152,24 +152,42 @@ tr:nth-child(even) a:hover{
 
   /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #ffffff;
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 30px;
     width: 80%;
+    height: 90%;
   }
   
   /* The Close Button */
   .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+      color: #aaaaaa;
+      font-size: 40px;
+      font-weight: bold;
   }
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: #000000;
+  float: right;
     text-decoration: none;
     cursor: pointer;
+  }
+  
+  .aspect-ratio {
+      position: relative;
+      width: 80%;
+      height: 0;
+      /* 56.25% of width */
+      padding-bottom: 45%;
+  }
+
+ iframe {
+     width: 80vw;
+    /* 56.25% of width */
+     height: 45vw;
   }
