@@ -140,7 +140,6 @@ tr:nth-child(even) a:hover{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -151,43 +150,37 @@ tr:nth-child(even) a:hover{
   }
 
   /* Modal Content */
-.modal-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: #ffffff;
+.modalContent {  
     margin: auto;
-    padding: 30px;
     width: 80%;
-    height: 90%;
   }
   
   /* The Close Button */
-  .close {
-      color: #aaaaaa;
-      font-size: 40px;
-      font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+  .closeButton {
     color: #000000;
-  float: right;
-    text-decoration: none;
-    cursor: pointer;
+    float: right;
+    font-size: 100px;
+    font-weight: bold;
   }
   
-  .aspect-ratio {
-      position: relative;
-      width: 80%;
-      height: 0;
-      /* 56.25% of width */
-      padding-bottom: 45%;
+  .closeButton:hover,
+  .closeButton:focus {
+      color: #222222;
+      text-decoration: none;
+      cursor: pointer;
   }
-
- iframe {
-     width: 80vw;
-    /* 56.25% of width */
-     height: 45vw;
+  
+  /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+  iframe {
+    width: 75vw; 
+    height: 42.1875vw; /* 100/56.25 = 1.778 */
+    max-height: 75vh;
+    max-width: 133.3333vh; /* 16/9 = 1.778 */
+    margin: auto;
+    position: absolute;
+    top:0;
+    bottom:0; /* vertical center */
+    left:0;
+    right:0; /* horizontal center */
+    background-color: transparent;
   }
