@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<script src="/script/commonScript.js"> </script>
+</head>
+
+<body>
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modalContent">
+			<span class="closeButton">&times;</span>
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("closeButton")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
+	<h1>臺灣 Vtuber 團體列表(此網站仍在建置中)</h1>
+
+	<div class="headerGrid">
+		<div class="gridItem"><a href="/all.html"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+		<div class="gridItem"><a href="/index.html"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
+		<div class="gridItem"><a href="/groupList.html"><img src="/icon/group.png">團體列表</a></div>
+		<div class="gridItem"><a href="/growthInPercentage.html"><img src="/icon/data-analytics.png">成長中 Vtuber 列表</a></div>
+		<div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose"
+				target="_blank" rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
+		</div>
+		<div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank"
+				rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+		<div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank"
+				rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+	</div>
+
+	<p>資料更新日期：2021/10/19 07:27:24</p>
+	<p>注意：目前只會顯示近 7 日人數成長至少 100 人的頻道</p>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>訂閱人數</th>
+			<th>近 7 日人數成長(幅度)</th>
+			<th>近 30 日人數成長(幅度)</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+		<colgroup>
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+		</colgroup>
+
+        <tr>
+	<td><a href="https://www.youtube.com/channel/UC6bzNHXhkRIm1anfxIRb41A" target="_blank" rel="noopener noreferrer">音彌彌</a></td>
+	<td>2200</td>
+	<td>+1080 (49.09%)</td>
+	<td>+0 (0.00%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCaMkIeoM2nNP_1mG22lOkUg" target="_blank" rel="noopener noreferrer">川井芮恩</a></td>
+	<td>1080</td>
+	<td>+224 (20.74%)</td>
+	<td>+282 (26.11%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCGgyxauNnwoD0vvorJbjGIQ" target="_blank" rel="noopener noreferrer">蜂蜜布丁</a></td>
+	<td>929</td>
+	<td>+162 (17.44%)</td>
+	<td>+192 (20.67%)</td>
+	<td><a href="/group/Lamplighter5.html">Lamplighter5</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCkTQ6gRCQPR_FbLXWakP6OA" target="_blank" rel="noopener noreferrer">星之川涅緒</a></td>
+	<td>2930</td>
+	<td>+500 (17.06%)</td>
+	<td>+740 (25.26%)</td>
+	<td><a href="/group/Mirolive.html">Mirolive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCCo1oV47p2_gX7AgCMDisVg" target="_blank" rel="noopener noreferrer">星之川倷緒</a></td>
+	<td>3040</td>
+	<td>+490 (16.12%)</td>
+	<td>+740 (24.34%)</td>
+	<td><a href="/group/Mirolive.html">Mirolive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCE4AYOumlJCFRHSV0CfyJWg" target="_blank" rel="noopener noreferrer">花房夢娜</a></td>
+	<td>1960</td>
+	<td>+260 (13.27%)</td>
+	<td>+900 (45.92%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCT1kajmUhayQ4QaLlDbK23g" target="_blank" rel="noopener noreferrer">洛可洛斯特</a></td>
+	<td>16100</td>
+	<td>+2000 (12.42%)</td>
+	<td>+8890 (55.22%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCOM-k_e60saQjIkA8m4sqzw" target="_blank" rel="noopener noreferrer">露莎米娜</a></td>
+	<td>1020</td>
+	<td>+126 (12.35%)</td>
+	<td>+754 (73.92%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC_soGpcb7SORsk5yzHLMdTQ" target="_blank" rel="noopener noreferrer">神稻櫻火</a></td>
+	<td>6280</td>
+	<td>+720 (11.46%)</td>
+	<td>+2900 (46.18%)</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCeZSiI9Kcyld9AjLuUdNKkA" target="_blank" rel="noopener noreferrer">月城九曜</a></td>
+	<td>4450</td>
+	<td>+480 (10.79%)</td>
+	<td>+1540 (34.61%)</td>
+	<td><a href="/group/比鄰星域.html">比鄰星域</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" target="_blank" rel="noopener noreferrer">李李鈴蘭</a></td>
+	<td>105000</td>
+	<td>+10300 (9.81%)</td>
+	<td>+68100 (64.86%)</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJSBNjYCB1pu_t0FajsY17g" target="_blank" rel="noopener noreferrer">Aoi Hinamori</a></td>
+	<td>12100</td>
+	<td>+1100 (9.09%)</td>
+	<td>+3600 (29.75%)</td>
+	<td><a href="/group/KAHO-FAMI.html">KAHO-FAMI</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCFVh1V9Sja0C-c4sGl_swhA" target="_blank" rel="noopener noreferrer">可粒可</a></td>
+	<td>1250</td>
+	<td>+100 (8.00%)</td>
+	<td>+354 (28.32%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCc5cZPorgyc23wKN-Ng1R6w" target="_blank" rel="noopener noreferrer">Lumina</a></td>
+	<td>5420</td>
+	<td>+430 (7.93%)</td>
+	<td>+500 (9.23%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC5UUZ6-jkMocoHX7sJ6DlcA" target="_blank" rel="noopener noreferrer">夏羽由里</a></td>
+	<td>1920</td>
+	<td>+150 (7.81%)</td>
+	<td>+250 (13.02%)</td>
+	<td><a href="/group/夢遊天使Myu.html">夢遊天使Myu</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCKe1Q0YIwT-hzrZs_uxGb2g" target="_blank" rel="noopener noreferrer">稻乙緹</a></td>
+	<td>2890</td>
+	<td>+220 (7.61%)</td>
+	<td>+680 (23.53%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCXe8hqIk_Yap31y7EOCMdzg" target="_blank" rel="noopener noreferrer">塔芭絲可</a></td>
+	<td>13700</td>
+	<td>+800 (5.84%)</td>
+	<td>+3500 (25.55%)</td>
+	<td><a href="/group/Mirolive.html">Mirolive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC1VdrZAgdlp1QPAAjmoWYJw" target="_blank" rel="noopener noreferrer">伊索渡</a></td>
+	<td>2200</td>
+	<td>+110 (5.00%)</td>
+	<td>+780 (35.45%)</td>
+	<td><a href="/group/靛之森.html">靛之森</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCsbNbQh3IEUkztXrV3bRBDA" target="_blank" rel="noopener noreferrer">星空朵莉</a></td>
+	<td>2250</td>
+	<td>+110 (4.89%)</td>
+	<td>+180 (8.00%)</td>
+	<td><a href="/group/拍咪呀.html">拍咪呀</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UClQot-XYs9KQ2fmItSz4IjA" target="_blank" rel="noopener noreferrer">雨宮夢</a></td>
+	<td>2480</td>
+	<td>+120 (4.84%)</td>
+	<td>+320 (12.90%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC7uqtUmvZTvLY5WbH_oBw_A" target="_blank" rel="noopener noreferrer">希爾艾姆</a></td>
+	<td>2490</td>
+	<td>+120 (4.82%)</td>
+	<td>+150 (6.02%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJ4VZaUiVC2vpN7TXG85M5g" target="_blank" rel="noopener noreferrer">瑪格麗特．溫特斯</a></td>
+	<td>14300</td>
+	<td>+600 (4.20%)</td>
+	<td>+4930 (34.48%)</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCR_lIhYdX7XLIVytgEVSrfA" target="_blank" rel="noopener noreferrer">麻子マコ</a></td>
+	<td>8210</td>
+	<td>+280 (3.41%)</td>
+	<td>+620 (7.55%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCmkHW5H3YzSqSdKVmfR2Deg" target="_blank" rel="noopener noreferrer">蔡宜蓁</a></td>
+	<td>8300</td>
+	<td>+280 (3.37%)</td>
+	<td>+640 (7.71%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCKFv-yBQr08D0-4wpt_53TQ" target="_blank" rel="noopener noreferrer">海老瑠花</a></td>
+	<td>3720</td>
+	<td>+110 (2.96%)</td>
+	<td>+970 (26.08%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" target="_blank" rel="noopener noreferrer">浠Mizuki</a></td>
+	<td>82200</td>
+	<td>+2200 (2.68%)</td>
+	<td>+10100 (12.29%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCO62chyehk6pX7OitrnJAUg" target="_blank" rel="noopener noreferrer">MK妹</a></td>
+	<td>10400</td>
+	<td>+200 (1.92%)</td>
+	<td>+440 (4.23%)</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" target="_blank" rel="noopener noreferrer">璐洛洛</a></td>
+	<td>93800</td>
+	<td>+1800 (1.92%)</td>
+	<td>+9200 (9.81%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC3T7xU1_r3-LAx5PKHYyxsg" target="_blank" rel="noopener noreferrer">弦戶帝丹</a></td>
+	<td>10100</td>
+	<td>+160 (1.58%)</td>
+	<td>+1210 (11.98%)</td>
+	<td><a href="/group/MLNAM.html">MLNAM</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCM1nL55m_QImE0ZRqvGmWWQ" target="_blank" rel="noopener noreferrer">希靈</a></td>
+	<td>15600</td>
+	<td>+200 (1.28%)</td>
+	<td>+1000 (6.41%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCykgAuIjn70_CXLNjZ8zppQ" target="_blank" rel="noopener noreferrer">祈菈‧貝希毛絲</a></td>
+	<td>20600</td>
+	<td>+200 (0.97%)</td>
+	<td>+900 (4.37%)</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCnSa7dnmEf6bmyS_34yqE_A" target="_blank" rel="noopener noreferrer">蘆棠布奈</a></td>
+	<td>11800</td>
+	<td>+100 (0.85%)</td>
+	<td>+300 (2.54%)</td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCgVuzUu24q8KIDOjJcmCnIQ" target="_blank" rel="noopener noreferrer">諾櫻</a></td>
+	<td>12000</td>
+	<td>+100 (0.83%)</td>
+	<td>+600 (5.00%)</td>
+	<td><a href="/group/ReLive Project.html">ReLive Project</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCPYNvBYZ8ClPPJ6274K4rVA" target="_blank" rel="noopener noreferrer">貝莉莓Vtype</a></td>
+	<td>38300</td>
+	<td>+300 (0.78%)</td>
+	<td>+3100 (8.09%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC0u_-3zgLkSYpQOxlBi-5Ng" target="_blank" rel="noopener noreferrer">兔姬</a></td>
+	<td>38500</td>
+	<td>+300 (0.78%)</td>
+	<td>+1300 (3.38%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCW5O-tjdwofBwfispeMSPfw" target="_blank" rel="noopener noreferrer">歐貝爾</a></td>
+	<td>25800</td>
+	<td>+200 (0.78%)</td>
+	<td>+800 (3.10%)</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCDb47NT3QzoCiorDtK9C_qg" target="_blank" rel="noopener noreferrer">蕾兒</a></td>
+	<td>13000</td>
+	<td>+100 (0.77%)</td>
+	<td>+600 (4.62%)</td>
+	<td><a href="/group/ACGlive.html">ACGlive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCwO7OC8he-XAkrDNvGe5kXA" target="_blank" rel="noopener noreferrer">銀鈴‧希爾貝露</a></td>
+	<td>13500</td>
+	<td>+100 (0.74%)</td>
+	<td>+400 (2.96%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" target="_blank" rel="noopener noreferrer">懶貓子</a></td>
+	<td>144000</td>
+	<td>+1000 (0.69%)</td>
+	<td>+8000 (5.56%)</td>
+	<td></td>
+	<td>JP</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC_UqaRNrLcaL4fp2IAPV0OQ" target="_blank" rel="noopener noreferrer">十五號</a></td>
+	<td>46900</td>
+	<td>+300 (0.64%)</td>
+	<td>+1900 (4.05%)</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCVDrzfo7NnOvNx8dU-Ebitg" target="_blank" rel="noopener noreferrer">米亞</a></td>
+	<td>16300</td>
+	<td>+100 (0.61%)</td>
+	<td>+500 (3.07%)</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC-o-1qjKkMLq-ZFxXIzOUBQ" target="_blank" rel="noopener noreferrer">悠白</a></td>
+	<td>52800</td>
+	<td>+300 (0.57%)</td>
+	<td>+2100 (3.98%)</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCN7sEdAjj4Q--al9pDsCPOg" target="_blank" rel="noopener noreferrer">灰名</a></td>
+	<td>53200</td>
+	<td>+300 (0.56%)</td>
+	<td>+2300 (4.32%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCFjL9hrhIxJyskUdGI6nCeg" target="_blank" rel="noopener noreferrer">Yu</a></td>
+	<td>18200</td>
+	<td>+100 (0.55%)</td>
+	<td>+500 (2.75%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC2yG-9ekUwTs8Q0yMSycMxA" target="_blank" rel="noopener noreferrer">平平子</a></td>
+	<td>45300</td>
+	<td>+200 (0.44%)</td>
+	<td>+1200 (2.65%)</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ" target="_blank" rel="noopener noreferrer">須多夜花</a></td>
+	<td>22800</td>
+	<td>+100 (0.44%)</td>
+	<td>+400 (1.75%)</td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCPqYxut8IQxG4HAMrJx5ffQ" target="_blank" rel="noopener noreferrer">三毛</a></td>
+	<td>23700</td>
+	<td>+100 (0.42%)</td>
+	<td>+200 (0.84%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJcKh9mwJH4zhHsU4NDs54g" target="_blank" rel="noopener noreferrer">如月ルミィ</a></td>
+	<td>23700</td>
+	<td>+100 (0.42%)</td>
+	<td>+300 (1.27%)</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCtN3gU012OXuT4BJIaq4W6A" target="_blank" rel="noopener noreferrer">迷子羽根</a></td>
+	<td>24400</td>
+	<td>+100 (0.41%)</td>
+	<td>+0 (0.00%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCr1m3SYxD89MHQmh8EynAVg" target="_blank" rel="noopener noreferrer">喵太</a></td>
+	<td>25600</td>
+	<td>+100 (0.39%)</td>
+	<td>+200 (0.78%)</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+<footer>
+	<div>Icons except GitHub logo made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+		from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>

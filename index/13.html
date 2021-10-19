@@ -46,6 +46,7 @@
 		<div class="gridItem"><a href="/all.html"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
 		<div class="gridItem"><a href="/index.html"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
 		<div class="gridItem"><a href="/groupList.html"><img src="/icon/group.png">團體列表</a></div>
+		<div class="gridItem"><a href="/growthInPercentage.html"><img src="/icon/data-analytics.png">成長中 Vtuber 列表</a></div>
 		<div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose"
 				target="_blank" rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
 		</div>
@@ -56,6 +57,13 @@
 	</div>
 
 	<p>資料更新日期：2021/10/19 07:27:24</p>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage(13)" />
+		<div><input type="number" id="numberBox" value="13" min="1"
+				max="48" />/48 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(13, 48)" />
+	</div>
 
 	<table>
 		<tr>
