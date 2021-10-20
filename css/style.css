@@ -1,7 +1,7 @@
 h1 {
     font-size: x-large;
     text-align: center;
-  }
+}
 
 input[type=button] {
     padding: 5px;
@@ -22,7 +22,7 @@ input[type=number] {
     grid-row: auto;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:700px) {
     .headerGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -30,7 +30,7 @@ input[type=number] {
     }
 }
 
-@media screen and (min-width:10000px){
+@media screen and (min-width:10000px) {
     .headerGrid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -38,24 +38,24 @@ input[type=number] {
     }
 }
 
-  .gridItem a{
-      display:flex;
-      color: #000000;
-      background-color: #e1e1e1;
-      border: 1px solid #808080;
-      text-align: left;
-      align-items:center;
-      text-decoration: none;
-      margin: 2px;
-      padding: 15px;
-  }
+.gridItem a {
+    display: flex;
+    color: #000000;
+    background-color: #e1e1e1;
+    border: 1px solid #808080;
+    text-align: left;
+    align-items: center;
+    text-decoration: none;
+    margin: 2px;
+    padding: 15px;
+}
 
-  .gridItem a:hover {
-    background-color: #cccccc;
-  }
-  
+    .gridItem a:hover {
+        background-color: #cccccc;
+    }
 
-footer{
+
+footer {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -89,7 +89,7 @@ th {
     height: 20px;
 }
 
-tr:nth-child(odd) a{
+tr:nth-child(odd) a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -100,42 +100,42 @@ tr:nth-child(odd) a{
     text-decoration: none;
 }
 
-tr:nth-child(odd) a:hover{
-    background-color: #dddddd;
-}
+    tr:nth-child(odd) a:hover {
+        background-color: #dddddd;
+    }
 
 tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-tr:nth-child(even) a{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    color: #000000;
-    background-color: #dddddd;
-    text-align: left;
-    align-items: center;
-    text-decoration: none;
-}
+    tr:nth-child(even) a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: #000000;
+        background-color: #dddddd;
+        text-align: left;
+        align-items: center;
+        text-decoration: none;
+    }
 
-tr:nth-child(even) a:hover{
-    background-color: #ffffff;
-}
+        tr:nth-child(even) a:hover {
+            background-color: #ffffff;
+        }
 
 .verticalList {
     width: auto;
     padding: 5px;
     border: 3px solid rgb(100, 100, 100);
     border-radius: 5px;
-  }
-  
-  .verticalList a {
-    display: block;
-    padding: 3px;
-  }
-  
-  /* The Modal (background) */
+}
+
+    .verticalList a {
+        display: block;
+        padding: 3px;
+    }
+
+/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -147,40 +147,40 @@ tr:nth-child(even) a:hover{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
 
-  /* Modal Content */
-.modalContent {  
+/* Modal Content */
+.modalContent {
     margin: auto;
     width: 80%;
-  }
-  
-  /* The Close Button */
-  .closeButton {
+}
+
+/* The Close Button */
+.closeButton {
     color: #000000;
     float: right;
     font-size: 100px;
     font-weight: bold;
-  }
-  
-  .closeButton:hover,
-  .closeButton:focus {
-      color: #222222;
-      text-decoration: none;
-      cursor: pointer;
-  }
-  
-  /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
-  iframe {
-    width: 75vw; 
+}
+
+    .closeButton:hover,
+    .closeButton:focus {
+        color: #222222;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+iframe {
+    width: 75vw;
     height: 42.1875vw; /* 100/56.25 = 1.778 */
     max-height: 75vh;
     max-width: 133.3333vh; /* 16/9 = 1.778 */
     margin: auto;
     position: absolute;
-    top:0;
-    bottom:0; /* vertical center */
-    left:0;
-    right:0; /* horizontal center */
+    top: 0;
+    bottom: 0; /* vertical center */
+    left: 0;
+    right: 0; /* horizontal center */
     background-color: transparent;
-  }
+}
