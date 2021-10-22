@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<script src="/script/commonScript.js"> </script>
+</head>
+
+<body>
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+	<!-- hidden video modal -->
+	<div id="videoModal" class="modal">
+		<div class="modalContent">
+			<span class="closeButton">&times;</span>
+			<iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("videoModal");
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("closeButton")[0];
+		var frame = document.getElementById("videoFrame");
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+			frame.src = "";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				frame.src = "";
+			}
+		}
+	</script>
+
+	<h1>熱門臺灣 Vtuber 列表(此網站仍在建置中)</h1>
+
+	<div class="headerGrid">
+		<div class="gridItem"><a href="/all.html"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+		<div class="gridItem"><a href="/index.html"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
+		<div class="gridItem"><a href="/groupList.html"><img src="/icon/group.png">團體列表</a></div>
+		<div class="gridItem"><a href="/growthInPercentage.html"><img src="/icon/data-analytics.png">成長中 Vtuber 列表</a></div>
+		<div class="gridItem"><a href="/trending.html"><img src="/icon/arrow-up.png">熱門 Vtuber 列表</a></div>
+		<div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose"
+				target="_blank" rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
+		</div>
+		<div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank"
+				rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+		<div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank"
+				rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+	</div>
+
+	<p>資料更新日期：2021/10/22 07:27:24</p>
+	<p>近 30 日影片觀看中位數：近 30 日 YouTube 上傳影片的觀看中位數 + 近 30 日 Twitch 過去實況的觀看中位數</p>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>近 30 日影片觀看中位數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>YouTube 頻道訂閱人數</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+		<colgroup>
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+			<col span="1" style="width: 16%;">
+		</colgroup>
+
+        <tr>
+	<td><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" target="_blank" rel="noopener noreferrer">李李鈴蘭</a></td>
+	<td>48337</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_jk_WXu7HrI')" /></td>
+	<td>107000</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" target="_blank" rel="noopener noreferrer">懶貓子</a></td>
+	<td>29466</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OZBZ3zr7jTQ')" /></td>
+	<td>145000</td>
+	<td></td>
+	<td>JP</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" target="_blank" rel="noopener noreferrer">杏仁ミル</a></td>
+	<td>21059 + 6615 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'mOe7NqjZXiU')" /></td>
+	<td>364000</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" target="_blank" rel="noopener noreferrer">浠Mizuki</a></td>
+	<td>22553</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3uclMILBoGY')" /></td>
+	<td>82800</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCPYNvBYZ8ClPPJ6274K4rVA" target="_blank" rel="noopener noreferrer">貝莉莓Vtype</a></td>
+	<td>10036</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'XqJouCmZtbc')" /></td>
+	<td>38400</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" target="_blank" rel="noopener noreferrer">璐洛洛</a></td>
+	<td>7393 + 1631 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ly8MMG4ahJg')" /></td>
+	<td>94100</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCmyc8eVR3G9A7hjaHsLR6NQ" target="_blank" rel="noopener noreferrer">露恰露恰</a></td>
+	<td>7620</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'s4WrF-Sx3YE')" /></td>
+	<td>53200</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC2yG-9ekUwTs8Q0yMSycMxA" target="_blank" rel="noopener noreferrer">平平子</a></td>
+	<td>6238</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Qn758qFMSC4')" /></td>
+	<td>45400</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC_UqaRNrLcaL4fp2IAPV0OQ" target="_blank" rel="noopener noreferrer">十五號</a></td>
+	<td>5952</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'nkQY9sYw_lA')" /></td>
+	<td>47000</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCN7sEdAjj4Q--al9pDsCPOg" target="_blank" rel="noopener noreferrer">灰名</a></td>
+	<td>5766</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xKkxWL1_DFM')" /></td>
+	<td>53200</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC-o-1qjKkMLq-ZFxXIzOUBQ" target="_blank" rel="noopener noreferrer">悠白</a></td>
+	<td>5571</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'60WDTzQQ_ZY')" /></td>
+	<td>52900</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJ4VZaUiVC2vpN7TXG85M5g" target="_blank" rel="noopener noreferrer">瑪格麗特．溫特斯</a></td>
+	<td>4950</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_Eo8MnhiJCo')" /></td>
+	<td>14600</td>
+	<td><a href="/group/雲際線工作室.html">雲際線工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCxm2qC7Z7cjDAd6yPyl-sKQ" target="_blank" rel="noopener noreferrer">Asa Ifrit</a></td>
+	<td>4929</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xR-_P2hwlYE')" /></td>
+	<td>39700</td>
+	<td><a href="/group/MLNAM.html">MLNAM</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCzHbCUKXn65icryUIgn1ETA" target="_blank" rel="noopener noreferrer">泰多貝亞</a></td>
+	<td>4358</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'h0AFcJxYLtM')" /></td>
+	<td>42000</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCW5O-tjdwofBwfispeMSPfw" target="_blank" rel="noopener noreferrer">歐貝爾</a></td>
+	<td>4030</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'fpIgdoRkXZo')" /></td>
+	<td>25900</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCfwIUmAj5QKbaAxHoOR-23g" target="_blank" rel="noopener noreferrer">高雄林小姐</a></td>
+	<td>3855</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'H_-OgfmMYog')" /></td>
+	<td>103000</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJcKh9mwJH4zhHsU4NDs54g" target="_blank" rel="noopener noreferrer">如月ルミィ</a></td>
+	<td>3696</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4HHtTShANeg')" /></td>
+	<td>23800</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCPqYxut8IQxG4HAMrJx5ffQ" target="_blank" rel="noopener noreferrer">三毛</a></td>
+	<td>3662</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CsdFSxjuLLE')" /></td>
+	<td>23700</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCO62chyehk6pX7OitrnJAUg" target="_blank" rel="noopener noreferrer">MK妹</a></td>
+	<td>3569</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OEwKQP9OC1w')" /></td>
+	<td>10500</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCT1kajmUhayQ4QaLlDbK23g" target="_blank" rel="noopener noreferrer">洛可洛斯特</a></td>
+	<td>3451</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qbRyzJ1-Dtg')" /></td>
+	<td>16500</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCtWuTDvZeZ09COJ2SjfESzQ" target="_blank" rel="noopener noreferrer">祈霓</a></td>
+	<td>3441</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qigoIlut7Vs')" /></td>
+	<td><font color="red">已停止活動</font></td>
+	<td><a href="/group/七二二軍團.html">七二二軍團</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC0u_-3zgLkSYpQOxlBi-5Ng" target="_blank" rel="noopener noreferrer">兔姬</a></td>
+	<td>3374</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CuIJGsnuDOI')" /></td>
+	<td>38600</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCLHSj-ZnzmpQlZuUcnXMoVg" target="_blank" rel="noopener noreferrer">語風薯薯與愛紗公主</a></td>
+	<td>3235</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BkGXheGZTxA')" /></td>
+	<td>22300</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCykgAuIjn70_CXLNjZ8zppQ" target="_blank" rel="noopener noreferrer">祈菈‧貝希毛絲</a></td>
+	<td>2778</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5OPFNtlTcf0')" /></td>
+	<td>20600</td>
+	<td><a href="/group/SquareLive.html">SquareLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCUxIkkVP4EIIPhF8M1KRBjw" target="_blank" rel="noopener noreferrer">巴蘭利維坦</a></td>
+	<td>2631</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'E6Lbw9YEEe4')" /></td>
+	<td>10400</td>
+	<td><a href="/group/MLNAM.html">MLNAM</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCr1m3SYxD89MHQmh8EynAVg" target="_blank" rel="noopener noreferrer">喵太</a></td>
+	<td>1665 + 917 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'rzw9iG3X354')" /></td>
+	<td>25600</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCmkHW5H3YzSqSdKVmfR2Deg" target="_blank" rel="noopener noreferrer">蔡宜蓁</a></td>
+	<td>2404</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'NmXdSW6TBnw')" /></td>
+	<td>8390</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCJSBNjYCB1pu_t0FajsY17g" target="_blank" rel="noopener noreferrer">Aoi Hinamori</a></td>
+	<td>2394</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bFllYVGVNuU')" /></td>
+	<td>12300</td>
+	<td><a href="/group/KAHO-FAMI.html">KAHO-FAMI</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC4J0GZLM55qrFh2L-ZAb2LA" target="_blank" rel="noopener noreferrer">香草奈若</a></td>
+	<td>2359</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'M38BUzUBx_k')" /></td>
+	<td>50000</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCKe1Q0YIwT-hzrZs_uxGb2g" target="_blank" rel="noopener noreferrer">稻乙緹</a></td>
+	<td>537 + 1790 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1170956167')" /></td>
+	<td>2900</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCgbHkaJRVorQltgRwM-fn0g" target="_blank" rel="noopener noreferrer">仔魚</a></td>
+	<td>2296 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1169575466')" /></td>
+	<td>264</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCVDrzfo7NnOvNx8dU-Ebitg" target="_blank" rel="noopener noreferrer">米亞</a></td>
+	<td>2258</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'-QhHH15OEqE')" /></td>
+	<td>16300</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCa6rKAjusYEugf3Y6sPGTFg" target="_blank" rel="noopener noreferrer">說書客</a></td>
+	<td>2094</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'oz8oAGExVNk')" /></td>
+	<td>39200</td>
+	<td></td>
+	<td>HK</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCXe8hqIk_Yap31y7EOCMdzg" target="_blank" rel="noopener noreferrer">塔芭絲可</a></td>
+	<td>2037</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'n6tmOwNqRyA')" /></td>
+	<td>14200</td>
+	<td><a href="/group/Mirolive.html">Mirolive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCoGmG17nsPyVxH_SckUoQKQ" target="_blank" rel="noopener noreferrer">絨絨鼠</a></td>
+	<td>723 + 1245 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1158481808')" /></td>
+	<td>499</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCDb47NT3QzoCiorDtK9C_qg" target="_blank" rel="noopener noreferrer">蕾兒</a></td>
+	<td>1963</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'cD4rupmaAYM')" /></td>
+	<td>13000</td>
+	<td><a href="/group/ACGlive.html">ACGlive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCM1nL55m_QImE0ZRqvGmWWQ" target="_blank" rel="noopener noreferrer">希靈</a></td>
+	<td>1926</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5AiAGeGTSsY')" /></td>
+	<td>15700</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC6bzNHXhkRIm1anfxIRb41A" target="_blank" rel="noopener noreferrer">音彌彌</a></td>
+	<td>1917</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'lpeJ_NjChQ4')" /></td>
+	<td>2300</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCnSa7dnmEf6bmyS_34yqE_A" target="_blank" rel="noopener noreferrer">蘆棠布奈</a></td>
+	<td>1873</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'O6wo2YQ6bSc')" /></td>
+	<td>11800</td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCgVuzUu24q8KIDOjJcmCnIQ" target="_blank" rel="noopener noreferrer">諾櫻</a></td>
+	<td>1792</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'tfJtVrjUXIc')" /></td>
+	<td>12100</td>
+	<td><a href="/group/ReLive Project.html">ReLive Project</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC6s0wLR0TZauzTVoGGw2r6g" target="_blank" rel="noopener noreferrer">虎妮</a></td>
+	<td>1710</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'zChJSZL-n0E')" /></td>
+	<td>40000</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC3T7xU1_r3-LAx5PKHYyxsg" target="_blank" rel="noopener noreferrer">弦戶帝丹</a></td>
+	<td>1645</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'a_V-ULtbZgM')" /></td>
+	<td>10100</td>
+	<td><a href="/group/MLNAM.html">MLNAM</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCFEd5V7VcxBPPcuMGpmvkQA" target="_blank" rel="noopener noreferrer">鳥羽樂奈</a></td>
+	<td>1579</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ym12lVdm7RE')" /></td>
+	<td>52500</td>
+	<td><a href="/group/靛之森.html">靛之森</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC7P5GH9nvcjP120r62h3v3g" target="_blank" rel="noopener noreferrer">天堂密室</a></td>
+	<td>1545</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OT33xwNwsLY')" /></td>
+	<td>未顯示訂閱人數</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UC9H5JijqcmqYQpB8yK3sJCg" target="_blank" rel="noopener noreferrer">紫映遊月</a></td>
+	<td>1485</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'aT3I6qmoga4')" /></td>
+	<td>3920</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCprlKrFgmLW4F_Ec80PWuCw" target="_blank" rel="noopener noreferrer">嗚夫沃夫</a></td>
+	<td>1477</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OuWA2V1-Bfo')" /></td>
+	<td>7420</td>
+	<td><a href="/group/Psycho Fantasy.html">Psycho Fantasy</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCwWvT4KAio6qGG-2KERUgKQ" target="_blank" rel="noopener noreferrer">狐太れお</a></td>
+	<td>19 + 1365 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1178913000')" /></td>
+	<td>2830</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ" target="_blank" rel="noopener noreferrer">須多夜花</a></td>
+	<td>1379</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3ppuT32qumc')" /></td>
+	<td>22800</td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCAZ6zbMz0DzJG4uTs9SOTog" target="_blank" rel="noopener noreferrer">飛鳥唯世</a></td>
+	<td>1271</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'EyR5VZwnIo0')" /></td>
+	<td>1820</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><a href="https://www.youtube.com/channel/UCUQ5NMAU3sUXVjipTmNiDTg" target="_blank" rel="noopener noreferrer">紅茶拿鐵</a></td>
+	<td>209 + 1061 Twitch 觀看</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1157780998')" /></td>
+	<td>1970</td>
+	<td></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+<footer>
+	<div>Icons except GitHub logo made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+		from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>
