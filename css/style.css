@@ -184,3 +184,7 @@ iframe {
     right: 0; /* horizontal center */
     background-color: transparent;
 }
+
+.inactiveText {
+    color: red;
+}
