@@ -188,3 +188,7 @@ iframe {
 .inactiveText {
     color: red;
 }
+
+.displayNameButton span{
+    margin-left: 5px;
+}
