@@ -41,4 +41,14 @@
             rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
 </div>
 
-<p>資料更新日期：###UpdateDateTime</p>
+<div class="evenlySpacedGrid">
+    <span>資料更新日期：###UpdateDateTime</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+		<form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+        <span><input class="searchBox" id="searchField" type="text" value="" placeholder="DuckDuckGo 搜尋此網站..."></span>
+	</form>
+    </div>
+</div>

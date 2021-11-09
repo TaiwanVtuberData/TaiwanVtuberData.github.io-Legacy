@@ -64,3 +64,11 @@ function ShowList(id) {
         e.style.display = "none";
     }
 }
+
+// copied from https://jonbeebe.net/2017/07/duckduckgo-site-search/
+function DuckDuckGoSearch() {
+    var searchField = document.getElementById("searchField");
+    if (searchField && searchField.value) {
+        window.location.href = "https://duckduckgo.com/?q=site:taiwanvtuberdata.github.io " + searchField.value;
+    }
+}

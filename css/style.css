@@ -63,6 +63,49 @@ footer {
     border-top: 2px solid #dddddd;
 }
 
+.evenlySpacedGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto;
+    margin: 3px;
+    align-items: center;
+}
+
+
+/* copied from here https://stackoverflow.com/a/14537979/11947017 */
+.searchItem{
+    overflow:hidden;
+}
+
+.searchItem span {
+    display: block;
+    overflow: hidden;
+    padding: 0 5px
+}
+
+.searchBox {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 34px;
+    padding: 5px;
+    border: 3px solid #636363;
+    border-radius: 5px;
+}
+
+.searchButton {
+    float: right;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: 3px solid #636363;
+    border-radius: 5px;
+}
+
+.searchButton:hover {
+    background-color: #cccccc;
+}
+
 .navigateButtons {
     display: flex;
     margin: auto;
