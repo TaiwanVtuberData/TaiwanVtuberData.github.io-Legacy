@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<script src="/script/commonScript.js"> </script>
+</head>
+
+<body>
+	<h1>臺灣 Vtuber 團體 土芒果社 成員列表(此網站仍在建置中)</h1>
+
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+<!-- hidden video modal -->
+<div id="videoModal" class="modal">
+    <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("videoModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeButton")[0];
+    var frame = document.getElementById("videoFrame");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            frame.src = "";
+        }
+    }
+</script>
+
+<div class="headerGrid">
+    <div class="gridItem"><a href="/all.html"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+    <div class="gridItem"><a href="/index.html"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/groupList.html"><img src="/icon/group.png">團體列表</a></div>
+    <div class="gridItem"><a href="/growthInPercentage.html"><img src="/icon/data-analytics.png">成長中 Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/trending.html"><img src="/icon/arrow-up.png">熱門 Vtuber 列表</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose"
+            target="_blank" rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
+    </div>
+    <div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank"
+            rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank"
+            rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+</div>
+
+<div class="evenlySpacedGrid">
+    <span>資料更新日期：2021/11/27 07:27:28</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+		<form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+        <span><input class="searchBox" id="searchField" type="text" value="" placeholder="DuckDuckGo 搜尋此網站..."></span>
+	</form>
+    </div>
+</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>YouTube 頻道訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+		<colgroup>
+			<col span="1" style="width: 30%;">
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 15%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCnSa7dnmEf6bmyS_34yqE_A" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/tSqJAEZiqorTyEc9jy4RjC1-qo9aH59em4cWZ56r1kA4HfvVO-YMsl50t5SPHFmZgLMQ22FOZQ=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>蘆棠布奈</span></a></div></td>
+	<td>11900</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3m0kOmi8iNI')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCR0jqDkiTPm6kCbHeKQw2WQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/bhpsR9Y4xZ_KFjnAHunzBhRSZSGz3By-EEaJA6f9Fxr9AhVU_xrxH8QF1jxy9I7Ra8VZ5iblkQ=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>G-Bao</span></a></div></td>
+	<td>1340</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Of6qcn7nedY')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC9pXpmr_eYeVMGS0lVt5vuw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/v5YHZuFmvOiF3Nmv0hzxhTPBYxVT_zdK1Vic1yJmAaGw46nRKvS4yp02dzwrkWPVfI8h4UyNi9o=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>小金碧碧</span></a></div></td>
+	<td>867</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'YQqX0KYnvPA')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCLVIxrXH6oWTcrT1-2C8x3A" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/Y9pe8vMAk04mkRsn9FichixcQOsJaXUFunaWfraqcRvGJEw5Sh5zhsh0O75VwO0WrMgVeav1Vg=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>坊冬</span></a></div></td>
+	<td>306 (10 Twitch 追隨人數)</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'hFc0HTRWfdA')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC13kIQww3Nb15AaVbNgoSkQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/jmIlbW8vWQ5QHhofPmQLZMiRLuvPgkkHDwkNdZXoX6uS8v348Uck2HLBSWGZJaH93l7hH_9RF7Y=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>斕想</span></a></div></td>
+	<td>266</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'E1K5AN_a7VE')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC4luBvryEOgbV-HNOwpU0Cw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/CYleJlsM7nkKDdRyBJdccqTvteKlVRojAvoNjd98Jz01ot_fu6BOYbPVccIvs1TgZh8d0c_8mw=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>百瀬ヤスミ</span></a></div></td>
+	<td>256</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'lVaonykZ6Zc')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>JP</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCi6HZuQJ1QHN3LJ779X1EAA" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/liZ9w_lw0tfpLR8-sKHPP0RK30tR0GUteS3qhUk4MPUff7xgPb1Ai-jkRemiVNaZ_h3UOMrlXg=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>蘭卡夏</span></a></div></td>
+	<td>252 (496 Twitch 追隨人數)</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'x5W0_HLO0Ro')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC_pQrqWJKPsFu7b2mGk1X2Q" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/suLHLkbPg2OPp7Gem5Q-PiH5JUnvZvjiucO1lhHpozb4WPylSYeOYTXXhiisDe4i994oGsH_Nbs=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>芮德‧哈特‧希斯特</span></a></div></td>
+	<td>203</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'m627c8efv_s')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCPI7UzTUFM6VqQqZA10OxZg" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/DnoWRugkhN58tvLK-YvIHyHwqoSwFkrW7p0xgrtORvnbYctKu2NkuGUcxrz3JodojRAHJVFWMw=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>夜想</span></a></div></td>
+	<td>200 (229 Twitch 追隨人數)</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'0HXLBF3tCtw')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCytoAdAYF9yalqzoc_akZBQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/74-k2nY6toDf6A9mSAi1iCzOuFnq8hHHXRpzWQWvfx0IzocQZz2uU8Y_dErAEMEMSEoQhvrwlVs=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>鰭鱗漉</span></a></div></td>
+	<td>163</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'awuz7ORqGvE')" /></td>
+	<td><a href="/group/土芒果社.html">土芒果社</a></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+<footer>
+	<div>Icons except GitHub logo made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+		from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>

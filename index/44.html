@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<script src="/script/commonScript.js"> </script>
+</head>
+
+<body>
+	<h1>臺灣 Vtuber 列表第 44 頁(此網站仍在建置中)</h1>
+	
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+<!-- hidden video modal -->
+<div id="videoModal" class="modal">
+    <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("videoModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeButton")[0];
+    var frame = document.getElementById("videoFrame");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            frame.src = "";
+        }
+    }
+</script>
+
+<div class="headerGrid">
+    <div class="gridItem"><a href="/all.html"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+    <div class="gridItem"><a href="/index.html"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/groupList.html"><img src="/icon/group.png">團體列表</a></div>
+    <div class="gridItem"><a href="/growthInPercentage.html"><img src="/icon/data-analytics.png">成長中 Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/trending.html"><img src="/icon/arrow-up.png">熱門 Vtuber 列表</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose"
+            target="_blank" rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
+    </div>
+    <div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank"
+            rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank"
+            rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+</div>
+
+<div class="evenlySpacedGrid">
+    <span>資料更新日期：2021/11/27 07:27:28</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+		<form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+        <span><input class="searchBox" id="searchField" type="text" value="" placeholder="DuckDuckGo 搜尋此網站..."></span>
+	</form>
+    </div>
+</div>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage(44)" />
+		<div><input type="number" id="numberBox" value="44" min="1"
+				max="51" />/51 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(44, 51)" />
+	</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>YouTube 頻道訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+		<colgroup>
+			<col span="1" style="width: 35%;">
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 15%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCxEq6llds_jFJajAsPlvrNg" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/FQ5Ar6Aea2EkFbGCIe3gF1zmLTS_K9sKh_YVowxf44B6oXVWFhcZ1l9sUKRbcIsgpksjblf0vDU=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>米糕不能吃</span></a></div></td>
+	<td>119</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCkqv0tYRqP9KoffsO74CB_g" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/R0QLW-iz_9PO59ImxqKBgPK3_0j52CsB1E2E2idL0r_WaGxQs00s0UDuBqrMYJHvAM9W2urLaw=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>焦糖雪比</span></a></div></td>
+	<td>117</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'IE351W5eh7Q')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC66ycGBFoil-mxIqW5lPc6Q" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/GZStIPtc6UtRcFhuHh4jq6BukXRswlbpQEb1P3GGL8OMjef4ZMTtGDJF_E1QWbThP5kwY_46ww=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>石狛海栗</span></a></div></td>
+	<td>116</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Ul56nZUX4Jg')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCy5ZoyicnyHLXsPppkIZV1w" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLRhHeQjr_wotHoNx6-uyVXqHt1sLCh2UkmlSff8=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>蛸波ヤエカ</span></a></div></td>
+	<td>116</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2Gs5Ec1LJ24')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCFxnBtn2Tm3NbluDfP0eIdA" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/KC02m51lEqPRRvkE67SmS0INTKO_xBZyDtXHPXvIpgRKotfQy__k2yzW13VImpgR7uMqAv0y=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>伊津レイニ</span></a></div></td>
+	<td>116</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'7jqKIWi8RM4')" /></td>
+	<td><a href="/group/超異界通信+.html">超異界通信+</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCbZ8OOwuBqLrAPtYjZN5u3Q" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/tV5oKL-9_YnSrLnjuS2xWXOEtu8uxfrx5L0atdou-_Mggk384gRViuB_dbV_na-1odyVvn0Q_Q=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>林富貴</span></a></div></td>
+	<td>115</td>
+	<td></td>
+	<td><a href="/group/艋舺會社.html">艋舺會社</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC72DNczNO1fr9bFjEoxL1uQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/xCJgocuBM8BNjIAkLnHUFuiBVJDpQPlToexmLwUY9i_ol8ySwGOHe7urGU0y5f1j-zdLOliZ=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>阿香Kaori</span></a></div></td>
+	<td>114</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'f3dIJrcc5rg')" /></td>
+	<td><a href="/group/織女星project.html">織女星project</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCm3h1PfxmtC9er45raNzfXw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ScOJSkU-FTIZaBp46T8B7Y853fRf7wH9GkKiigu8khRElmoLvw1jyf95IiTfD06O1e0qadlP1QE=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>藍琉ウミ</span></a></div></td>
+	<td>114</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'n1q2GFijJyA')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCsbCCK4-Z8J3PSjpk8AY3_Q" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLTsbeq6FvT52ASwULpvvc8TOAwTW8XXJLf9JEuP=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>鬼崎魁</span></a></div></td>
+	<td>114</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCzBi5O-K8VY-pHPy_ZBsAEA" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/fD3q4YOxVjhSUppi-bc7gHNvg_dmjjC4SKE7tHEN-5H29J9SFVkgUaxySDsHW6Hz3GySBi9q_2Y=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>裏明</span></a></div></td>
+	<td>111</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Of2xbTSHkMk')" /></td>
+	<td><a href="/group/VPS製幻工作室.html">VPS製幻工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCMDY0ebDXrAeCphj5YB6K5Q" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLSOnmv9wrgwVsNjXfHobqVg-oqL_uL19YYCB5LH=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>宇紫醬</span></a></div></td>
+	<td>111 (4025 Twitch 追隨人數)</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1211614634')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCYzIH8nuxrrs2FSFNFeSN6g" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/-9fcTc9vYsoMWEY3dL_ArwxpviUhnywnLlcHx9qQlLj-wC0vylpFJpv1yU0Tl9aVCV0ItGqsPXo=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>羽川莓</span></a></div></td>
+	<td>110</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OgX3xj5M94s')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC8Wl20iEmxTYk20-rUZfjrA" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLQbak9CI2ZfWy52HHYIV1aZ9ZkhvW1qA2jXbpLQ=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>安特薩斯</span></a></div></td>
+	<td>110</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pcHcMIcpMe8')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCnVqIV0rJ2uZq0Dv1u_GOoQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/BtYuCIjoVM4Wlm2CkDiBR2nIFh-mkPRh5ESFiz8s5oU6arnaiuh60cks7xG4Nvvz_YV0WRRn=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>李墨娘</span></a></div></td>
+	<td>110</td>
+	<td></td>
+	<td><a href="/group/神霄.html">神霄</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC-xDOvvpUCSlyQ69eUfB8WQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/vn68QxTa25HRk1jkUguPdnE5Oo8Ry81or2dTGLYUrpkhVEjjJmL9sQsaDdFh2zOuCUp08CHxHkU=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>C妮Cinnie</span></a></div></td>
+	<td>109</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCCbXNuqvIx_YixxPGI1otPw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/7uPA1s4guMQc36QJxsvkzAr1X3HgKjkJ38H5omasSgqagkDOLZUpnPIEe8QG7iLMXvID7a6ylA=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>莎夏柯莫德</span></a></div></td>
+	<td>107</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'RYXuelFp1DM')" /></td>
+	<td><a href="/group/VPS製幻工作室.html">VPS製幻工作室</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCNmnDodoP9ikVTGXYS30pDg" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLTK1F6q-YQWs_-usU85AJcmWIxJjCjv6Ftzo3E0zA=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>wilita 薇麗塔</span></a></div></td>
+	<td>106</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'6zPpSJCxk0I')" /></td>
+	<td></td>
+	<td>US</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCxqbNEZBd0o9IQbWrJcW7mQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/pf5xweXBeMNyZHVwnQwhXZ6wd5APw1TrUMNzr_0RYHoPf3_eZkGm0w1Y8AErl5PopnOA4Hn_CQ=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>精靈飛飛</span></a></div></td>
+	<td>105</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'aHei1PLIELA')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCmiPokDObk6d4MGy_naHebQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/AQezELbuUGHfasRM7S0XlBZdY9cq9Q_hV5AZONc5cmYEmuSRMsi2IHNXb57-QrDgs53T0F9E0M8=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>巴娜Bana</span></a></div></td>
+	<td>105</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_7exhavB7V4')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCH7VmxsMYZt2AjRqTzwb6Ug" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/FoXvGzPgcGdPmfBD7m10uTx_Z6ZJ3lI0oVuLuL1OCgEzAklkDX61MArJn-W1HkSq-e1YDrF2Yg=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>久啾</span></a></div></td>
+	<td>105</td>
+	<td></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+
+	<div class="navigateButtons">
+		<input type="button" value="上一頁" onclick="RedirectToPrevPage(44)" />
+		<div><input type="number" id="numberBoxBottom" value="44" min="1"
+				max="51" />/51 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(44, 51)" />
+	</div>
+</body>
+
+<script>
+	const numberBox = document.getElementById("numberBox");
+	numberBox.addEventListener('change', (event) => {
+		RedirectIndexPageWithCheck(event.target.value, 51);
+	});
+
+	const numberBoxBottom = document.getElementById("numberBoxBottom");
+	numberBoxBottom.addEventListener('change', (event) => {
+		RedirectIndexPageWithCheck(event.target.value, 51);
+	});
+</script>
+
+<footer>
+	<div>Icons except GitHub logo made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+		from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>

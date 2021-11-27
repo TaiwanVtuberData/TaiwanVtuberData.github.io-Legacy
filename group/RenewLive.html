@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>臺灣 Vtuber 列表</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<script src="/script/commonScript.js"> </script>
+</head>
+
+<body>
+	<h1>臺灣 Vtuber 團體 RenewLive 成員列表(此網站仍在建置中)</h1>
+
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+<!-- hidden video modal -->
+<div id="videoModal" class="modal">
+    <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("videoModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeButton")[0];
+    var frame = document.getElementById("videoFrame");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            frame.src = "";
+        }
+    }
+</script>
+
+<div class="headerGrid">
+    <div class="gridItem"><a href="/all.html"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+    <div class="gridItem"><a href="/index.html"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/groupList.html"><img src="/icon/group.png">團體列表</a></div>
+    <div class="gridItem"><a href="/growthInPercentage.html"><img src="/icon/data-analytics.png">成長中 Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/trending.html"><img src="/icon/arrow-up.png">熱門 Vtuber 列表</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose"
+            target="_blank" rel="noopener noreferrer"><img src="/icon/question-mark-in-dark-circle.png">問題回報</a>
+    </div>
+    <div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank"
+            rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank"
+            rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+</div>
+
+<div class="evenlySpacedGrid">
+    <span>資料更新日期：2021/11/27 07:27:28</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+		<form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+        <span><input class="searchBox" id="searchField" type="text" value="" placeholder="DuckDuckGo 搜尋此網站..."></span>
+	</form>
+    </div>
+</div>
+
+	<table>
+		<tr>
+			<th>名稱</th>
+			<th>YouTube 頻道訂閱人數</th>
+			<th>近 30 日最高觀看影片</th>
+			<th>團體</th>
+			<th>國家</th>
+		</tr>
+		<colgroup>
+			<col span="1" style="width: 30%;">
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 20%;">
+			<col span="1" style="width: 15%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/OueuQiG16DQnXD_WKYWiol15-tqlZItmoyYjdR2_XzZOvp04IBb24D4yjpB72Dq7LZlbQt9ilQ=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>須多夜花</span></a></div></td>
+	<td>24300</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'NxXOaRxPJmY')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCv_W2ZpvfrLAzsHqtjWGKYw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLTRS97LxulMGph5xiwzKydcOrVMdtHb9WMA9j2U=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>海姬依莉亞</span></a></div></td>
+	<td>8010</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'sHvZB_LogtQ')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCdesGlD7t5JV-z28p5GqVIw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/_u-cT-3P77puRu6UpL5mqV7YqGvABFmTwdahPzx597tRpzDg0TPqnjx_b37MUss4qmnKUDiJtg=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>名雪薇薇</span></a></div></td>
+	<td>5420</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BeUW8wgYiHY')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCvUTCi2Ms1eP-bFnh0lfGHA" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/3OQxpVQ__Jcr0hOIPaHCsaUsXXkmoIx_p2DDzczYeXM52uFM3pIB3QaHXf6hyVD6XHExRYI24Q=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>夢寐愛姆</span></a></div></td>
+	<td>4820</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'AKjtSfBH-iw')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCd8HRfH8S2TUJ47qkmYR9Kg" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/FVeaOEU7xxpCBAQby8C9jZqUX1OXKLyb_yKzAxaPR8PzKVA40eYPF_ygltfGPqpxHFRHa3NDfZE=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>初春桃</span></a></div></td>
+	<td>3740</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'0jMsqLMOKxo')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UC5oghoJUIvFHnLZaz5k34rA" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/4qs2hZ2wJooK0J5Svo7p_nlEZ86PSxf127eMAuuCYO_w63h3byyKhtJbSEgZAGP__Z8ndFsY=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>牧乃柯寧</span></a></div></td>
+	<td>2780</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'lFoJRINhT48')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
+	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCcXo1Ch7aP-D6miwSWwWLVw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/g5tRxmY9HP7H59Fj4y4Tabh3Wlv_5A6jdU1mWIwSf-W0PAnqGRdjU8p05nnatKQqSu6ydHz0SA=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>RenewLive(官方頻道)</span></a></div></td>
+	<td>1700</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'JIPJZ_pXwHE')" /></td>
+	<td><a href="/group/RenewLive.html">RenewLive</a></td>
+	<td>TW</td>
+</tr>
+
+	</table>
+</body>
+
+<footer>
+	<div>Icons except GitHub logo made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+		from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>
