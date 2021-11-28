@@ -1,7 +1,7 @@
 ---
 name: 新人/未登錄 Vtuber 登載
 about: 回報未登錄 Vtuber 資料
-title: "[資料登載]"
+title: "[資料登載] 請輸入頻道名稱"
 labels: ''
 assignees: nh60211as
 
