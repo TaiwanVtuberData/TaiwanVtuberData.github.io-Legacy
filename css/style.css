@@ -46,8 +46,10 @@ input[type=number] {
     text-align: left;
     align-items: center;
     text-decoration: none;
-    margin: 2px;
-    padding: 15px;
+    margin: 1px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
     .gridItem a:hover {
@@ -115,6 +117,15 @@ footer {
     padding: auto;
     justify-content: space-around;
     align-items: center;
+}
+
+.calendar {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 table {
@@ -198,6 +209,21 @@ tr:nth-child(even) {
     width: 80%;
 }
 
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.modalContent iframe {
+    width: 75vw;
+    height: 42.1875vw; /* 100/56.25 = 1.778 */
+    max-height: 75vh;
+    max-width: 133.3333vh; /* 16/9 = 1.778 */
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0; /* vertical center */
+    left: 0;
+    right: 0; /* horizontal center */
+    background-color: transparent;
+}
+
 /* The Close Button */
 .closeButton {
     color: #000000;
@@ -213,23 +239,12 @@ tr:nth-child(even) {
         cursor: pointer;
     }
 
-/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
-iframe {
-    width: 75vw;
-    height: 42.1875vw; /* 100/56.25 = 1.778 */
-    max-height: 75vh;
-    max-width: 133.3333vh; /* 16/9 = 1.778 */
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0; /* vertical center */
-    left: 0;
-    right: 0; /* horizontal center */
-    background-color: transparent;
+.inactiveText {
+    color: Red;
 }
 
-.inactiveText {
-    color: red;
+.highlightText {
+    color: MediumBlue;
 }
 
 .displayNameButton span{
