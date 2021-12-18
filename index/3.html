@@ -59,7 +59,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新日期：2021/12/18 07:28:23</span>
+    <span>資料更新日期：2021/12/19 07:27:58</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -73,8 +73,8 @@
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(3)" />
 		<div><input type="number" id="numberBox" value="3" min="1"
-				max="53" />/53 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(3, 53)" />
+				max="54" />/54 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(3, 54)" />
 	</div>
 
 	<table>
@@ -144,7 +144,7 @@
 </tr>
 <tr>
 	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCO62chyehk6pX7OitrnJAUg" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/ytc/AKedOLQ7vcp9qrvt48RvdCiAa37uGWcBOaMahg9-_f6G=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>MK妹</span></a></div></td>
-	<td>11200</td>
+	<td>11300</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2LPyL9KPI4o')" /></td>
 	<td></td>
 	<td>HK</td>
@@ -158,14 +158,14 @@
 </tr>
 <tr>
 	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCmkHW5H3YzSqSdKVmfR2Deg" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/PfGrxN6rGCpfMvstl1vEk67Ik5u9G5221nbH_-eNuEXAF4cj9rjHQGBUhnBbGoKQ6LvAgeY-ug=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>蔡宜蓁</span></a></div></td>
-	<td>10900</td>
+	<td>11000</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'peMACR5-BiY')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCUxIkkVP4EIIPhF8M1KRBjw" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/rSyl3b1Da2bkPu4F_xijY8PHWIStgGVp1uzMgrlDWrYkBoCO4zBM2qagy7xdF2DjwIJilZpr2A=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>巴蘭利維坦</span></a></div></td>
-	<td>10700</td>
+	<td>10800</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'f3X95MXgFdE')" /></td>
 	<td><a href="/group/MLNAM.html">MLNAM</a></td>
 	<td>TW</td>
@@ -200,7 +200,7 @@
 </tr>
 <tr>
 	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCH9Yw2PyGW0AtGltOuVcq_A" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/DOcxJBWNkTJQ4Vajdq0O-D5ExtpYYsQ6Lzel2MlPDljDwCqiq5v0YJ4NRrnhssy5CHKfFwzP=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>鴨鴨伊比</span></a></div></td>
-	<td>9020</td>
+	<td>9030</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'JbWo9Gx5lwI')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
 	<td><div class="displayNameButton"><a href="https://www.youtube.com/channel/UCIR0USMXU0r7N8spBJHNA7A" target="_blank" rel="noopener noreferrer"><img src="https://yt3.ggpht.com/x-w40GaBGp3QYTScUK0Vzuez3pkYe2UaWN1Cy1uvfU4nJC3oTWbeQWSBApL9AmVRUEUIC-KHCA=s88-c-k-c0x00ffffff-no-rj" width="88" height="88"><span>瀰婭</span></a></div></td>
-	<td>8390 (198 Twitch 追隨人數)</td>
+	<td>8400 (198 Twitch 追隨人數)</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'s-h369bS_gg')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -239,20 +239,20 @@
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(3)" />
 		<div><input type="number" id="numberBoxBottom" value="3" min="1"
-				max="53" />/53 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(3, 53)" />
+				max="54" />/54 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(3, 54)" />
 	</div>
 </body>
 
 <script>
 	const numberBox = document.getElementById("numberBox");
 	numberBox.addEventListener('change', (event) => {
-		RedirectIndexPageWithCheck(event.target.value, 53);
+		RedirectIndexPageWithCheck(event.target.value, 54);
 	});
 
 	const numberBoxBottom = document.getElementById("numberBoxBottom");
 	numberBoxBottom.addEventListener('change', (event) => {
-		RedirectIndexPageWithCheck(event.target.value, 53);
+		RedirectIndexPageWithCheck(event.target.value, 54);
 	});
 </script>
 
