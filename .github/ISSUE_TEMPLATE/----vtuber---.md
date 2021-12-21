@@ -3,7 +3,7 @@ name: 未登錄 Vtuber 登載
 about: 未收錄的 Vtuber 資料登載
 title: "[未收錄登載] 請輸入頻道名稱"
 labels: ''
-assignees: ''
+assignees: nh60211as
 
 ---
 
