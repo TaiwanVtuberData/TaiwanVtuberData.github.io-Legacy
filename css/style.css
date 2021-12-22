@@ -247,11 +247,34 @@ tr:nth-child(even) {
     color: MediumBlue;
 }
 
-.displayNameButton img{
-    width: 88;
-    height: 88;
+.displayNameButton{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
+    align-items: center;
+}
+
+.displayNameButton .profileImg{
+    width: 88px;
+    height: 88px;
 }
 
 .displayNameButton span{
     margin-left: 5px;
+}
+
+.verticalLink{
+    display: flex;
+    margin: auto;
+    padding: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.verticalLink .YouTubeImg{
+    content:url(/icon/youtube_social_squircle_dark.png);
+}
+
+.verticalLink .TwitchImg{
+    content:url(/icon/TwitchGlitchBlackOps.png);
 }
