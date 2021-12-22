@@ -56,7 +56,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新日期：2021/12/22 07:28:17</span>
+    <span>資料更新日期：2021/12/23 07:28:23</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -71,8 +71,8 @@
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(53)" />
 		<div><input type="number" id="numberBox" value="53" min="1"
-				max="55" />/55 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(53, 55)" />
+				max="56" />/56 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(53, 56)" />
 	</div>
 
 	<table>
@@ -92,15 +92,22 @@
 		</colgroup>
 
 		<tr>
+	<td><div class="displayNameButton"><img class="profileImg" src="https://yt3.ggpht.com/BiDMtDiMnci3Ec-aUWK1q0fa7xOKCaJFp625uS401a-FQ8V6O-8sgvJBfEH8JMM0HMQlyW70Iw=s88-c-k-c0x00ffffff-no-rj"><span>方小紅</span><div class="verticalLink"><a href="https://www.youtube.com/channel/UCcvpYGIu0JaWvnlpakMSw8A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>未顯示訂閱人數</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'N63dzV2av_8')" /></td>
+	<td></td>
+	<td>TW</td>
+</tr>
+<tr>
 	<td><div class="displayNameButton"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="verticalLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>10757 Twitch 追隨人數</td>
+	<td>10781 Twitch 追隨人數</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1234004275')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayNameButton"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/ff0a55dc-31bb-4615-8d93-79116c1187be-profile_image-300x300.png"><span>Naya</span><div class="verticalLink"><a href="https://www.twitch.tv/porknuckle_gaming" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>3251 Twitch 追隨人數</td>
+	<td>3252 Twitch 追隨人數</td>
 	<td></td>
 	<td></td>
 	<td>TW</td>
@@ -114,7 +121,7 @@
 </tr>
 <tr>
 	<td><div class="displayNameButton"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/da64d3dc-6af7-4837-b648-847f81ff16e1-profile_image-300x300.png"><span>嘟嘟DoDo</span><div class="verticalLink"><a href="https://www.twitch.tv/s24794797" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>497 Twitch 追隨人數</td>
+	<td>500 Twitch 追隨人數</td>
 	<td></td>
 	<td></td>
 	<td>TW</td>
@@ -224,33 +231,26 @@
 	<td><a href="/group/卡布奇諾.html" target="_self">卡布奇諾</a></td>
 	<td>TW</td>
 </tr>
-<tr>
-	<td><div class="displayNameButton"><img class="profileImg" src="https://yt3.ggpht.com/dVHJtgvr5FhELoBrCeJEI4CFusIEgZxMO15IraPTfy4CaWy5x6AgYCDTm_74q9_154M9lVJIcw=s88-c-k-c0x00ffffff-no-rj"><span>初雪秋奈</span><div class="verticalLink"><a href="https://www.youtube.com/channel/UC4HHhz_gdz3OkMnIl8xVv9w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td><span class="inactiveText">已停止活動</span></td>
-	<td></td>
-	<td><a href="/group/幻靈工作室.html" target="_self">幻靈工作室</a></td>
-	<td>TW</td>
-</tr>
 
 	</table>
 
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(53)" />
 		<div><input type="number" id="numberBoxBottom" value="53" min="1"
-				max="55" />/55 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(53, 55)" />
+				max="56" />/56 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(53, 56)" />
 	</div>
 </body>
 
 <script>
 	const numberBox = document.getElementById("numberBox");
 	numberBox.addEventListener('change', (event) => {
-		RedirectIndexPageWithCheck(event.target.value, 55);
+		RedirectIndexPageWithCheck(event.target.value, 56);
 	});
 
 	const numberBoxBottom = document.getElementById("numberBoxBottom");
 	numberBoxBottom.addEventListener('change', (event) => {
-		RedirectIndexPageWithCheck(event.target.value, 55);
+		RedirectIndexPageWithCheck(event.target.value, 56);
 	});
 </script>
 
