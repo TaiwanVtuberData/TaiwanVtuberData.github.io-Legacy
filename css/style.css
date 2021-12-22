@@ -245,6 +245,7 @@ tr:nth-child(even) {
 
 .highlightText {
     color: MediumBlue;
+    font-weight: 700;
 }
 
 .displayNameButton{
