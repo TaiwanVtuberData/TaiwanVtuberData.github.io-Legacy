@@ -247,6 +247,11 @@ tr:nth-child(even) {
     color: MediumBlue;
 }
 
+.displayNameButton img{
+    width: 88;
+    height: 88;
+}
+
 .displayNameButton span{
     margin-left: 5px;
 }
