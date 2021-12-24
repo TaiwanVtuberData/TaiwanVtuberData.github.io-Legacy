@@ -177,6 +177,24 @@ tr:nth-child(even) {
             background-color: #ffffff;
         }
 
+thead tr th {
+    position:sticky;
+    top:0;
+}
+
+th {
+    font-size: larger;
+    color: white;
+    background-color:#636363;
+}
+
+th:first-child{
+    font-size: larger;
+    z-index:2;
+    color: white;
+    background-color:#636363;
+}
+
 .verticalList {
     width: auto;
     padding: 5px;
