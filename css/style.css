@@ -3,6 +3,23 @@ h1 {
     text-align: center;
 }
 
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: right;
+    border-top: 2px solid #dddddd;
+}
+
+.inactiveText {
+    color: red;
+}
+
+.highlightText {
+    color: mediumblue;
+    font-weight: 700;
+}
+
 input[type=button] {
     padding: 5px;
     border: 3px solid #636363;
@@ -30,7 +47,7 @@ input[type=number] {
     }
 }
 
-@media screen and (min-width:10000px) {
+@media screen and (min-width:1000px) {
     .headerGrid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -52,17 +69,8 @@ input[type=number] {
     padding-bottom: 7px;
 }
 
-    .gridItem a:hover {
-        background-color: #cccccc;
-    }
-
-
-footer {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: right;
-    border-top: 2px solid #dddddd;
+.gridItem a:hover {
+    background-color: #cccccc;
 }
 
 .evenlySpacedGrid {
@@ -73,9 +81,8 @@ footer {
     align-items: center;
 }
 
-
 /* copied from here https://stackoverflow.com/a/14537979/11947017 */
-.searchItem{
+.searchItem {
     overflow:hidden;
 }
 
@@ -128,11 +135,17 @@ footer {
     margin-bottom: 10px;
 }
 
+/* table related elements */
 table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+thead tr th {
+    position:sticky;
+    top:0;
 }
 
 td,
@@ -141,6 +154,18 @@ th {
     text-align: left;
     padding: 6px;
     height: 20px;
+}
+
+th {
+    font-size: larger;
+    color: white;
+    background-color:#636363;
+}
+
+th:first-child {
+    font-size: larger;
+    color: white;
+    background-color:#636363;
 }
 
 tr:nth-child(odd) a {
@@ -154,45 +179,27 @@ tr:nth-child(odd) a {
     text-decoration: none;
 }
 
-    tr:nth-child(odd) a:hover {
-        background-color: #dddddd;
-    }
+tr:nth-child(odd) a:hover {
+    background-color: #dddddd;
+}
 
 tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-    tr:nth-child(even) a {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        color: #000000;
-        background-color: #dddddd;
-        text-align: left;
-        align-items: center;
-        text-decoration: none;
-    }
-
-        tr:nth-child(even) a:hover {
-            background-color: #ffffff;
-        }
-
-thead tr th {
-    position:sticky;
-    top:0;
+tr:nth-child(even) a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: black;
+    background-color: #dddddd;
+    text-align: left;
+    align-items: center;
+    text-decoration: none;
 }
 
-th {
-    font-size: larger;
-    color: white;
-    background-color:#636363;
-}
-
-th:first-child{
-    font-size: larger;
-    z-index:2;
-    color: white;
-    background-color:#636363;
+tr:nth-child(even) a:hover {
+    background-color: #ffffff;
 }
 
 .verticalList {
@@ -202,10 +209,10 @@ th:first-child{
     border-radius: 5px;
 }
 
-    .verticalList a {
-        display: block;
-        padding: 3px;
-    }
+.verticalList a {
+    display: block;
+    padding: 3px;
+}
 
 /* The Modal (background) */
 .modal {
@@ -250,39 +257,30 @@ th:first-child{
     font-weight: bold;
 }
 
-    .closeButton:hover,
-    .closeButton:focus {
-        color: #222222;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-.inactiveText {
-    color: Red;
+.closeButton:hover,
+.closeButton:focus {
+    color: #222222;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.highlightText {
-    color: MediumBlue;
-    font-weight: 700;
-}
-
-.displayNameButton{
+.displayName {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row: auto;
     align-items: center;
 }
 
-.displayNameButton .profileImg{
+.displayName .profileImg {
     width: 88px;
     height: 88px;
 }
 
-.displayNameButton span{
+.displayName span {
     margin-left: 5px;
 }
 
-.verticalLink{
+.channelLink {
     display: flex;
     margin: auto;
     padding: auto;
@@ -290,10 +288,10 @@ th:first-child{
     align-items: center;
 }
 
-.verticalLink .YouTubeImg{
+.channelLink .YouTubeImg {
     content:url(/icon/youtube_social_circle_dark.png);
 }
 
-.verticalLink .TwitchImg{
+.channelLink .TwitchImg {
     content:url(/icon/TwitchGlitchBlackOps.png);
 }
