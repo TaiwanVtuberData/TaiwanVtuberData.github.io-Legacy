@@ -272,13 +272,13 @@ tr:nth-child(even) a:hover {
 }
 
 .displayName .profileImg {
-    width: min(88px, 100%);
-    padding-bottom: 0%;
+    width: 88px;
+    height: 88px;
 }
 
 .displayName span {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
     width: 100%;
     text-align: left;
 }
@@ -295,25 +295,21 @@ tr:nth-child(even) a:hover {
 
 .channelLink .YouTubeImg {
     content:url(/icon/youtube_social_circle_dark.png);
-    width: min(48px, 100%);
-    padding-bottom: 0%;
+    width: 48px;
+    height: 48px;
 }
 
 .channelLink .TwitchImg {
     content:url(/icon/TwitchGlitchBlackOps.png);
-    width: min(48px, 100%);
-    padding-bottom: 0%;
+    width: 48px;
+    height: 48px;
 }
 
 @media screen and (max-width:700px) {
     .displayName {
         display: grid;
         grid-template-columns: 1fr;
-    }
-
-    .displayName .profileImg {
-        width: min(88px, 100%);
-        padding-bottom: 0%;
+        align-content: center;
     }
 
     .displayName span {
@@ -331,13 +327,13 @@ tr:nth-child(even) a:hover {
 
     .channelLink .YouTubeImg {
         content:url(/icon/youtube_social_circle_dark.png);
-        width: min(40px, 100%);
-        padding-bottom: 0%;
+        width: 40px;
+        height: 40px;
     }
     
     .channelLink .TwitchImg {
         content:url(/icon/TwitchGlitchBlackOps.png);
-        width: min(40px, 100%);
-        padding-bottom: 0%;
+        width: 40px;
+        height: 40px;
     }
 }
