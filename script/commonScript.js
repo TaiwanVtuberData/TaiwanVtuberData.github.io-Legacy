@@ -72,3 +72,22 @@ function DuckDuckGoSearch() {
         window.location.href = "https://duckduckgo.com/?q=site:taiwanvtuberdata.github.io " + searchField.value;
     }
 }
+
+// copied from https://www.w3schools.com/howto/howto_js_filter_table.asp
+function SearchDisplayName(displayNameIndex) {
+  const filter = document.getElementById("displayNameSearchBox").value.toUpperCase();
+  const tr = document.getElementById("mainTable").getElementsByTagName("tr");
+
+  for (var i = 0; i < tr.length; i++) {
+    const td = tr[i].getElementsByTagName("td")[displayNameIndex];
+    if (td) {
+      var txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+
+}
