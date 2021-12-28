@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<base target="_blank">
-	<link rel="stylesheet" type="text/css" href="/css/style.css?v=6">
-	<script src="/script/commonScript.js"> </script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css?v=7">
+	<script src="/script/commonScript.js?v=1"> </script>
 	<title>臺灣 Vtuber 列表</title>
 </head>
 
@@ -56,7 +56,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2021/12/28 05:38:38<br>網頁產生時間：2021/12/28 05:50:07</span>
+    <span>資料更新時間：2021/12/28 05:38:38<br>網頁產生時間：2021/12/28 12:47:19</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -75,10 +75,10 @@
 		<input type="button" value="下一頁" onclick="RedirectToNextPage(51, 57)" />
 	</div>
 
-	<table>
+	<table id="mainTable">
 		<thead>
 			<tr>
-				<th>名稱</th>
+				<th>名稱<br><input type="text" id="displayNameSearchBox" onkeyup="SearchDisplayName(0)" placeholder="搜尋..."></th>
 				<th>YouTube 訂閱人數</th>
 				<th>近 30 日最高觀看影片</th>
 				<th>團體</th>
