@@ -299,6 +299,8 @@ tr:nth-child(even) a:hover {
 .displayName .profileImg {
     width: 88px;
     height: 88px;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
 .displayName span {
@@ -343,7 +345,6 @@ tr:nth-child(even) a:hover {
     .displayName .profileImg {
         display: flex;
         margin: auto;
-        width: 88px;
         justify-content: space-evenly;
         align-items: center;
         align-content: space-around;
