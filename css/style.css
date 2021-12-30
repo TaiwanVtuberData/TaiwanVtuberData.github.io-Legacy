@@ -3,6 +3,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: large;
+    text-align: center;
+}
+
 footer {
     display: flex;
     width: 100%;
