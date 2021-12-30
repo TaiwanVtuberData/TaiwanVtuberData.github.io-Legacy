@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
+	<link rel="stylesheet" type="text/css" href="/css/style.css?v=8">
+	<script src="/script/commonScript.js?v=1"> </script>
+	<title>臺灣 Vtuber 列表</title>
+</head>
+
+<body>
+	<h1>關於本站</h1>
+
+	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
+<!-- hidden video modal -->
+<div id="videoModal" class="modal">
+    <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("videoModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeButton")[0];
+    var frame = document.getElementById("videoFrame");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            frame.src = "";
+        }
+    }
+</script>
+
+<div class="headerGrid">
+    <div class="gridItem"><a href="/event.html" target="_self"><img src="/icon/calendar.png">重大活動月曆</a></div>
+    <div class="gridItem"><a href="/all.html" target="_self"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+    <div class="gridItem"><a href="/index.html" target="_self"><img src="/icon/user-portrait.png">Vtuber 列表</a></div>
+    <div class="gridItem"><a href="/groupList.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
+    <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
+    <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
+    <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues/new/choose" target="_blank" rel="noopener noreferrer"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
+    <div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank" rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank" rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+    <div class="gridItem"><a href="/about.html" target="_self"><img src="/icon/question-mark-in-dark-circle.png">關於本站</a></div>
+</div>
+
+<div class="evenlySpacedGrid">
+    <span>資料更新時間：2021/12/30 17:39:22<br>網頁產生時間：2021/12/30 23:56:09</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+        <form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+            <span><input class="searchBox" id="searchField" type="text" value=""
+                    placeholder="DuckDuckGo 搜尋此網站..."></span>
+        </form>
+    </div>
+</div>
+
+	<h1>About The Site</h1>
+    <h2>Terms Of Service</h2>
+    <p>Last Updated: 2021/12/30</p>
+    <p>臺灣 Vtuber 列表 ("The site") uses <a href="https://developers.google.com/youtube" text-decoration="none" target="_blank" rel="noopener noreferrer">YouTube API Services</a> to keep recorded VTuber YouTube channels data up-to-date.<br>
+        The data collected are as followed:</p>
+    <ol>
+        <li>Channel subscribers count</li>
+        <li>Channel subscribers count difference in last 7 days / 30 days</li>
+        <li>Channel median video view count in last 30 days</li>
+        <li>Channel highest viewed video in last 30 days</li>
+    </ol>
+    <p>Refer to YouTube's Terms of Service: <a href="https://www.youtube.com/t/terms" text-decoration="none" target="_blank" rel="noopener noreferrer">https://www.youtube.com/t/terms</a></p>
+
+    <p>The site uses <a href="https://dev.twitch.tv/docs/api/" text-decoration="none" target="_blank" rel="noopener noreferrer">Twitch API</a> to keep recorded VTuber Twitch channels data up-to-date.<br>
+        The data collected are as followed:</p>
+    <ol>
+        <li>Channel followers count</li>
+        <li>Channel median past broadcast view count in last 30 days</li>
+        <li>Channel highest viewed past broadcast in last 30 days</li>
+    </ol>
+
+    <h2>Privacy Policy</h2>
+    <p>Last Updated: 2021/12/30</p>
+    <ol>
+        <li>The site does not ask for or collect user's personal data.<br>However, it could not guarantee that the site's web hosting provider(GitHub) does not collect user's personal data.</li>
+        <li>The site does not use cookies or similar technology to track user's usage record.<br>However, it could not guarantee that the embedded Google Calendar, YouTube videos, or Twitch videos do not track user's usage record.<br>Refer to Google Privacy Policy: <a href="http://www.google.com/policies/privacy" text-decoration="none" target="_blank" rel="noopener noreferrer">http://www.google.com/policies/privacy</a></li>
+        <li>The site uses external search engine <a href="https://duckduckgo.com/" text-decoration="none" target="_blank" rel="noopener noreferrer">DuckDuckGo</a> to provide the functionality of searching Vtuber and Vtuber group on this site.<br>The site will only send necessary content(your search query) to the serach engine when searching.</li>
+        <li>The site could not guarantee that the external sites it linked to do not collect user's personal data.</li>
+    </ol>
+
+    <br>
+    <h1>關於本站</h1>
+    <h2>使用條款</h2>
+    <p>更新日期：2021/12/30</p>
+    <p>臺灣 Vtuber 列表 (下稱本站) 使用 <a href="https://developers.google.com/youtube" text-decoration="none" target="_blank" rel="noopener noreferrer">YouTube API 服務</a> 定期更新收錄之 VTuber YouTube 頻道資料。<br>
+        每次更新收集之資料如下：</p>
+    <ol>
+        <li>頻道訂閱者人數</li>
+        <li>近 7 日 / 30 日頻道訂閱者人數變化</li>
+        <li>頻道近 30 日影片觀看中位數</li>
+        <li>頻道近 30 日最高觀看影片</li>
+    </ol>
+    <p>關於 YouTube 服務條款請見連結：<a href="https://www.youtube.com/t/terms" text-decoration="none" target="_blank" rel="noopener noreferrer">https://www.youtube.com/t/terms</a></p>
+
+    <p>本站使用 <a href="https://dev.twitch.tv/docs/api/" text-decoration="none" target="_blank" rel="noopener noreferrer">Twitch API</a> 定期更新收錄之 VTuber Twitch 頻道資料。<br>
+        每次更新收集之資料如下：</p>
+    <ol>
+        <li>頻道追隨者人數</li>
+        <li>頻道近 30 日過去實況觀看中位數</li>
+        <li>頻道近 30 日最高觀看過去實況</li>
+    </ol>
+
+    <h2>隱私權政策</h2>
+    <p>更新日期：2021/12/30</p>
+    <ol>
+        <li>本站不會主動要求或是收集使用者個人資料，但是無法保證網站服務提供者 (GitHub) 不會蒐集使用者個人資料。</li>
+        <li>本站不使用 Cookie 或是其他追蹤技術追蹤使用者使用記錄，但是無法保證所提供之內嵌 Google 日曆、YouTube 影片、或 Twitch 影片不會追蹤使用者資料。<br>關於 Google 隱私權政策請見連結：<a href="http://www.google.com/policies/privacy" text-decoration="none" target="_blank" rel="noopener noreferrer">http://www.google.com/policies/privacy</a></li>
+        <li>本站使用外部搜尋引擎 <a href="https://duckduckgo.com/" text-decoration="none" target="_blank" rel="noopener noreferrer">DuckDuckGo</a> 提供搜尋本網站之 Vtuber、Vtuber 團體名稱之功能，本站只會傳送搜尋本站內容必要之資訊(您的搜尋請求)供此搜尋引擎進行搜尋。</li>
+        <li>本站無法保證所提供之其他網站連結不會蒐集使用者資料。</li>
+    </ol>
+
+</body>
+
+<footer>
+	<div>Icons except GitHub, YouTube, and Twitch logos made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>
