@@ -3,7 +3,7 @@ name: 即將畢業 Vtuber 登載
 about: 即將畢業/已畢業的 Vtuber 資料登載
 title: "[畢業登載] 請輸入頻道名稱"
 labels: ''
-assignees: nh60211as
+assignees: ''
 
 ---
 
