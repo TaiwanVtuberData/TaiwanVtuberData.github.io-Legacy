@@ -89,5 +89,12 @@ function SearchDisplayName(displayNameIndex) {
       }
     }       
   }
+}
 
+// https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+function SearchDisplayNameWithDelay(displayNameIndex) {
+    let SearchDelay = null;
+    if (SearchDelay != null) clearTimeout(SearchDelay);
+
+    SearchDelay = setTimeout(SearchDisplayName(displayNameIndex), 500);
 }
