@@ -74,27 +74,48 @@ function DuckDuckGoSearch() {
 }
 
 // copied from https://www.w3schools.com/howto/howto_js_filter_table.asp
-function SearchDisplayName(displayNameIndex) {
-  const filter = document.getElementById("displayNameSearchBox").value.toUpperCase();
-  const tr = document.getElementById("mainTable").getElementsByTagName("tr");
+// arrayIdIndexPair should be an array. Each element in said array shall contain two elements.
+// First is id of <th> column, second is index of column.
+// Example: [['displayNameSearchBoxNameByChannel',0], ['displayNameSearchBoxNameByGroup', 3]]
+function SearchMainTable(arrayIdIndexPair) {
 
-  for (var i = 0; i < tr.length; i++) {
-    const td = tr[i].getElementsByTagName("td")[displayNameIndex];
-    if (td) {
-      var txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
+    const tr = document.getElementById("mainTable").getElementsByTagName("tr");
+
+    const arrayFilter = [];
+    for(var i = 0; i < arrayIdIndexPair.length; i++) {
+        arrayFilter.push(document.getElementById(arrayIdIndexPair[i][0]).value.toUpperCase());
+    }
+    
+    for (var i = 0; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName("td");
+        
+        var isDisplay = true;
+        for (var j = 0; j < arrayFilter.length; j++) {
+            if(arrayFilter[j]=="") {
+                continue;
+            }
+            
+            const tdIdx = td[arrayIdIndexPair[j][1]];
+            if (tdIdx) {
+                var txtValue = tdIdx.textContent || tdIdx.innerText;
+                if (txtValue.toUpperCase().indexOf(arrayFilter[j]) <= -1) {
+                    isDisplay = false;
+                }
+            }
+        }
+        
+        if (isDisplay) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
-function SearchDisplayNameWithDelay(displayNameIndex) {
+function SearchMainTableWithDelay(arrayIdIndexPair) {
     let SearchDelay = null;
     if (SearchDelay != null) clearTimeout(SearchDelay);
 
-    SearchDelay = setTimeout(SearchDisplayName(displayNameIndex), 500);
+    SearchDelay = setTimeout(SearchMainTable(arrayIdIndexPair), 500);
 }
