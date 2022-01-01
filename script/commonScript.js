@@ -85,8 +85,13 @@ function SearchMainTable(arrayIdIndexPair) {
     for(var i = 0; i < arrayIdIndexPair.length; i++) {
         arrayFilter.push(document.getElementById(arrayIdIndexPair[i][0]).value.toUpperCase());
     }
-    
-    for (var i = 0; i < tr.length; i++) {
+
+    for (var i = 1; i < tr.length; i++) {
+        // Hide the row initially
+        tr[i].style.display = "none";
+    }
+
+    for (var i = 1; i < tr.length; i++) {
         const td = tr[i].getElementsByTagName("td");
         
         var isDisplay = true;
