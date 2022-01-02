@@ -103,7 +103,10 @@ function SearchMainTable(arrayIdIndexPair) {
             const tdIdx = td[arrayIdIndexPair[j][1]];
             if (tdIdx) {
                 var txtValue = tdIdx.textContent || tdIdx.innerText;
-                if (txtValue.toUpperCase().indexOf(arrayFilter[j]) <= -1) {
+                if (txtValue.length < 1) {
+                    isDisplay = false;
+                }
+                else if (txtValue.toUpperCase().indexOf(arrayFilter[j]) <= -1) {
                     isDisplay = false;
                 }
             }
