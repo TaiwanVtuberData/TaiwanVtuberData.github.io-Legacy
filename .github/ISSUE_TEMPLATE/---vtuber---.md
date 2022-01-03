@@ -3,7 +3,7 @@ name: 新人 Vtuber 登載
 about: 近期出道的 Vtuber 資料登載
 title: "[新人登載] 請輸入頻道名稱"
 labels: ''
-assignees: ''
+assignees: nh60211as
 
 ---
 
