@@ -57,7 +57,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2022/01/03 17:42:09<br>網頁產生時間：2022/01/03 19:25:38</span>
+    <span>資料更新時間：2022/01/04 05:38:41<br>網頁產生時間：2022/01/04 05:50:07</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -72,8 +72,8 @@
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(8)" />
 		<div><input type="number" id="numberBox" value="8" min="1"
-				max="59" />/59 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(8, 59)" />
+				max="60" />/60 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(8, 60)" />
 	</div>
 
 	<table id="mainTable">
@@ -96,13 +96,6 @@
 		</colgroup>
 
 		<tr>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/unQC9eA9obpV4G_--gyXNMX2riIAH1mOp3SAHIQ3UAvCDbdswJ6J1_KfDeBNXhJk0tvo30xt=s88-c-k-c0x00ffffff-no-rj"><span>薇妮</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCrycDv1sYVGH5GK8XBTXABg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>3270</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'F7McODIU4-I')" /></td>
-	<td><a href="/group/ReLive Project.html" target="_self">ReLive Project</a></td>
-	<td>TW</td>
-</tr>
-<tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLRg53gQpPGTc7uR8ASXRJY8JR6rdubOTyyaV0nn=s88-c-k-c0x00ffffff-no-rj"><span>尤里‧佛瑞斯特</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCcLBxo0HmwMDKhzXnNUmiIQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
 	<td>3240</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'hJTkOy1UVh0')" /></td>
@@ -111,7 +104,7 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/QG2jsVHjyhUbycX4FiwmfYkjIG7NOiUnhE9Mg-w0ZaAgNaC4l9rTIUDHIWlJdpKcZ2iaoTT4-Q=s88-c-k-c0x00ffffff-no-rj"><span>烏庫魯尼魯</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCrIz9TA-2HUzvNHB5z8nOhg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>3190</td>
+	<td>3210</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WPMjMqTh9q8')" /></td>
 	<td><a href="/group/Twodot.html" target="_self">Twodot</a></td>
 	<td>TW</td>
@@ -235,26 +228,33 @@
 	<td><a href="/group/MOMOMO團.html" target="_self">MOMOMO團</a></td>
 	<td>TW</td>
 </tr>
+<tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQOH_50kGmxZv_nVhrqqI7pZ_AtkWmf96eS6j_mmA=s88-c-k-c0x00ffffff-no-rj"><span>水屋砂糖</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCgoD_Nc6f58_32QEGAaz77g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>2790</td>
+	<td></td>
+	<td></td>
+	<td>HK</td>
+</tr>
 
 	</table>
 
 	<div class="navigateButtons">
 		<input type="button" value="上一頁" onclick="RedirectToPrevPage(8)" />
 		<div><input type="number" id="numberBoxBottom" value="8" min="1"
-				max="59" />/59 頁</div>
-		<input type="button" value="下一頁" onclick="RedirectToNextPage(8, 59)" />
+				max="60" />/60 頁</div>
+		<input type="button" value="下一頁" onclick="RedirectToNextPage(8, 60)" />
 	</div>
 </body>
 
 <script>
 	const numberBox = document.getElementById("numberBox");
 	numberBox.addEventListener('change', (event) => {
-		RedirectIndexPageWithCheck(event.target.value, 59);
+		RedirectIndexPageWithCheck(event.target.value, 60);
 	});
 
 	const numberBoxBottom = document.getElementById("numberBoxBottom");
 	numberBoxBottom.addEventListener('change', (event) => {
-		RedirectIndexPageWithCheck(event.target.value, 59);
+		RedirectIndexPageWithCheck(event.target.value, 60);
 	});
 </script>
 
