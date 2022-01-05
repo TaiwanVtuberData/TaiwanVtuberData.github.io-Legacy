@@ -11,7 +11,7 @@ assignees: nh60211as
 請注意：登載請求會公開顯示在 https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues
 -->
 
-**新人 Vtuber 資料**
+**畢業 Vtuber 資料**
 <!--
 沒有或是不確定請留空
 -->
