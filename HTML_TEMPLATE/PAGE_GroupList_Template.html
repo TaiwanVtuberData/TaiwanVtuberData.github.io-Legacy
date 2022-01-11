@@ -8,10 +8,19 @@
 
 	###CommonHeader
 
+	<span>排序方式：</span>
+	<select onchange="OnDropDownChangeEvent(this)">
+		<option value="/groupList/popularity" ###PopularitySelected>熱度</option>
+		<option value="/groupList/name" ###NameSelected>名稱</option>
+		<option value="/groupList/averageSubscriber" ###AverageSubscriberSelected>平均訂閱數</option>
+		<option value="/groupList/totalSubscriber" ###TotalSubscriberSelected>總訂閱數</option>
+	</select>
+
 	<table id="mainTable">
 		<thead>
 			<tr>
-				<th>團體名稱<br><input type="text" id="displayNameSearchBox" onkeyup="SearchMainTable([['displayNameSearchBox',0]])" placeholder="搜尋..."></th>
+				<th>團體名稱<br><input type="text" id="displayNameSearchBox"
+						onkeyup="SearchMainTable([['displayNameSearchBox',0]])" placeholder="搜尋..."></th>
 				<th>近 30 日最高觀看影片</th>
 				<th>成員人數</th>
 				<th>成員</th>

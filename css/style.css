@@ -47,6 +47,12 @@ th input[type=text] {
     width: 100px;
 }
 
+select {
+    padding: 5px;
+    border: 3px solid #636363;
+    border-radius: 5px;
+}
+
 .headerGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

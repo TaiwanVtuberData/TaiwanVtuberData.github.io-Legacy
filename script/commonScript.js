@@ -127,3 +127,8 @@ function SearchMainTableWithDelay(arrayIdIndexPair) {
 
     SearchDelay = setTimeout(SearchMainTable(arrayIdIndexPair), 500);
 }
+
+function OnDropDownChangeEvent(dropDownElement) {
+    var selectedValue = dropDownElement.options[dropDownElement.selectedIndex].value;
+    window.location.href = selectedValue + ".html";
+}
