@@ -1,33 +1,3 @@
-function CloseThisTab() {
-	window.close();
-}
-
-function RedirectIndexPageWithCheck(newPage, maxPageNumber) {
-	if (1 <= newPage && newPage <= maxPageNumber) {
-    window.location.href = "/index/" + newPage + ".html";
-	}
-}
-
-function RedirectIndexPage(newPage) {
-    window.location.href = "/index/" + newPage + ".html";
-}
-
-function RedirectToPrevPage(thisPageIndex) {
-    var newPage = Math.max(1, thisPageIndex - 1);
-
-    if (newPage !== thisPageIndex) {
-        RedirectIndexPage(newPage);
-    }
-}
-
-function RedirectToNextPage(thisPageIndex, maxPageNumber) {
-    var newPage = Math.min(maxPageNumber, thisPageIndex + 1);
-
-    if (newPage !== thisPageIndex) {
-        RedirectIndexPage(newPage);
-    }
-}
-
 const Site = {
     YouTube: 1,
     Twitch: 2
