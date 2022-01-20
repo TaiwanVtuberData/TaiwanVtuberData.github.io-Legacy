@@ -13,9 +13,7 @@
 <body>
 	<h1>近期出道臺灣 Vtuber(此網站仍在建置中)</h1>
 
-	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
-<!-- hidden video modal -->
-<div id="videoModal" class="modal">
+	<div id="videoModal" class="modal">
     <div class="modalContent">
         <span class="closeButton">&times;</span>
         <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
@@ -24,15 +22,12 @@
 
 <script>
     var modal = document.getElementById("videoModal");
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("closeButton")[0];
     var frame = document.getElementById("videoFrame");
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         frame.src = "";
     }
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -48,6 +43,7 @@
     <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
     <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
     <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
     <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
     <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
     <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
@@ -57,7 +53,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2022/01/20 17:37:02<br>網頁產生時間：2022/01/20 17:55:08</span>
+    <span>資料更新時間：2022/01/21 05:35:42<br>網頁產生時間：2022/01/21 07:09:31</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -93,6 +89,14 @@
 		</colgroup>
 
 		<tr>
+	<td>2022/02/15</td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/nmgnTloORn6aHa2HKLcFNcI9vXLv9h8Urtvvw2O6LDrO32_kTEfiNaR1UhDK2YNSdpxOM9hjxA=s88-c-k-c0x00ffffff-no-rj"><span>藥師寺丹</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC3nnLh4kPjNTTyBdImaPBXg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>80</td>
+	<td></td>
+	<td><a href="/group/UMiLive.html" target="_self">UMiLive</a></td>
+	<td>TW</td>
+</tr>
+<tr>
 	<td>2022/02/14</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/tz1djhFw65S4Hwkm2XIvXes-IfS1XZk2-RMAWilJPEVupeDfQ9Rr5ijbfFkmMtT2fTadbBBG1Q=s88-c-k-c0x00ffffff-no-rj"><span>柚月</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCt4mxuTjnMNpPeYwb461G2g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
 	<td>1110</td>
@@ -103,7 +107,7 @@
 <tr>
 	<td>2022/02/14</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/GuRRlCOkIJGWdCke8-GfF2Q95zTFcelshRUxLFwetTL_SziAn_Hbpni-4jdnHw_J4HCiftTPeg=s88-c-k-c0x00ffffff-no-rj"><span>希蘿亞</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCu6ElyxgXHVRH3uXyswhoSg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>109</td>
+	<td>118</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'umCXc6nhL9c')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -111,7 +115,7 @@
 <tr>
 	<td>2022/02/14</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NjAUT1RDZd_1VcRHmj-2wWrBFBbeWJZXTViWCTYXpvjBGuB8d1r-uydpCVa6YXKGnKuItoOqfA=s88-c-k-c0x00ffffff-no-rj"><span>莓果花夕</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCPbEIlgqBQCWyZKrWrQwtUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>130</td>
+	<td>127</td>
 	<td></td>
 	<td></td>
 	<td>TW</td>
@@ -119,7 +123,7 @@
 <tr>
 	<td>2022/02/08</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/03CY33i3kxKgQVpDvf_JdW6asFxHqgI0rbqdtUp3MzY0CRJ_Ou68Enmkyl75G9zLvzxfUtxgcA=s88-c-k-c0x00ffffff-no-rj"><span>可洛莉</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC0LNztG1Nh3q7KEoxgY5-7w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>221</td>
+	<td>235</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'owST_3E7Kk8')" /></td>
 	<td><a href="/group/UMiLive.html" target="_self">UMiLive</a></td>
 	<td>TW</td>
@@ -143,7 +147,7 @@
 <tr>
 	<td>2022/01/30</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/Pg3w2SPSWT8aR7krc9UPwDW9gu2wK2Y-DZZYSIG7w2DWBEuDG7_BgTGjlOuxUSFUvtAwtkDx2g=s88-c-k-c0x00ffffff-no-rj"><span>雪霜凍凍</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQ7mfvrBdILyKtFAERcbXzg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>31</td>
+	<td>33</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pAC7lHvUtSo')" /></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>TW</td>
@@ -151,7 +155,7 @@
 <tr>
 	<td>2022/01/25</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/rV4LYaVRe_cI2NZae5FEotcxQuptFN-35BHz5LBcUYAxuzuGJ4Uart724ixAXULmJsdsuVO4Zw=s88-c-k-c0x00ffffff-no-rj"><span>千秋</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCuy3D3c1QX8pykmFoE_aLfg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>117</td>
+	<td>118</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xfZGjdFV4y0')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -167,7 +171,7 @@
 <tr>
 	<td>2022/01/23</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NrcwBVEuLCW7J6rqTGtIY8Q3MU0FuB3gihNUzzQU7LlydEJs81cpeQPbfdBjKnJdC7ZUIhf2vi8=s88-c-k-c0x00ffffff-no-rj"><span>皮瑞瑟</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC39GAIsMLb63Ru7UPcaDYMw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>161</td>
+	<td>165</td>
 	<td></td>
 	<td></td>
 	<td>TW</td>
@@ -175,7 +179,7 @@
 <tr>
 	<td>2022/01/23</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/qmKekzUHfRlUJRnPr-cRHZbdpCP4zAKqayNskQeo1-gh-wEZpyM3coGQsU1QcLL61u1EaEjk5w=s88-c-k-c0x00ffffff-no-rj"><span>黏依</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCialw5_BwJ407BzGg42ArbQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>163</td>
+	<td>166</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'hPspDFMHqqY')" /></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>TW</td>
@@ -191,8 +195,8 @@
 <tr>
 	<td>2022/01/22</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/-uEphYU9QqUpSYuCq8TsKLw2igdKgSMId7gOrMQGhT1YRoVNF7npgo1wAEIKJOQBZLpnYUumXg=s88-c-k-c0x00ffffff-no-rj"><span>海克莉絲 HercuLes</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCNq94QHAnn-zCxXQYpvPk7A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>708</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'23PD0pS9viU')" /></td>
+	<td>712</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'NfIUcBn4eFE')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
@@ -205,41 +209,41 @@
 	<td>TW</td>
 </tr>
 <tr>
-	<td>2022/01/21</td>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/FUjCKVc6nunnTKVxgKqZUDGc10UWO8uYdPSvKCt4axHOjdirWTHwWqGSTM5pnlouFSryIWp2=s88-c-k-c0x00ffffff-no-rj"><span>嘟比</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxAxBPUKQZzDGeI9xNSex7g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>365</td>
+	<td><span class="highlightText">2022/01/21</span></td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ZJLspFELSRi9wL9dsN7QUvdDGbyb-RlyaB5xaISvXk3Q1kVAQ_IzajGyTH-zByoUWSVxHZjiaBQ=s88-c-k-c0x00ffffff-no-rj"><span class="highlightText">嘟比</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxAxBPUKQZzDGeI9xNSex7g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>465</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CqTgGvcl914')" /></td>
 	<td><a href="/group/夢想之都工作室.html" target="_self">夢想之都工作室</a></td>
 	<td>TW</td>
 </tr>
 <tr>
-	<td>2022/01/21</td>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PGoHVzc5YYLTiDWf3GxfLcVFjiflAU5dtRyo3bfULLbi7WcprkzhY3Pv5SIvaHtF3md2ccY1Kg=s88-c-k-c0x00ffffff-no-rj"><span>鵡陸</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCvA0UKaEmpUaViq7s4vAh9Q" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>293</td>
+	<td><span class="highlightText">2022/01/21</span></td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PGoHVzc5YYLTiDWf3GxfLcVFjiflAU5dtRyo3bfULLbi7WcprkzhY3Pv5SIvaHtF3md2ccY1Kg=s88-c-k-c0x00ffffff-no-rj"><span class="highlightText">鵡陸</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCvA0UKaEmpUaViq7s4vAh9Q" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>305</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Y4pgNg8At40')" /></td>
 	<td><a href="/group/梓京海生館.html" target="_self">梓京海生館</a></td>
 	<td>TW</td>
 </tr>
 <tr>
-	<td>2022/01/21</td>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/stvA_7YUkfd8YPDPRps47-wKzymg7zzXYFh6-pLL1vqOXAiijwHxExLjatOv2p5zN5z_VciM=s88-c-k-c0x00ffffff-no-rj"><span>悠咪 Yumi</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCCO6PpL_LnYys4Ehin8rpAg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td><span class="highlightText">2022/01/21</span></td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/stvA_7YUkfd8YPDPRps47-wKzymg7zzXYFh6-pLL1vqOXAiijwHxExLjatOv2p5zN5z_VciM=s88-c-k-c0x00ffffff-no-rj"><span class="highlightText">悠咪 Yumi</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCCO6PpL_LnYys4Ehin8rpAg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
 	<td>82</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'QcUTnBUJJEU')" /></td>
 	<td></td>
 	<td>TW</td>
 </tr>
 <tr>
-	<td><span class="highlightText">2022/01/20</span></td>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/IEwnbao-KrMXF5NEXunk0pk6GhLMqgroGAdAZaGj8Ce1i3NeU8x4sQGjOkcuqtGAzZS7seyv=s88-c-k-c0x00ffffff-no-rj"><span class="highlightText">貝蘿</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCBg--1PwCyNYWfSpZCr41Kw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>1460</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2-ZkIFeb2Ms')" /></td>
+	<td>2022/01/20</td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/IEwnbao-KrMXF5NEXunk0pk6GhLMqgroGAdAZaGj8Ce1i3NeU8x4sQGjOkcuqtGAzZS7seyv=s88-c-k-c0x00ffffff-no-rj"><span>貝蘿</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCBg--1PwCyNYWfSpZCr41Kw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>1560</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'d_y1H2hrEww')" /></td>
 	<td><a href="/group/VOICEMITH.html" target="_self">VOICEMITH</a></td>
 	<td>TW</td>
 </tr>
 <tr>
-	<td><span class="highlightText">2022/01/20</span></td>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/h3go7sv9qq9wFGRCFLs1HQ22jNiHjqUNfp3cmXOwv0no7un9E-fv-e-cIXJW2RD4XF-6cHhTMA=s88-c-k-c0x00ffffff-no-rj"><span class="highlightText">淵夜よるふち</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC2fZgxXAiHIqcq5DN-Wal2A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>93</td>
+	<td>2022/01/20</td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/h3go7sv9qq9wFGRCFLs1HQ22jNiHjqUNfp3cmXOwv0no7un9E-fv-e-cIXJW2RD4XF-6cHhTMA=s88-c-k-c0x00ffffff-no-rj"><span>淵夜よるふち</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC2fZgxXAiHIqcq5DN-Wal2A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>130</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'UXMkDlziJmE')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -247,7 +251,7 @@
 <tr>
 	<td>2022/01/18</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/V1os3LYW4hE7EKK3I30TABfRW4eMhhA1TCzIy8U2jrGPYNqLLOYb6EtiWdwkpdeByyrh7tB2=s88-c-k-c0x00ffffff-no-rj"><span>Loxy</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCbn5UYDxFciNg7OJPHr4Cnw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>69</td>
+	<td>70</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'YMK3wWxamnc')" /></td>
 	<td></td>
 	<td>HK</td>
@@ -255,7 +259,7 @@
 <tr>
 	<td>2022/01/17</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/qtoOWznVFgL1aW9mtaEKqH3Sq0rKSF6hDpp34kvcul-OQCB60EDwb6KcOXAKZrx0dXOugoh2=s88-c-k-c0x00ffffff-no-rj"><span>阿爾姿</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCULLc5b5rzDNp9K-rtF8W5w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>5980</td>
+	<td>6060</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_X8lNugN2YA')" /></td>
 	<td><a href="/group/春魚工作室.html" target="_self">春魚工作室</a></td>
 	<td>TW</td>
@@ -279,7 +283,7 @@
 <tr>
 	<td>2022/01/16</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/DrlEfKjveFvzJ5yI0lRAjqlDwH4IrHEK3lmf8KO1rqSBHTPw8nubrHR0Knr3Zqhh1f-I1F-sjQ=s88-c-k-c0x00ffffff-no-rj"><span>嵐凝月</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoDmjco3wLXZKGycm9NgPpA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>55</td>
+	<td>57</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'DI1mt-YzIZI')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -287,7 +291,7 @@
 <tr>
 	<td>2022/01/15</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/cA65pAZNYo_7zEyEBzmCgmhAdxud3M6eGCn8Mc1wcIWn0NTJbV_0teVDGyu4gs0aVC3L8IYI=s88-c-k-c0x00ffffff-no-rj"><span>浮世惑夢</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC3Ms3hR_J3z7PdJuCbfzw6A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>153</td>
+	<td>154</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bjdZ6ZM56Tw')" /></td>
 	<td><a href="/group/GS＠Virtual.html" target="_self">GS＠Virtual</a></td>
 	<td>TW</td>
@@ -295,7 +299,7 @@
 <tr>
 	<td>2022/01/15</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/4FMn5XBJqm4Y8Zw8561byDHpkAQ_tnYMRkqSyypZlbZF5grLCiazQkw9-3cI6grue05GogPPmII=s88-c-k-c0x00ffffff-no-rj"><span>伊甸白水</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCToHGMjyOc05Oz51uyWoEaQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>95</td>
+	<td>97</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'aoeYbs622FQ')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -311,7 +315,7 @@
 <tr>
 	<td>2022/01/15</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/kuhpCq7hEhfwU7oOdoemyhtVX39ffzZ6F_lI79T-ZDavOyfncdVzwB1iaLB4xUjGpl6mFGOvqw=s88-c-k-c0x00ffffff-no-rj"><span>Nefen寧寧</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjTyDp3_abKXz-mhoQIREag" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>101</td>
+	<td>102</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'YfYw27QIVSw')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -319,7 +323,7 @@
 <tr>
 	<td>2022/01/15</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/HEDPDsZBuQWuK4ZiPJUlXQw2-1HPqPCPKwuUCAr6O7T_P_Tgnh0PevtweHtlyLiNG_Fo3iWp6Q=s88-c-k-c0x00ffffff-no-rj"><span>艾比 . Post Rabi</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCJSBPZ8Is2MA3ud3KbHtlHQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>390</td>
+	<td>396</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Z-VQCg1UO08')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -327,7 +331,7 @@
 <tr>
 	<td>2022/01/13</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/qJOHT6LzlQx-BMLXY9uuWQu6Qp5C9Oo1Bgk3Sk517ndVOJT4_cHzrQwIRPMOy1mkx5bwsYAWDA=s88-c-k-c0x00ffffff-no-rj"><span>エイフカイマン</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC8w_QwGnN8-5gH61PZc3d7A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>110</td>
+	<td>111</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WIT6H38LUl8')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -375,7 +379,7 @@
 <tr>
 	<td>2022/01/09</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/aMGD1Y3TDmqEXXtZcGiuFxvWMe4-XZRAm_W61lSQ7vgZbq0dtNqnmmVl9bExaOEUMJJh428i_2A=s88-c-k-c0x00ffffff-no-rj"><span>七空赤龍</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCpDiNJzR8yw9znSETqk3YdQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>9</td>
+	<td>10</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'rkoCLJPqCN0')" /></td>
 	<td></td>
 	<td>HK</td>
@@ -391,7 +395,7 @@
 <tr>
 	<td>2022/01/08</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/3Cdm4br632WOyI6qDOSp1bAZqWQg86HfjxDx9cRXmzAcNmjVeVS67DadpNCneeWf23y-0wIM=s88-c-k-c0x00ffffff-no-rj"><span>賽琳</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC7DXhIdqZiChlSlPhAs_B0A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>136</td>
+	<td>142</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_-37hwNlqRM')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -415,7 +419,7 @@
 <tr>
 	<td>2022/01/07</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/azi3CrHu4fO39ZF6souMRYWy3kMLF4xvBoa7Mika_xozazON_-vr01N2wec1iv4nJu4L8pQU=s88-c-k-c0x00ffffff-no-rj"><span>DIKA豚足姬</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCrQPrfSgzfiUdp8WE2e9gNg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>521</td>
+	<td>525</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'DxKUQssaO-w')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -423,7 +427,7 @@
 <tr>
 	<td>2022/01/07</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/E-zE4eunDh2eyusFqTdcZWUiBuyQMY87RK2GiC1rMQz8-1AoNTodmpzc-kfEJXB1F_Vudfj3d24=s88-c-k-c0x00ffffff-no-rj"><span>莉芙嘉薇亞</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCaIS6uccr85XCsojsyIWs_w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>404</td>
+	<td>417</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'hECK-3IMIEY')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -439,7 +443,7 @@
 <tr>
 	<td>2022/01/06</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/CD-Hmv3XSkV9LaQj8LNYpmsK4aS7RaH0zbDGw8L-MnoIXSV3zKgT_zlbW29Z-SxhEsNCSDVWnQ=s88-c-k-c0x00ffffff-no-rj"><span>布波BUBO</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC7Na7chtX_-LVgFHgiepMsQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>319</td>
+	<td>321</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bUuwpU5Szok')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -447,7 +451,7 @@
 <tr>
 	<td>2022/01/05</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/h2GuB3UqYcbosYL-ri07-qTRS72DsdPg3b69Y8oLIJPEUXj21ZlHgK-dl3wseuQ422mgkXG4=s88-c-k-c0x00ffffff-no-rj"><span>杜蘭德·梅林</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCeRf9OFQldxPh877op-QLjA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>20</td>
+	<td>24</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bupYNccW4EE')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -495,7 +499,7 @@
 <tr>
 	<td>2021/12/31</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>1670<br>(25359 Twitch 追隨人數)</td>
+	<td>1680<br>(25428 Twitch 追隨人數)</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1248665074')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -511,7 +515,7 @@
 <tr>
 	<td>2021/12/31</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/qZ31beenstfuBhnptBvYA0uOCnAQOPdZR2Y2iAlyPvlsSSeZJgkQKQNnIEaojGWj_Q0c2C0RNw=s88-c-k-c0x00ffffff-no-rj"><span>月影はなり</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCHWqQ1hObDa4xw5wq0Tarjg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>1110</td>
+	<td>1120</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'uFD_Co7dRFI')" /></td>
 	<td></td>
 	<td>HK</td>
@@ -519,7 +523,7 @@
 <tr>
 	<td>2021/12/31</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/z7wBGw4uTa7xhZVcOnVFIafE7F02Zq7KeL_IIqxprM3zvHj9w2Kqv3bQWDq2MEjCNY3j0U_5xrs=s88-c-k-c0x00ffffff-no-rj"><span>獅子堂マヤ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCGnse5xn3X8BuY3bRbQWNyA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>734</td>
+	<td>736</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qKaFC8sXOAI')" /></td>
 	<td></td>
 	<td>HK</td>
@@ -527,7 +531,7 @@
 <tr>
 	<td>2021/12/29</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/hu3vhmnqyjydhifvZRFCArDA7MzORdZPikKEfZcGz--FR6LmDvBGtzw8YYwFBDhBXlt7c0-7kA=s88-c-k-c0x00ffffff-no-rj"><span>羅德哈特</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCdxaVhw_ObaGU_4hh1gIrng" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>2540</td>
+	<td>2550</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'R2UiZYkTVpo')" /></td>
 	<td><a href="/group/SINner.html" target="_self">SINner</a></td>
 	<td>TW</td>
@@ -543,7 +547,7 @@
 <tr>
 	<td>2021/12/27</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/9q4WT5A3IKtbXDCyApxln0aQXgEL04zcnqrPP5LPYSg-rwm3-lfcUkgYVa8sUFVccDMpkyml5p0=s88-c-k-c0x00ffffff-no-rj"><span>朵咪可</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCI0qkJpfpA9cCeeu0lkP1tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>52</td>
+	<td>60</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'PX0is9bYpg0')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -551,7 +555,7 @@
 <tr>
 	<td>2021/12/27</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/I2Qx0VeoNKyr7qXi5at_PMpD7qK4zy-OqVsi4ZN45RLsvc6_tIw9uigT2Q-AR9KY_x6kw3t0nw=s88-c-k-c0x00ffffff-no-rj"><span>維利尼娜</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQwJIsmN-3ZKMwdAPC24A5w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>186</td>
+	<td>187</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'zagiQbXYt80')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -583,7 +587,7 @@
 <tr>
 	<td>2021/12/26</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/K1wyIcFa3-YWbagWdjHzTESxeytu7bSxT_w3HeuKXf5SFH-V1W1rYVwtYNUfeadxqKtJLNs-=s88-c-k-c0x00ffffff-no-rj"><span>白星優米</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCzGz6LnrLQ49h5Nio2uwQGw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>152</td>
+	<td>154</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'KCDNSTKeiCc')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -615,7 +619,7 @@
 <tr>
 	<td>2021/12/23</td>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/Px0WrROwhA1N4LWA-QRZLS4RF0dz-RmqbubnY_cyHnKgZWTEW7sMj5RK2Nx1X4r6jdsUaAYQDw=s88-c-k-c0x00ffffff-no-rj"><span>克萊克</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCZQUX665cdt-Bhr61ForzuQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>73</td>
+	<td>74</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'SSkrBrrUw9k')" /></td>
 	<td></td>
 	<td>TW</td>
@@ -627,14 +631,6 @@
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'jvoJZ9qRNSU')" /></td>
 	<td><a href="/group/SINner.html" target="_self">SINner</a></td>
 	<td>JP</td>
-</tr>
-<tr>
-	<td>2021/12/21</td>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLTOVlmkH8zEiQ8eY5JrKkgaKavCKJOe4dWqOd_KAA=s88-c-k-c0x00ffffff-no-rj"><span>可安朵露</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCKGbcoGoTiMSylRK_wAxong" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>194</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'PxAB06ScMnE')" /></td>
-	<td></td>
-	<td>TW</td>
 </tr>
 
 	</table>

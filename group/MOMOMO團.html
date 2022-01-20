@@ -13,9 +13,7 @@
 <body>
 	<h1>臺灣 Vtuber 團體 <span class="highlightText">MOMOMO團</span> 成員列表(此網站仍在建置中)</h1>
 
-	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
-<!-- hidden video modal -->
-<div id="videoModal" class="modal">
+	<div id="videoModal" class="modal">
     <div class="modalContent">
         <span class="closeButton">&times;</span>
         <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
@@ -24,15 +22,12 @@
 
 <script>
     var modal = document.getElementById("videoModal");
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("closeButton")[0];
     var frame = document.getElementById("videoFrame");
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         frame.src = "";
     }
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -48,6 +43,7 @@
     <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
     <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
     <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
     <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
     <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
     <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
@@ -57,7 +53,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2022/01/20 17:37:02<br>網頁產生時間：2022/01/20 17:55:08</span>
+    <span>資料更新時間：2022/01/21 05:35:42<br>網頁產生時間：2022/01/21 07:09:31</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -111,14 +107,14 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/orrCxBzN-4a-J4CEpBsla9ACBAQBiyWrGnjTN9OT2HMFn3CqpuqPb6ESURbXRAwJvyCnFQJUDg=s88-c-k-c0x00ffffff-no-rj"><span>紗夏</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQucf5TmsGZZPE-zpC9f5LA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vt_sasha" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>4160<br>(2516 Twitch 追隨人數)</td>
+	<td>4160<br>(2515 Twitch 追隨人數)</td>
 	<td></td>
 	<td><a href="/group/MOMOMO團.html" target="_self">MOMOMO團</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLTaAucx4Pm5xzHDg72oaThuAhEUt_knMheiGFX_=s88-c-k-c0x00ffffff-no-rj"><span>卡滋可可</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCauImUa4IByz95-SxBDWZTQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/katsu_coco" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>3780<br>(478 Twitch 追隨人數)</td>
+	<td>3790<br>(479 Twitch 追隨人數)</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_xCHmCQA1EA')" /></td>
 	<td><a href="/group/MOMOMO團.html" target="_self">MOMOMO團</a></td>
 	<td>TW</td>
@@ -133,7 +129,7 @@
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/VfKTdqdiPxpeqqC0bx5BTjQP8qTIVdhw22CDKZzI3ByO8-mbMtWTthxS9g6KJiEd86NtaWwv7b4=s88-c-k-c0x00ffffff-no-rj"><span>結月</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCb9Zg0yIbJEjgTQUK1LfpRg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
 	<td>2840</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'mLIYSO0H7Uw')" /></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'mLHf7jCMdnI')" /></td>
 	<td><a href="/group/MOMOMO團.html" target="_self">MOMOMO團</a></td>
 	<td>TW</td>
 </tr>
@@ -160,7 +156,7 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSs-89Ek28fq4ivuCFzSjFld13PvcObNbExKlVsYw=s88-c-k-c0x00ffffff-no-rj"><span>草鈴</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC24VfLW6TODSoa36tot94CQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/momomokusarin" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>1280<br>(1123 Twitch 追隨人數)</td>
+	<td>1280<br>(1122 Twitch 追隨人數)</td>
 	<td></td>
 	<td><a href="/group/MOMOMO團.html" target="_self">MOMOMO團</a></td>
 	<td>TW</td>
@@ -174,7 +170,7 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS0eYWKGOvfb3M_vOpOFaKkyLvVoh0YCyx5thZo=s88-c-k-c0x00ffffff-no-rj"><span>帕露菲</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC0xXBGnLzpTj61PCq7nb-jQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>532</td>
+	<td>533</td>
 	<td></td>
 	<td><a href="/group/MOMOMO團.html" target="_self">MOMOMO團</a></td>
 	<td>TW</td>

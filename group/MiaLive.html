@@ -13,9 +13,7 @@
 <body>
 	<h1>臺灣 Vtuber 團體 <span class="highlightText">MiaLive</span> 成員列表(此網站仍在建置中)</h1>
 
-	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
-<!-- hidden video modal -->
-<div id="videoModal" class="modal">
+	<div id="videoModal" class="modal">
     <div class="modalContent">
         <span class="closeButton">&times;</span>
         <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
@@ -24,15 +22,12 @@
 
 <script>
     var modal = document.getElementById("videoModal");
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("closeButton")[0];
     var frame = document.getElementById("videoFrame");
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         frame.src = "";
     }
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -48,6 +43,7 @@
     <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
     <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
     <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
     <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
     <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
     <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
@@ -57,7 +53,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2022/01/20 17:37:02<br>網頁產生時間：2022/01/20 17:55:08</span>
+    <span>資料更新時間：2022/01/21 05:35:42<br>網頁產生時間：2022/01/21 07:09:31</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -91,20 +87,20 @@
 		<tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/rfXZnX4yABO_n5BK4N4f5XUb0rzkzt_Dl4Jf9VjSpQY1vdr8WQWEzQ1qtuNgZkSPJ02rVDEleVM=s88-c-k-c0x00ffffff-no-rj"><span>白狼ゆざい</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC3EbIzDPqAFX_Qh6dV_komA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/shiroiokamiyuzai" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
 	<td>2510<br>(29 Twitch 追隨人數)</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'nV3-dgWjLuA')" /></td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'J6ny8g6h534')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/IDda76tLiFghJAqZbm5HcArldF9yUDzPpBeRpGgfrBknJT_P96FqNex2H90iYHWT4Ub9_Japgg=s88-c-k-c0x00ffffff-no-rj"><span>姫柊ミカ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCM5dYVLzmDnAhxyVvLMXoTw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>691</td>
+	<td>693</td>
 	<td></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/QkRhKcoDxb6JpdIsQwCCvYAfRFkoBxqrT3-NjzCQ9SK_K-gFuVDlDcD7Et9RRVXTFSzAs8f4=s88-c-k-c0x00ffffff-no-rj"><span>Rurii</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCCYKKCbc9RMx-XzLd9Ye90Q" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>669</td>
+	<td>670</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'TyQkxErg37I')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
@@ -118,35 +114,35 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fl1AtE3A7YYbWmObDBspUfAQUCQKsUjZq5V0s7hwZzhSFIglyWT06uS3Ja2Jkx3A_crlTFME=s88-c-k-c0x00ffffff-no-rj"><span>提亞咪嗚</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC2uiZzfcPQy_wWRzPxYVB_Q" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/tiamiuuuu" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
-	<td>441<br>(14 Twitch 追隨人數)</td>
+	<td>445<br>(14 Twitch 追隨人數)</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'YJdlP8BzE38')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/gF6wS5vF2Wi2t-ObAq9ZxHyXrrYithkOTMs1jaoSAbDjKB86NLv5d9xML1ML59Wo8bZnFvqu=s88-c-k-c0x00ffffff-no-rj"><span>陸吾Riko</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCtJVDpP2sFkftPWlvfFBPKA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>430</td>
+	<td>433</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'IMNuMxv5yak')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/8qMEJc1Ff7Nh29s49oIpUWKRn3W13KZ4DI7JGRDD7DbhBX_KzUc4YcY7h8gIoaZHn1yEyDqCvA=s88-c-k-c0x00ffffff-no-rj"><span>娜堤 梅菲斯特</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC5J1uG7jbMdkEaDeXQTRDBQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>247</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'riJkn7oNHkM')" /></td>
+	<td>248</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'UYP57mWil4k')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/Rl0yjab2GWBTtoxSsWIXopkoNLCrLHii4E_SRqFqEi3cfsi2g3FGMYkUGDF7-ij8NdEbVLHahqg=s88-c-k-c0x00ffffff-no-rj"><span>月光索娜塔</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC8Hq51P4c7mH794v7nUEnFg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>141</td>
-	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'9uEbRej2hKc')" /></td>
+	<td>147</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2OxjM0QK8NM')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NZ2Ha0hzAwvZsOFEgc7IrCzCg-9BARRO2uDvCtYNbjoVmWVjF-EXSBEL_4cMVZcDHg_x4_9w=s88-c-k-c0x00ffffff-no-rj"><span>雷雷狐泥</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQbtNBHZj4fphE4oZ-K9F-Q" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>106</td>
+	<td>109</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'1VG2bYkJPxI')" /></td>
 	<td><a href="/group/MiaLive.html" target="_self">MiaLive</a></td>
 	<td>TW</td>

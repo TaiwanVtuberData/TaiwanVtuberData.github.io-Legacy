@@ -13,9 +13,7 @@
 <body>
 	<h1>臺灣 Vtuber 團體 <span class="highlightText">Sky Live</span> 成員列表(此網站仍在建置中)</h1>
 
-	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
-<!-- hidden video modal -->
-<div id="videoModal" class="modal">
+	<div id="videoModal" class="modal">
     <div class="modalContent">
         <span class="closeButton">&times;</span>
         <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
@@ -24,15 +22,12 @@
 
 <script>
     var modal = document.getElementById("videoModal");
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("closeButton")[0];
     var frame = document.getElementById("videoFrame");
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         frame.src = "";
     }
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -48,6 +43,7 @@
     <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
     <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
     <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
     <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
     <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
     <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
@@ -57,7 +53,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2022/01/20 17:37:02<br>網頁產生時間：2022/01/20 17:55:08</span>
+    <span>資料更新時間：2022/01/21 05:35:42<br>網頁產生時間：2022/01/21 07:09:31</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -90,21 +86,21 @@
 
 		<tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/zt6ubwdOQL3i-zp70-yXgnwSk-tukGM4d8NYMLtA-R8NuFyxWhBNIY3eahak5HioJEiMgNcJFg=s88-c-k-c0x00ffffff-no-rj"><span>海月幽奈</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCvhSvOGRRylTOcdNG3ebwRw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>403</td>
+	<td>404</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xBFHSfPxZQ8')" /></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/9uUos4E-hy26OdAgJoIPPd2BAkUODVy4hsel8IxnKf04iW7hYTpHOKAgvg3gWVOyUumVOFVZw6w=s88-c-k-c0x00ffffff-no-rj"><span>依比鴨鴨</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCA8nSxy_JxyD2unvgCAB6Qg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>312</td>
+	<td>313</td>
 	<td></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>TW</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/qmKekzUHfRlUJRnPr-cRHZbdpCP4zAKqayNskQeo1-gh-wEZpyM3coGQsU1QcLL61u1EaEjk5w=s88-c-k-c0x00ffffff-no-rj"><span>黏依</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCialw5_BwJ407BzGg42ArbQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>163</td>
+	<td>166</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'hPspDFMHqqY')" /></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>TW</td>
@@ -117,21 +113,21 @@
 	<td>TW</td>
 </tr>
 <tr>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/1tNfJjiYWeyzVtqYSUI9AFVcoAJJhk9pDi444kCEpRS4RR7bzO2ucsfDQ1V5udqy2iQimqEar58=s88-c-k-c0x00ffffff-no-rj"><span>辻本大和</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCZmbQxsSl72RyGtDsHl3Zkg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>63</td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/o9np6WhSpFHRbbhaH3sbwYXN9JLHIhWsWoQ7Jo0vRfcwEP349K170259GY4FNK6aNs8urEUDZ-Y=s88-c-k-c0x00ffffff-no-rj"><span>辻本大和</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCZmbQxsSl72RyGtDsHl3Zkg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>65</td>
 	<td></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>HK</td>
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/Pg3w2SPSWT8aR7krc9UPwDW9gu2wK2Y-DZZYSIG7w2DWBEuDG7_BgTGjlOuxUSFUvtAwtkDx2g=s88-c-k-c0x00ffffff-no-rj"><span>雪霜凍凍</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQ7mfvrBdILyKtFAERcbXzg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>31</td>
+	<td>33</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pAC7lHvUtSo')" /></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>
 	<td>TW</td>
 </tr>
 <tr>
-	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/BT7OPL4-_Czrxy2lHBRT2uDI2U9kEURgtrIqyh8umzK65ekvg9mdAHI4vecG_7rOg6kWb98nmw=s88-c-k-c0x00ffffff-no-rj"><span>秋本瑞希</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCgXa3h3JUrJy3M7RklX8FBg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/izXsvIG8MappUSIwXrhPeNmsYkes_mrQpDg1YVxtiJAPSsR-c1ELw_V9NeBeEXbcA7LKy9pj=s88-c-k-c0x00ffffff-no-rj"><span>秋本瑞希</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCgXa3h3JUrJy3M7RklX8FBg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
 	<td>未顯示訂閱人數</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'RjfNrjgrPPI')" /></td>
 	<td><a href="/group/Sky Live.html" target="_self">Sky Live</a></td>

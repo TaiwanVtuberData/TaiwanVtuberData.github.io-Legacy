@@ -13,9 +13,7 @@
 <body>
 	<h1>臺灣 Vtuber 團體 <span class="highlightText">RenewLive</span> 成員列表(此網站仍在建置中)</h1>
 
-	<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
-<!-- hidden video modal -->
-<div id="videoModal" class="modal">
+	<div id="videoModal" class="modal">
     <div class="modalContent">
         <span class="closeButton">&times;</span>
         <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
@@ -24,15 +22,12 @@
 
 <script>
     var modal = document.getElementById("videoModal");
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("closeButton")[0];
     var frame = document.getElementById("videoFrame");
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         frame.src = "";
     }
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -48,6 +43,7 @@
     <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
     <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
     <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
     <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
     <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
     <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
@@ -57,7 +53,7 @@
 </div>
 
 <div class="evenlySpacedGrid">
-    <span>資料更新時間：2022/01/20 17:37:02<br>網頁產生時間：2022/01/20 17:55:08</span>
+    <span>資料更新時間：2022/01/21 05:35:42<br>網頁產生時間：2022/01/21 07:09:31</span>
 
     <div class="searchItem">
         <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
@@ -90,7 +86,7 @@
 
 		<tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/DTWFHla2Lx1HsfCLaZuTkFQZQhsHwWvgcQ_7FogGL8-6nIfYXbNU3TNNTiiCJm9G_O4S4CeWuw=s88-c-k-c0x00ffffff-no-rj"><span>須多夜花</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>24900</td>
+	<td>25000</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Yd0wIwDWa2E')" /></td>
 	<td><a href="/group/RenewLive.html" target="_self">RenewLive</a></td>
 	<td>TW</td>
@@ -111,7 +107,7 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/WttTKyk2iHKEnMpNJs94B4wi6V_puDhhM7j0er4-vl2TvufcUTxcmmZ0IrGbBh3sbCqFP2mRHg=s88-c-k-c0x00ffffff-no-rj"><span>夢寐愛姆</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCvUTCi2Ms1eP-bFnh0lfGHA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>6660</td>
+	<td>6670</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'CIsDJKhS0sM')" /></td>
 	<td><a href="/group/RenewLive.html" target="_self">RenewLive</a></td>
 	<td>TW</td>
@@ -125,7 +121,7 @@
 </tr>
 <tr>
 	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/4qs2hZ2wJooK0J5Svo7p_nlEZ86PSxf127eMAuuCYO_w63h3byyKhtJbSEgZAGP__Z8ndFsY=s88-c-k-c0x00ffffff-no-rj"><span>牧乃柯寧</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC5oghoJUIvFHnLZaz5k34rA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
-	<td>3490</td>
+	<td>3500</td>
 	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'oYnNRkyae0A')" /></td>
 	<td><a href="/group/RenewLive.html" target="_self">RenewLive</a></td>
 	<td>TW</td>

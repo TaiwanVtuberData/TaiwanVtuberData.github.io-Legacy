@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
+	<link rel="stylesheet" type="text/css" href="/css/style.css?v=11">
+	<script src="/script/commonScript.js?v=4"> </script>
+	<title>臺灣 Vtuber 列表</title>
+</head>
+
+<body>
+	<h1>近期熱門影片列表(此網站仍在建置中)</h1>
+
+	<div id="videoModal" class="modal">
+    <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("videoModal");
+    var span = document.getElementsByClassName("closeButton")[0];
+    var frame = document.getElementById("videoFrame");
+    span.onclick = function () {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            frame.src = "";
+        }
+    }
+</script>
+
+<div class="headerGrid">
+    <div class="gridItem"><a href="/index.html" target="_self"><img src="/icon/log-in.png">首頁</a></div>
+    <div class="gridItem"><a href="/event.html" target="_self"><img src="/icon/calendar.png">重大活動月曆</a></div>
+    <div class="gridItem"><a href="/all.html" target="_self"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+    <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
+    <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
+    <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
+    <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
+    <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
+    <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
+    <div class="gridItem"><a href="https://github.com/nh60211as/TaiwanVtuberTrackingData" target="_blank" rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">資料來源</a></div>
+    <div class="gridItem"><a href="https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io" target="_blank" rel="noopener noreferrer"><img src="/icon/GitHub-Mark-32px.png">網站原始碼</a></div>
+    <div class="gridItem"><a href="/about.html" target="_self"><img src="/icon/question-mark-in-dark-circle.png">關於本站</a></div>
+</div>
+
+<div class="evenlySpacedGrid">
+    <span>資料更新時間：2022/01/21 05:35:42<br>網頁產生時間：2022/01/21 07:09:31</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+        <form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+            <span><input class="searchBox" id="searchField" type="text" value=""
+                    placeholder="DuckDuckGo 搜尋此網站..."></span>
+        </form>
+    </div>
+</div>
+
+	<span>排序方式：</span>
+	<select onchange="OnDropDownChangeEvent(this)">
+		<option value="/trendingVideo/all" selected>所有影片</option>
+		<option value="/trendingVideo/noDuplicate" >同一 Vtuber 一影片</option>
+	</select>
+
+	<table id="mainTable">
+		<thead>
+			<tr>
+				<th>名稱<br><input type="text" id="displayNameSearchBox" onkeyup="SearchMainTableWithDelay([['displayNameSearchBox',0],['titleSearchBox', 1]])" placeholder="搜尋..."></th>
+				<th>標題<br><input type="text" id="titleSearchBox" onkeyup="SearchMainTableWithDelay([['displayNameSearchBox',0],['titleSearchBox', 1]])" placeholder="搜尋..."></th>
+				<th>影片</th>
+				<th>觀看次數</th>
+				<th>上傳時間</th>
+			</tr>
+		</thead>
+
+		<colgroup>
+			<col span="1" style="width: 40%;">
+			<col span="1" style="width: 30%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		<tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>到底大潤發在哪裡？</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4oadnlps6Ss')" /></td>
+	<td>153419</td>
+	<td>2021/12/24 02:04:24</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神研究室】2.4版本角色&amp;武器抽取建議&#128126;▸申鶴/魈/甘雨/鍾離怎麼抽？先1命還是先阿莫斯之弓？魈退環境了嗎？鍾離還需要抽嗎？觀念大補帖！ ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'N1NNxIlS4kQ')" /></td>
+	<td>110816</td>
+	<td>2022/01/03 23:30:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神】2.4版本前瞻懶人包&#127919;申鶴、雲堇登場! 魈、甘雨、鍾離超豪華復刻！璃月角色免費8選1、抽角選擇困難？新地圖『淵下宮』！海燈節活動 新武器 新時裝 新BOSS 系統更新&amp;優化! ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'QxuEp48n5t4')" /></td>
+	<td>104699</td>
+	<td>2021/12/27 22:00:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】2.4前瞻直播一起看&#128064;你期盼的老公老婆究竟來了嗎？ ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'QLbSUUpbLzA')" /></td>
+	<td>100633</td>
+	<td>2021/12/27 03:49:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌回LA】&#127793;穩妥LA｜Singing stream</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'VzZiYxK1ZWk')" /></td>
+	<td>86359</td>
+	<td>2021/12/30 21:37:30</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌回LA】古風歌回&#127911;讓音樂慢慢沁入你的心脾｜Singing stream</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'VD5Lgk0T_UA')" /></td>
+	<td>82879</td>
+	<td>2022/01/12 22:06:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 祝我生日快樂 !加班 |˶˙ᵕ˙˶)꜆ !YT !LINE !比賽 !VPN | 1/14
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1263026177')" /></td>
+	<td>82855</td>
+	<td>2022/01/14 05:34:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【跨年夜】2021~2022歡唱不間斷！【年越しお歌リレー配信】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'vpYMXDYZ9DM')" /></td>
+	<td>71722</td>
+	<td>2022/01/01 02:18:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神研究室】申鶴全分析&#128038;▸甘雨、神里狂喜，冰系隊伍專屬輔助！只有冰隊能用嗎？聖遺物/命座建議/天賦/武器/組隊搭配 ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4cWxai3Aot0')" /></td>
+	<td>69459</td>
+	<td>2022/01/08 00:15:08</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>這個吊燈會晃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'cOhmcazVCWo')" /></td>
+	<td>63036</td>
+	<td>2022/01/06 20:00:06</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PfGrxN6rGCpfMvstl1vEk67Ik5u9G5221nbH_-eNuEXAF4cj9rjHQGBUhnBbGoKQ6LvAgeY-ug=s88-c-k-c0x00ffffff-no-rj"><span>蔡宜蓁</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCmkHW5H3YzSqSdKVmfR2Deg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【Candy Ch.】AI AI AI／ Covered by 蔡宜蓁</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'OWjHNn59hGg')" /></td>
+	<td>63000</td>
+	<td>2022/01/01 12:00:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 謝謝大家 !加班 |˶˙ᵕ˙˶)꜆ 17號有發發活動 !YT !LINE !比賽 !VPN | 1/15
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1264947186')" /></td>
+	<td>62436</td>
+	<td>2022/01/15 22:44:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】滿命申鶴/魈來我家&#128153;息災滿精衝衝衝，雙卡池一次給他抽爆！ ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xHGvpnEurdM')" /></td>
+	<td>59329</td>
+	<td>2022/01/06 04:25:06</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神研究室】雲堇放大鏡&#128681;▸宵宮進化加特林！普攻流專屬輔助！組隊空間變得更加彈性多變，聖遺物/命座建議/天賦/武器/組隊搭配 ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'7lV5by_F6a0')" /></td>
+	<td>58127</td>
+	<td>2022/01/10 22:00:10</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>《你站在雲林 我輸得徹底&#128070;&#128529;&#128071;》Cover by 浠Mizuki</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'RvjTqV5hgro')" /></td>
+	<td>51505</td>
+	<td>2022/01/19 20:00:19</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/2 新貓貓  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1250563806')" /></td>
+	<td>49604</td>
+	<td>2022/01/02 10:11:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/6 &gt;&gt; 等S4洗白  隨便玩的伺服器 &lt;&lt; !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1254688772')" /></td>
+	<td>47425</td>
+	<td>2022/01/06 11:58:06</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【官方歌回剪輯】Ado/踊 ｜李李鈴蘭</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'XBp3ezYk5MI')" /></td>
+	<td>47387</td>
+	<td>2022/01/08 20:00:08</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】新皮初配信！初次見面✩ᏊꈍꈊꈍᏊ/</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1248665074')" /></td>
+	<td>44943</td>
+	<td>2021/12/31 07:00:31</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/3 貓貓再戰  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1251534561')" /></td>
+	<td>44051</td>
+	<td>2022/01/03 09:23:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/9 舌根超痛RRR  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1258012836')" /></td>
+	<td>41753</td>
+	<td>2022/01/09 11:04:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】精采絕倫三蛋黃！滿命申鶴/魈來我家 Part 2!&#128153;每周日滷肉幫到你家！ ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'KcJ6_jL9MkY')" /></td>
+	<td>40354</td>
+	<td>2022/01/10 04:44:10</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/cHyOVYnsAxK4EJ1XTxYLXPZJIjhqrxAHfwLpEsA6avXJ5M8_Ad0jxfmDAagkCRGIotiVmp-37g=s88-c-k-c0x00ffffff-no-rj"><span>米亞</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCVDrzfo7NnOvNx8dU-Ebitg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>米亞 MYA《講你知123！》ft. 甘米 (Official Music Video)</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'6K6n9mfxvXI')" /></td>
+	<td>38394</td>
+	<td>2022/01/04 20:45:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/5 沉迷貓貓 !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1253603201')" /></td>
+	<td>37709</td>
+	<td>2022/01/05 10:17:05</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/12 黃金體驗鎮魂曲  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1261073830')" /></td>
+	<td>37548</td>
+	<td>2022/01/12 10:34:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】新的一年的第一天！殭屍毀滅工程✩ᏊꈍꈊꈍᏊ/</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1249634184')" /></td>
+	<td>37228</td>
+	<td>2022/01/01 11:11:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【官方歌回剪輯】一剪梅｜Xue hua piao piao／李李鈴蘭</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'g2yoVt0p3XA')" /></td>
+	<td>36236</td>
+	<td>2022/01/04 21:00:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/10 一講話就會痛  少說話  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1259109613')" /></td>
+	<td>35445</td>
+	<td>2022/01/10 13:05:10</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>跟壞朋友們迎接2022年!!!!!!!</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'gMyV3wvn4bg')" /></td>
+	<td>35181</td>
+	<td>2022/01/01 02:58:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>哇你看是熱狗欸</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ND7oQlo_4O8')" /></td>
+	<td>34765</td>
+	<td>2022/01/17 18:00:17</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/A5BtwUIIVjRBI1_e7CztcVTAsGfm5AP1gCrhnvj6AjRmnBCTxvvDJX9G_eyWgz69q8kt_h9D=s88-c-k-c0x00ffffff-no-rj"><span>Yu</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFjL9hrhIxJyskUdGI6nCeg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【GTA5】新！單人黃金門開門法！2022年版 | 佩里克島搶劫</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5qltNNvkq8c')" /></td>
+	<td>33482</td>
+	<td>2022/01/07 19:36:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/8 話少 保養喉嚨 !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1256957582')" /></td>
+	<td>32556</td>
+	<td>2022/01/08 13:54:08</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【HoneyWorks】誇り高きアイドル／杏仁ミル(cover)【オリジナルMV】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'wDxfSflpPUE')" /></td>
+	<td>32331</td>
+	<td>2021/12/26 20:00:26</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【魔法私塾音訊空間精華】老吉 ft. @瑪格麗特．溫特斯 / Margaret．Winters 【CloudHorizon所屬】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'o7xzrP3tvqQ')" /></td>
+	<td>32089</td>
+	<td>2022/01/10 18:00:10</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. Woo虎 滿等開視訊 !加班 |˶˙ᵕ˙˶)꜆  !YT !LINE !比賽 !VPN | 1/14-1/17
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1267035651')" /></td>
+	<td>32069</td>
+	<td>2022/01/17 20:36:17</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】滿命申鶴代抽預約中! &#129303;導能原盤最後一天! 每週日滷肉幫到你家! ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'awU5rhXHCZQ')" /></td>
+	<td>30880</td>
+	<td>2022/01/03 04:32:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>跟老鼠掰掰的台語要怎麼說？ #李李鈴蘭</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'XvI5kUS-RPE')" /></td>
+	<td>30038</td>
+	<td>2022/01/14 23:12:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/7 喉嚨痛痛  天氣好冷 !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1255728237')" /></td>
+	<td>29893</td>
+	<td>2022/01/07 11:39:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/14 不知道要幹嘛  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1263054493')" /></td>
+	<td>29602</td>
+	<td>2022/01/14 06:33:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/1 老大要康復! !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1249641091')" /></td>
+	<td>28724</td>
+	<td>2022/01/01 11:30:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【抹茶鑑賞大會】新年第一天路邊刷抹茶畫面流出 #李李鈴蘭 #第二屆</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'7nspWhlKonE')" /></td>
+	<td>28364</td>
+	<td>2022/01/01 22:16:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【ASMR男性向け・囁き】同棲彼女と添い寝(和同居女友一起睡)【中文cc字幕】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'5ZwboWkL3_s')" /></td>
+	<td>27618</td>
+	<td>2022/01/13 20:00:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>欅坂46／不協和音 【cover by 杏仁ミル、虎妮β、鳳玲天々、花守へるし、兔姬、15號、阿露比】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'tgCMEl5ebBk')" /></td>
+	<td>27485</td>
+	<td>2022/01/16 12:00:16</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【遊戲GO】雙人成行，一起中風 #李李鈴蘭 #瑪格麗特</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'LNuGv4kDmak')" /></td>
+	<td>27332</td>
+	<td>2021/12/29 22:17:29</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【VR展覽線上逛】這個VR同人展可以線上逛街欸 #李李鈴蘭</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'tOBqwFBvCRo')" /></td>
+	<td>26437</td>
+	<td>2022/01/10 21:58:10</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;LIVE【新年快洛-3D跨年演唱會】2021再見，2022我們來洛! 還有重大發表&#128561;你各位今晚都要給我HIGH起來!! ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2pTVHr94cHo')" /></td>
+	<td>24842</td>
+	<td>2022/01/01 00:43:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神】大佬來開秀10▸只要0命可莉+1命甘雨，就能『無傷』+『單通』+『滿星』通關深境螺旋12層？武器面板與聖遺物展示 ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Ast6xotVbkc')" /></td>
+	<td>24611</td>
+	<td>2022/01/14 21:00:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/4 和平主義者 !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1252576766')" /></td>
+	<td>24229</td>
+	<td>2022/01/04 10:43:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌枠】2022初歌回！充滿浠望的出發吧！【浠Mizuki Karaoke】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'owFUTmhXWCI')" /></td>
+	<td>23367</td>
+	<td>2022/01/01 23:14:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>今天出道即３周年！有告知！感謝大家的支持&#128150;【#MiruMiru3周年】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'t1WQonx4ATw')" /></td>
+	<td>23250</td>
+	<td>2021/12/26 22:39:26</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>2022新年第一發大家的新年初夢是什麼呢( &#39;ω&#39;  و( و&quot;♪</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bViPn-K89Bw')" /></td>
+	<td>23163</td>
+	<td>2022/01/01 22:22:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】辣個...感冒了˙都，鼻子喉嚨又...ᏊQꈊQᏊ/</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1250583697')" /></td>
+	<td>23022</td>
+	<td>2022/01/02 11:01:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】風行迷蹤第二屆友誼賽下週六舉辦，每周日滷肉幫到你家! ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pcKld1RzJXk')" /></td>
+	<td>22982</td>
+	<td>2022/01/17 04:01:17</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】日常肝▸魔藥陳研析一次通、淵下宮探險囉！ ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'bmYqrHDk-_Y')" /></td>
+	<td>22718</td>
+	<td>2022/01/12 04:45:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/11 體驗伺服器  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1260169979')" /></td>
+	<td>22403</td>
+	<td>2022/01/11 14:42:11</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NumrRp0hwaO8BEQOwTjpRztWMB0m6b6ipa08BBqfvIs2di5PaQRAKO8wUNgPJnSYZPgCKYt8TBY=s88-c-k-c0x00ffffff-no-rj"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>製作一碗抹茶 #李李鈴蘭 #療癒</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'0WIUM8ckM0s')" /></td>
+	<td>21969</td>
+	<td>2022/01/02 21:30:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】忙回來了都_(┐ ◟;ﾟдﾟ)ノ | 新貼圖上市&#128149; | 倒數4天新皮釋出&#128156; | !IG!Twitter4</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1244654174')" /></td>
+	<td>21924</td>
+	<td>2021/12/27 09:25:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/9 舌根超痛RRR  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1258394765')" /></td>
+	<td>21816</td>
+	<td>2022/01/09 19:05:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌粹】2021~2022跨年倒數歌粹⛄！~ Japanese hit song 2021~｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'J_DgGkBuo6c')" /></td>
+	<td>21568</td>
+	<td>2022/01/01 01:34:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】忙到早上累累病(●&#180;ω｀●)ゞ | 新貼圖上市&#128149; | 倒數2天新皮釋出&#128156; | !IG!Twitter</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1246676004')" /></td>
+	<td>21421</td>
+	<td>2021/12/29 10:12:29</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】喉嚨康復了吧！| 倒數9天新皮釋出&#128156; | !IG!Twitter</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1240341753')" /></td>
+	<td>21403</td>
+	<td>2021/12/22 09:32:22</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】準時了都_(:3 ⌒ﾞ)_　BGM影片好了！下播後POYT | !新片!賴貼圖!比賽</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1261041237')" /></td>
+	<td>21366</td>
+	<td>2022/01/12 09:00:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【官方烤肉#８】挑戰地獄鬼椒拉麵 直接被辣到失憶?｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'LhCtOo9_eM4')" /></td>
+	<td>21172</td>
+	<td>2022/01/13 19:00:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神】台日PK&#128293;滿命一斗 Round 1▸究竟誰能用最少抽數抽完呢？首度挑戰日文直播的洛洛! Ft. @変な親爺 Henna-Oyajii  ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'vjyNfo_TKN8')" /></td>
+	<td>21052</td>
+	<td>2022/01/12 22:30:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌枠】9萬人訂閱感謝歌回！我們要長長99~~【浠Mizuki Karaoke】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'sxBkq7tL0CE')" /></td>
+	<td>20545</td>
+	<td>2022/01/09 00:00:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】祝大家平安夜快洛&#127873;迷城戰線一次通關！導能原盤復刻玩玩看 ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ISizvsK1M8A')" /></td>
+	<td>20456</td>
+	<td>2021/12/25 04:14:25</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神】大佬來開秀11▸真．降魔大聖&#128121;！滿命魈三下戳爆獸境王獸？武器面板與聖遺物展示 ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'pasB7GcHoDA')" /></td>
+	<td>20179</td>
+	<td>2022/01/18 21:30:18</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#原神】貓兄妹抽卡PK！ #６｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3WH1izuyDYY')" /></td>
+	<td>19887</td>
+	<td>2022/01/07 21:58:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQqOHV49bP2LLZUeJigUsM88W-dMOahKA95PXLi=s88-c-k-c0x00ffffff-no-rj"><span>歐貝爾</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCW5O-tjdwofBwfispeMSPfw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌回】歐嚕歐嚕兇猛熊熊來襲！你招架得住嗎？【歐貝爾．Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'_G_G_n0WnEc')" /></td>
+	<td>19755</td>
+	<td>2021/12/31 00:26:31</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】日常肝▸申鶴傳說任務一起看、深境螺旋最後一天! ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'3u6E2z_7DHI')" /></td>
+	<td>19633</td>
+	<td>2022/01/16 03:35:16</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQ6hM9Uffig6XUSxGZZIgdTh1O8NZSFFSDrY2bE=s88-c-k-c0x00ffffff-no-rj"><span>十五號</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC_UqaRNrLcaL4fp2IAPV0OQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【聖誕節】聖誕節在做什麼？有沒有空？可以來看台嗎？【十五號．Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Q6TCfUw-wQo')" /></td>
+	<td>19531</td>
+	<td>2021/12/26 01:39:26</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】太忙都讓大家久等啦！羊到新小鎮了٩(◦`꒳&#180;◦)۶| !新片!賴貼圖</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1258276962')" /></td>
+	<td>19076</td>
+	<td>2022/01/09 17:10:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】懶懶羊(●&#180;ω｀●)ゞ 發發活動期間有活動！ | !新片!賴貼圖!比賽</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1264305365')" /></td>
+	<td>18870</td>
+	<td>2022/01/15 11:03:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【練習歌枠】練歌了 不要再睡了【浠Mizuki Karaoke】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'gWJoAoW8sIA')" /></td>
+	<td>18824</td>
+	<td>2022/01/04 23:21:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌枠】英文歌限定歌回！【浠Mizuki Karaoke】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'flbxnJWjkXc')" /></td>
+	<td>18722</td>
+	<td>2022/01/15 23:44:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 新年工作台 |˶˙ᵕ˙˶)꜆ !YT !LINE !VPN | 1/1
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1249572871')" /></td>
+	<td>18589</td>
+	<td>2022/01/01 08:12:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 跟仙人玩一下 !生日活動 |˶˙ᵕ˙˶)꜆ !YT !LINE !VPN | 1/9
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1257888510')" /></td>
+	<td>18376</td>
+	<td>2022/01/09 06:23:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】羊羊來拉 (*&#180;∀`)~♥ Woo虎紅包挑戰開跑！ | !活動!新片!比賽!賴貼圖</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1266568011')" /></td>
+	<td>18029</td>
+	<td>2022/01/17 10:51:17</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【突發】想唱歌了【浠Mizuki karaoke】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'dveEWsjg2HA')" /></td>
+	<td>17672</td>
+	<td>2021/12/30 23:39:30</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【懲罰遊戲】在健康歩道上唱歌・・【#歌粹】 ｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Qzl_3LsUWqA')" /></td>
+	<td>17662</td>
+	<td>2022/01/15 22:58:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/19 484該找新遊戲  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1268713256')" /></td>
+	<td>17483</td>
+	<td>2022/01/19 11:07:19</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】*腦子放空* | 倒數8天新皮釋出&#128156; | !IG!Twitter</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1241259034')" /></td>
+	<td>17365</td>
+	<td>2021/12/23 09:21:23</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【相機粹】辭舊迎新大會！【2022年初配信】｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BV5PPNC8zWw')" /></td>
+	<td>17259</td>
+	<td>2022/01/01 23:40:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】一開台就開船_(┐ ◟;ﾟдﾟ)ノ | 新貼圖上市&#128149; | 倒數3天新皮釋出&#128156; | !IG!Twitter</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1245673435')" /></td>
+	<td>16986</td>
+	<td>2021/12/28 10:46:28</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 自主練習 !生日活動 |˶˙ᵕ˙˶)꜆ !YT !LINE !比賽 | 1/11
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1259939519')" /></td>
+	<td>16697</td>
+	<td>2022/01/11 05:30:11</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【開工】冬季周邊包貨小精靈上線啦！【浠Mizuki 周邊】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'scr0kaEN-Tw')" /></td>
+	<td>16675</td>
+	<td>2022/01/02 17:14:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 不知道要幹嘛 |˶˙ᵕ˙˶)꜆ !YT !LINE !VPN | 1/4
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1252434794')" /></td>
+	<td>16614</td>
+	<td>2022/01/04 04:45:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 1/17  累累病  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1266648306')" /></td>
+	<td>16523</td>
+	<td>2022/01/17 13:41:17</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】小開！下午三點一定要來哦(つ&#180;ω`)つ | 新貼圖上市&#128149; | 明天下午三點釋出&#128156; | !IG!Twitter</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1247689518')" /></td>
+	<td>16140</td>
+	<td>2021/12/30 09:41:30</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】今天要玩什麼呢( ⸝•ᴗ•⸝)♡ | 經驗值動了但是... 挑戰快十等了！ | !活動!新片!比賽!賴貼圖</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1268792959')" /></td>
+	<td>16100</td>
+	<td>2022/01/19 13:45:19</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 12/31 開到明年貓貓 !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1248733463')" /></td>
+	<td>15620</td>
+	<td>2021/12/31 10:04:31</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【罵倒&amp;病嬌限定台詞回】小浠病了。【3DIO收音/ASMR】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'jpa2qFpW7oM')" /></td>
+	<td>15591</td>
+	<td>2022/01/07 23:16:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【原神】滿命一斗代抽精華▸媽祖顯靈？竟出現兩次雙蛋黃！只要大肌肌出現必有芭芭拉，太明顯囉！&#128526; ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'zdqMdbixn3g')" /></td>
+	<td>15467</td>
+	<td>2021/12/22 21:30:22</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>主播抽gogoro 嗎 #shorts</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'in1PPfILS7o')" /></td>
+	<td>15413</td>
+	<td>2022/01/14 06:25:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】聖誕快樂⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ | 新貼圖上市&#128149; | 倒數6天新皮釋出&#128156; | !IG!Twitter</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1242953345')" /></td>
+	<td>15375</td>
+	<td>2021/12/25 10:11:25</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSGFzD2YBmEUEdO6AucIoYj7Sedv2eqa3I6XUpETw=s88-c-k-c0x00ffffff-no-rj"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>聽說你聖誕節一個人過？聖誕節陪聊台&#127876;</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'9_yIJY6PbOE')" /></td>
+	<td>15121</td>
+	<td>2021/12/25 21:39:25</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#聖誕節派對】歌粹？！做聖誕蛋糕？！做這一切！！！｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qnaDEFCw0oQ')" /></td>
+	<td>15055</td>
+	<td>2021/12/27 19:17:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】小開！吃個藥睡一覺起來好多了Ꮚ＞ꈊ＜Ꮚ/</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1251590413')" /></td>
+	<td>15029</td>
+	<td>2022/01/03 11:50:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 要怎樣才能騙你進來看 |˶˙ᵕ˙˶)꜆ !YT !LINE !VPN | 1/2
+</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1250519939')" /></td>
+	<td>14849</td>
+	<td>2022/01/02 08:12:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 12/30 可怕被被怪 !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1247685284')" /></td>
+	<td>14841</td>
+	<td>2021/12/30 09:28:30</td>
+</tr>
+	</table>
+</body>
+
+<footer>
+	<div>Icons except GitHub, YouTube, and Twitch logos made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>
