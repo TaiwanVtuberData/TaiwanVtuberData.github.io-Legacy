@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+###Head
+
+<body>
+	<h1>近期熱門影片列表(此網站仍在建置中)</h1>
+
+	###CommonHeader
+
+	<span>排序方式：</span>
+	<select onchange="OnDropDownChangeEvent(this)">
+		<option value="/trendingVideo/all" ###AllSelected>所有影片</option>
+		<option value="/trendingVideo/noDuplicate" ###NoDuplicateSelected>同一 Vtuber 一影片</option>
+	</select>
+
+	<table id="mainTable">
+		<thead>
+			<tr>
+				<th>名稱<br><input type="text" id="displayNameSearchBox" onkeyup="SearchMainTableWithDelay([['displayNameSearchBox',0],['titleSearchBox', 1]])" placeholder="搜尋..."></th>
+				<th>標題<br><input type="text" id="titleSearchBox" onkeyup="SearchMainTableWithDelay([['displayNameSearchBox',0],['titleSearchBox', 1]])" placeholder="搜尋..."></th>
+				<th>影片</th>
+				<th>觀看次數</th>
+				<th>上傳時間</th>
+			</tr>
+		</thead>
+
+		<colgroup>
+			<col span="1" style="width: 40%;">
+			<col span="1" style="width: 30%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		###VideoContent
+	</table>
+</body>
+
+###Footer
+
+</html>

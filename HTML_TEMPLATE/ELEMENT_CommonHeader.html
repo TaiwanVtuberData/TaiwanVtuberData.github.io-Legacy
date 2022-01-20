@@ -1,5 +1,3 @@
-<!-- copied from https://www.w3schools.com/howto/howto_css_modals.asp -->
-<!-- hidden video modal -->
 <div id="videoModal" class="modal">
     <div class="modalContent">
         <span class="closeButton">&times;</span>
@@ -9,15 +7,12 @@
 
 <script>
     var modal = document.getElementById("videoModal");
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("closeButton")[0];
     var frame = document.getElementById("videoFrame");
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         frame.src = "";
     }
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -33,6 +28,7 @@
     <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
     <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
     <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">近期熱門影片</a></div>
     <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道 Vtuber</a></div>
     <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業 Vtuber</a></div>
     <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
