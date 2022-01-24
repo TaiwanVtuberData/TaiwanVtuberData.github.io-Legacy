@@ -44,7 +44,7 @@ th input[type=text] {
     border-radius: 5px;
     margin-right: 3px;
     margin-top: 5px;
-    width: 100px;
+    width: 60px;
 }
 
 select {
@@ -161,6 +161,7 @@ table {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+    table-layout: fixed;
 }
 
 thead tr th {
@@ -346,7 +347,7 @@ tr:nth-child(even) a:hover {
     height: 48px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
     .displayName {
         display: grid;
         grid-template-columns: 1fr;
