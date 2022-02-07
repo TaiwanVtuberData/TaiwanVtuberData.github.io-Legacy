@@ -2,7 +2,7 @@
 
 ## Vtuber 資料說明
 * 資料來源: <https://github.com/TaiwanVtuberData/TaiwanVtuberTrackingData> 
-* 資料更新時間: 每日 17:55
+* 資料更新時間: 每日 05:55
 
 ## Vtuber 資料登載/更新/錯誤回報方式
 * 使用本 repository 的 [Issues 頁面](https://github.com/TaiwanVtuberData/TaiwanVtuberData.github.io/issues) 發 issue
