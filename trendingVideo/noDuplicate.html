@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
+	<link rel="stylesheet" type="text/css" href="/css/style.css?v=11">
+	<script src="/script/commonScript.js?v=4"> </script>
+	<title>熱門影片 | 臺灣 Vtuber 列表</title>
+</head>
+
+<body>
+	<h1>熱門影片 (此網站仍在建置中)</h1>
+
+	<div id="videoModal" class="modal">
+    <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <iframe id="videoFrame" src="" width="640" height="360" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("videoModal");
+    var span = document.getElementsByClassName("closeButton")[0];
+    var frame = document.getElementById("videoFrame");
+    span.onclick = function () {
+        modal.style.display = "none";
+        frame.src = "";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            frame.src = "";
+        }
+    }
+</script>
+
+<div class="headerGrid">
+    <div class="gridItem"><a href="/index.html" target="_self"><img src="/icon/log-in.png">首頁</a></div>
+    <div class="gridItem"><a href="/event.html" target="_self"><img src="/icon/calendar.png">重大活動月曆</a></div>
+    <div class="gridItem"><a href="/all.html" target="_self"><img src="/icon/user-portrait.png">所有 Vtuber</a></div>
+    <div class="gridItem"><a href="/groupList/popularity.html" target="_self"><img src="/icon/group.png">團體列表</a></div>
+    <div class="gridItem"><a href="/trending.html" target="_self"><img src="/icon/podium.png">熱門 Vtuber</a></div>
+    <div class="gridItem"><a href="/trendingVideo/noDuplicate.html" target="_self"><img src="/icon/playlist.png">熱門影片</a></div>
+    <div class="gridItem"><a href="/growthInPercentage.html" target="_self"><img src="/icon/data-analytics.png">成長中 Vtuber</a></div>
+    <div class="gridItem"><a href="/debutList.html" target="_self"><img src="/icon/shooting-star.png">近期出道</a></div>
+    <div class="gridItem"><a href="/graduateList.html" target="_self"><img src="/icon/student.png">近期畢業</a></div>
+    <div class="gridItem"><a href="/report.html" target="_self"><img src="/icon/question.png">資料登載/錯誤回報</a></div>
+    <div class="gridItem"><a href="/about.html" target="_self"><img src="/icon/question-mark-in-dark-circle.png">關於</a></div>
+</div>
+
+<div class="evenlySpacedGrid">
+    <span>資料更新時間：2022/03/03 05:36:58<br>網頁產生時間：2022/03/03 05:55:07</span>
+
+    <div class="searchItem">
+        <button type="button" class="searchButton" onclick="DuckDuckGoSearch()"> <img src="/icon/magnifier.png">
+        </button>
+        <form onsubmit="DuckDuckGoSearch()" action="javascript:void(0)">
+            <span><input class="searchBox" id="searchField" type="text" value=""
+                    placeholder="DuckDuckGo 搜尋此網站..."></span>
+        </form>
+    </div>
+</div>
+
+	<span>排序方式：</span>
+	<select onchange="OnDropDownChangeEvent(this)">
+		<option value="/trendingVideo/noDuplicate" selected>同一 Vtuber 一影片</option>
+		<option value="/trendingVideo/all" >所有影片</option>
+	</select>
+
+	<table id="mainTable">
+		<thead>
+			<tr>
+				<th>名稱<br><input type="text" id="displayNameSearchBox" onkeyup="SearchMainTableWithDelay([['displayNameSearchBox',0],['titleSearchBox', 1]])" placeholder="搜尋..."></th>
+				<th>標題<br><input type="text" id="titleSearchBox" onkeyup="SearchMainTableWithDelay([['displayNameSearchBox',0],['titleSearchBox', 1]])" placeholder="搜尋..."></th>
+				<th>影片</th>
+				<th>觀看次數</th>
+				<th>上傳時間</th>
+			</tr>
+		</thead>
+
+		<colgroup>
+			<col span="1" style="width: 40%;">
+			<col span="1" style="width: 30%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		<tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSLrS5tJvDZBpAtcuKNok_Jx5PRElbr7gDH5q_5EA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>虎妮</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC6s0wLR0TZauzTVoGGw2r6g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hooniefriends" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>蔡宜蓁手把手教貝塔怎麼玩《全面屍控》</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'GMZiB9bFJJw')" /></td>
+	<td>181841</td>
+	<td>2022/02/16 19:02:16</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/o2hk8YfI6qobVV0vScp4pmmFf_sZncU5zIDWCO0kRRp6G791vczIcdpwE6z37Mgur1_LsMIe=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>狐芙 ミスティ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCSZjdJnifZ1f-hWJlid8TPQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>露西婭的最後一句... 「再見」</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'07wXrx8VTDM')" /></td>
+	<td>172701</td>
+	<td>2022/02/25 07:42:25</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLS4CpwnwTNCT3QzxJiqobNLKbRAi44lolzKH1N7=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>璐洛洛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCRf7OJA3azS4RsGd_G96FUw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ruroroisme" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>&#128308;AR59 ASIA【#原神 / Genshin】2.5版本官方前瞻直播一起看&#129418;是...是心心念念的狐狸嗎!? 海燈節活動一次肝! ▹璐洛洛◃</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'6EQZjpj-Scc')" /></td>
+	<td>127369</td>
+	<td>2022/02/05 11:49:05</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PNidqKT0wybKejx1NdZLteTlXP3Omy-ti1LFqekGs0Ms0ExfAiWv4Btmzgu4clH9A1QQ8yv-sA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>浠Mizuki</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCjv4bfP_67WLuPheS-Z8Ekg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>未知未踏アルスハイル / 浠Mizuki【Official Music Video】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'O0uH8ZJqUy8')" /></td>
+	<td>92702</td>
+	<td>2022/02/09 04:00:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/CRhdIqMTAjxrPJJcpKYEY_Yot20ByMcBid-nsSCcl8YFRCi2wzS_oQZ0bgx490bodZPZVqvDOQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>杏仁ミル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFahBR2wixu0xOex84bXFvg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/vtuber_amiru" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>色色製作人養成病嬌色色Vtuber【NEEDY GIRL OVERDOSE】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'iuf9RnrE8eQ')" /></td>
+	<td>75958</td>
+	<td>2022/02/02 23:30:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/y_VXsJfNp8sTQCB0lFemCleWB-9HpZ9R2pk7wbCOGrvkpFS3Qa1RAXqUVpgb0NNN9_xzWT446A=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>李李鈴蘭</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxWAL-c1psONO_DfG-cq2iA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【歌回LA】13+14萬訂閱&#127880;愛．歌回｜Singing stream for 130k &amp; 140k sub!</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'r7KIy8icJT0')" /></td>
+	<td>70733</td>
+	<td>2022/02/15 06:36:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fgKLHlHu5jNhL2SqaAkhlpo3bVv8CLeKbcYWS-myQTN5XPo0E2CjdRqqjjPQXPlYtpaCRT92=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>懶貓子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCswRX8mNNdn1fjRctZqzjgA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#FF38】LIVE生中繼！！【#雜談 #１８】｜Rumi/懶貓子</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'GUFvjwinDi4')" /></td>
+	<td>34501</td>
+	<td>2022/02/13 23:09:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/tSqJAEZiqorTyEc9jy4RjC1-qo9aH59em4cWZ56r1kA4HfvVO-YMsl50t5SPHFmZgLMQ22FOZQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>蘆棠布奈</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCnSa7dnmEf6bmyS_34yqE_A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>「Treasure」陳忻玥Vicky Chen｜Cover by 蘆棠布奈 &amp;  @李李鈴蘭 / Linglan Lily 【Cloud Horizon所屬】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'C_Cey8sCkog')" /></td>
+	<td>24601</td>
+	<td>2022/02/24 04:00:24</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLRrJyD9bR8Lu2vMm69shA1z95ZseJ9XYPoXN1U=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>貝莉莓Vtype</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCPYNvBYZ8ClPPJ6274K4rVA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>Winners／貝莉莓 Cover</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'yss_lwvEYUw')" /></td>
+	<td>24057</td>
+	<td>2022/02/06 03:00:06</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/A5BtwUIIVjRBI1_e7CztcVTAsGfm5AP1gCrhnvj6AjRmnBCTxvvDJX9G_eyWgz69q8kt_h9D=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>Yu</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCFjL9hrhIxJyskUdGI6nCeg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【GTA5】終於攻破！單人地下室黃金門開門法！佩里克島搶劫 The Cayo Perico Solo Gold glitch</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'mXLBcROZ0go')" /></td>
+	<td>22805</td>
+	<td>2022/02/05 04:12:05</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/-qkHS561CQQcnzsjEbWjYYPOWn601t-xUrju90UiC4-JdhligSSlhlZh_niLuYg7tevd-idSjN8=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>人偶・薩賓娜</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC0asdlSa4Z-G0_axuU3_F3Q" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【人偶．薩賓娜】新年自我介紹【台灣Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'gmpuBmiAd94')" /></td>
+	<td>22748</td>
+	<td>2022/02/01 20:05:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQcDtFiCCy-wfnT4r19uFTpoo__5G7Eh-7On6NR=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>露恰露恰</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCmyc8eVR3G9A7hjaHsLR6NQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【活動】水獺顧攤中，人類快來動漫節讓露恰看看&#127867;【露恰露恰．Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4WwNZ1OSQKU')" /></td>
+	<td>22509</td>
+	<td>2022/02/14 01:09:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQ-0N46a15-s79Bxpa3i_1Fow-JGsgtIxVS4UnS=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>洛可洛斯特</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCT1kajmUhayQ4QaLlDbK23g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【乖孫房間蘿可監視罵倒中！】因為洛可休息被抓出來看各位的房間的蘿可，罵倒NOW【洛可洛斯特 / VTUBER】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'eXRT-TAWjB4')" /></td>
+	<td>21783</td>
+	<td>2022/02/07 09:15:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQ6hM9Uffig6XUSxGZZIgdTh1O8NZSFFSDrY2bE=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>十五號</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC_UqaRNrLcaL4fp2IAPV0OQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【活動】台北國際動漫節春魚攤位現場互動直播！【十五號．Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'ADbMPr1uMn8')" /></td>
+	<td>18160</td>
+	<td>2022/02/11 01:30:11</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQrFTTxRjOgAcJSqe3Jr8oCHyq9ZpuR5JTpn4Xpjg=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>烟花蹦蹦蹦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCx_1ffdoE_L06OExQGhz6nw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/hennie2001" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【烟花】公休一天結果半夜麻爛作息怪怪起床開台 ( &#180;•̥&#215;•̥` )</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1290942291')" /></td>
+	<td>17079</td>
+	<td>2022/02/08 11:31:08</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/m4bhEql3SqcDAXfqulNXroVlBLzXjCiTXA7QexxR0sGUsBQ82Q92uCJ6Vm_GNR5MTrBV6A8b_Q=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>塔芭絲可</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCXe8hqIk_Yap31y7EOCMdzg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>&#128025;2.1萬慶祝加班台#7&#128025;百歌回後還是生龍活虎的繼續陪你們~....(詳細請看資訊區)【MiroLive/塔芭絲可】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'8V5bgN6Zrzs')" /></td>
+	<td>15822</td>
+	<td>2022/02/28 11:23:28</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQWQ8kRdOHFBLKIgC119Y5_O3KmUAwIJ8k8h-Si=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>Asa Ifrit</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCxm2qC7Z7cjDAd6yPyl-sKQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【PAINTING】#Ikenography【AsaIfrit】#asalive</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'R--MI4NKU2c')" /></td>
+	<td>15733</td>
+	<td>2022/02/18 08:43:18</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/7-f9SsViV2xNwLl5zGN2bH0N2INcjquoWGomdKxKyEibzlhmH1GfrzOVSqccEJlloanbVbSE4g=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>狸狸兒</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCYsZjpYAuBdytWpZEyZKO4g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【行動代號：探戈/Operation: Tango】跟學長一起出任務囉！  feat. @超負荷 學長 【狸狸視角】｜狸狸兒｜KitsuKitsuu</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Wvm3RiEputk')" /></td>
+	<td>14912</td>
+	<td>2022/02/23 09:03:23</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1594218f-190e-458f-9f81-fb80a1dee13f-profile_image-300x300.png" loading="lazy"><span>猫宮 バニラ</span><div class="channelLink"><a href="https://www.twitch.tv/vanilla_shironeko" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>[貓宮香草] 2/6  六六六  !DC</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1288810104')" /></td>
+	<td>14326</td>
+	<td>2022/02/06 13:26:06</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLSxytgNmjGDhkleKO2Lh4_PC0o0mSZijTwsGEfz=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>平平子</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC2yG-9ekUwTs8Q0yMSycMxA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【現場轉播】2022台北國際動漫節⚡平平子與User的現場互動時間</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WSBjM4Rhs-A')" /></td>
+	<td>14142</td>
+	<td>2022/02/13 23:51:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/o_qrK6EF2S1fzTzeu4xIjVrtllT33sJHG6w1dfyzPMFXUlFuYG_azvWE0AMrDS5v3RNgYDTZzg8=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>鷲峰良</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC-KMgJ1wl9DUV63HiUSGOXw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【初配信】我也不知道要打什麼，總之這是初配信《鷲峰良》</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'1cYGpx7twEI')" /></td>
+	<td>13911</td>
+	<td>2022/02/27 05:56:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLShQlhBsB5EPqrWc3v6pKUTZ73vl-crY16dMY--=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>麻子マコ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCR_lIhYdX7XLIVytgEVSrfA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【麻子マコ】Pretender（piano ver.）｜情人節記念【歌ってみた｜COVER】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'1LYOkVYIN1Y')" /></td>
+	<td>13756</td>
+	<td>2022/02/13 20:00:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/2rQ2CQOWCEqW0aFq6VQmjT0EJlQmM-jglJ4FR7PY5iCdBzxvaYVi_X8mE1XM2-SO3Lf-lnhN-ZQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>泰多貝亞</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCzHbCUKXn65icryUIgn1ETA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【泰多貝亞 3.0】我被鍊銅術士抓去當實驗品ㄌ</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'SCD-xr08vOo')" /></td>
+	<td>13504</td>
+	<td>2022/02/11 05:30:11</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLT45F-wtnSlvOYUFPT6kT8bVCnmhbrNJk1tqrIx=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>悠白</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC-o-1qjKkMLq-ZFxXIzOUBQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#情人節告白決鬥】浪漫DUEL！誰的告白最讓人心動？你決定！！#悠瑪 ft. @瑪格麗特．溫特斯 / Margaret．Winters 【CloudHorizon所屬】 ｜ #悠白 #Ubye</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'W8EJJZqiVxQ')" /></td>
+	<td>13457</td>
+	<td>2022/02/15 06:55:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLTfOcKAW3qzYEcbuf2WuebaSWmdH_j79qlvdKxFiw=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>TSMATCH火柴</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCXzEDlhV7wJuMY4c-Fvz7uQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【COVER】Blessing / halyosy ft.火星阿鼠【TSMATCH火柴】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'k8hVGrffoEE')" /></td>
+	<td>13328</td>
+	<td>2022/02/13 02:00:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/75GX8MTg8ngBkZ136nC-ktiB6vv3i6Ql9YMSUKgosLUTeDJ1s8Grb-JNknFSm0-9Wdx43-Pu=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>菲フェイ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoqZzJiVUMhmY8nMYOqa_Tw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/fei_z" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>Fei. 請問我頭好痛是正常的嗎( &#180;･･)ﾉ | !YT !LINE !VPN | 2/12</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1295390041')" /></td>
+	<td>11896</td>
+	<td>2022/02/12 12:59:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLRSFqeXIWXF_OhlZFBMGt9Wqtd1WHnJtDzqMwI5JQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>祈菈‧貝希毛絲</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCykgAuIjn70_CXLNjZ8zppQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【新衣裝】新年穿新衣！闆闆偷偷買給我的新衣服長怎麼樣呢？發布結束後話家常！【祈菈．貝希毛絲】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'u09sBt9y_i0')" /></td>
+	<td>11692</td>
+	<td>2022/02/03 10:52:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/xRrzK5EuSZKr8w29UMY6x2W5Irmf4s1iUqWAfwxS6dczO81zYwO0jAXVADdpf2sT69oN3WlAH_g=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>胡兎柚月</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCt4mxuTjnMNpPeYwb461G2g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/runayuzuki_1230" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【新年企劃】只酒不煙的寶寶初品嘗大//麻//味的安全套...味道竟然與想象的不一樣！？... 實況中無情開吸</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'WPgRyDn8Qrk')" /></td>
+	<td>11309</td>
+	<td>2022/02/04 02:00:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/977Ysq6uoRO8EheF1CimaFgZyFN0GgD9u61RvaiL65UNkibY-_jkI_G61L4RtfE1w2YpW5rZ-70=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>歐妲</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCfZofhrZ4pxCESrcs5m5NJg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【新年雜談】大年初一 ! 可以陪我一起吃飯嗎 ?【歐妲/惡獸時代】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'6unvfDN6DRs')" /></td>
+	<td>10849</td>
+	<td>2022/02/01 22:57:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/b5xnQkIJXxQoxwlb9x1Z3UZF5BPbVNIhWXmBy5abZQ4ZzORoAZ11sAE3RNmJtb4N5LLpG7zFoQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>白蛇梅伊</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC9Ife_inavJMm9CKKRhzg6w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【新世界狂歡】R18 BL 色色的遊戲?!【Ｗander&#178; | Meiilive】｜GAME</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'2aEB68j6Ugk')" /></td>
+	<td>10009</td>
+	<td>2022/02/25 21:23:25</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/_u-cT-3P77puRu6UpL5mqV7YqGvABFmTwdahPzx597tRpzDg0TPqnjx_b37MUss4qmnKUDiJtg=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>名雪薇薇</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCdesGlD7t5JV-z28p5GqVIw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【生誕祭】豹豹生日啦!!快來上供品!! 凸待 貢品開箱&#129293;重大公告&#129293; ft.大來賓</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'un4JYO0f9pQ')" /></td>
+	<td>9127</td>
+	<td>2022/03/01 12:03:01</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/pMxh3VGo3FUvGQxkahRcHJV3LOa5CIfjac_mkV8Y8h2WFnF35XgHeexfibo5GYwy6lPrXCjhGA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>兔姬</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC0u_-3zgLkSYpQOxlBi-5Ng" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【AIR線上聯合販售會】第一次的線上簽售會!!!  |  ft.櫻野露 、小空、夕燒、向日葵茄子【模擬販售會】#兔姬UsagiHime #惡兔CLUB</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'zr9YkX8J_jA')" /></td>
+	<td>8996</td>
+	<td>2022/02/21 00:46:21</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQnPpGCh-SCA3yyUp0qFT47xh2EyRc0ga3kUNQp=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>小森未央</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCpsElpnUji_pEVp8_Mo82YA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/komorimio" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【Apex】抱爛東南亞冠軍的大腿！上了鑽石就不能逛街真的很傷心 ft.百弟@Roieee【小森未央】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'cgrAj0MBPFY')" /></td>
+	<td>8864</td>
+	<td>2022/02/03 20:15:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQqOHV49bP2LLZUeJigUsM88W-dMOahKA95PXLi=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>歐貝爾</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCW5O-tjdwofBwfispeMSPfw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【台北國際動漫展互動轉播】熊熊來啦！好想跟歐貝爾互動嗎？絕對不能錯過今天！【歐貝爾．Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'g5sgfOBMlPA')" /></td>
+	<td>8570</td>
+	<td>2022/02/10 23:10:10</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/LmqWHwQzqspXt0i0FtMHbhLykq-q9aYRKp1GiLwnY7VNl0Jgfukehm4lRJBu80AxsH_LNa4kqA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>瑪格麗特．溫特斯</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCJ4VZaUiVC2vpN7TXG85M5g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#瑪格麗特的茶會】與你聊聊天&#127804;【瑪格麗特Vtuber】#瑪格麗特溫特斯</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'Diyts3hkhF0')" /></td>
+	<td>8435</td>
+	<td>2022/02/09 09:29:09</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/IjrRkbldFHNlsP8q4PGji8vN7VghpNhqSry85AU6dI8V4pVYEDQDDmftw7PZAhYd446LnIabag=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>海唧</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCI-b1GL4y_zoBoVozwmgrWQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【刮刮樂】老闆我不想努力了， 投資3000元目標回本1萬元！！【海唧/惡獸時代】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'khCGPie-Tlg')" /></td>
+	<td>8354</td>
+	<td>2022/02/02 05:08:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/9biBkiRxxws0shgw0GrYc0FW9Bb0d6lyzKXyDGVtKO0D2B6LMhltiBwFu9V8Tv1iRMbakPN-lQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>語風薯薯與愛紗公主</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCLHSj-ZnzmpQlZuUcnXMoVg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【闇影詩章】牌組分享➤源源不絕殺都殺不光，沉默決定不再沉默盡情吶喊！➧指定T2↓ OoS〈shadowverse/シャドウバース〉</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xvFmqaEqw-s')" /></td>
+	<td>8066</td>
+	<td>2022/02/05 06:50:05</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/2SNi49G1bF9sL2aQkmXhMNG5ZM2QG4Eoth3KxsD5EBtMpH1X86wu88DhWIKxIFle34W5Ko4Ung=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>可莉姆</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCJxsl0FdjW0FY4iqzx7mKYQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/3mounthgirl" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>遊戲王master duel遊戲王大師決鬥 XYZ活動 高速自爆牌組 (自爆デッキ)遊戲王對局資料Yu Gi Oh! MasterDuel 超量杯spontaneous explosion DECK</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'KWEr8tgghyI')" /></td>
+	<td>7945</td>
+	<td>2022/02/18 02:55:18</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/O1ZZXITXjWOMVfPMFRFTuABreO6VniFrfd4wLHsYqGPQFUWh-wva0qlQSxSIjNuV-ltNtNbj=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>Aoi Hinamori</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCJSBNjYCB1pu_t0FajsY17g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【１周年紀念】Super可愛周邊、給患者的超大禮物開箱、ICU患者限定抽獎！【AoiHinamori​​​​】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'8HNKkp8k5xE')" /></td>
+	<td>7853</td>
+	<td>2022/02/07 10:31:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/__E4VedeoEpLn1OPMqodtM4urz99mFfhilyFzCmJJJ_FnpLr6MdrXrLwPYe7aR7lvkmk3M40Bv4=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>神稻櫻火</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC_soGpcb7SORsk5yzHLMdTQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>看看現在都幾點了突襲練歌&#127800;#神稻櫻火</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'HpvNEjKKtKY')" /></td>
+	<td>7823</td>
+	<td>2022/02/08 11:22:08</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/WttTKyk2iHKEnMpNJs94B4wi6V_puDhhM7j0er4-vl2TvufcUTxcmmZ0IrGbBh3sbCqFP2mRHg=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>夢寐愛姆</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCvUTCi2Ms1eP-bFnh0lfGHA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【獸人按摩店 Orc Massage】Ep. 1 台灣原創3D按摩模擬器❗❓不&#129325;其實裡面暗藏乾坤&#128536;其實也挺想被按的...&#129402; #夢寐愛姆 #Emulive #RenewLive #YumebiEmu</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'9b-zoXSUtkg')" /></td>
+	<td>7647</td>
+	<td>2022/02/13 11:17:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/qtoOWznVFgL1aW9mtaEKqH3Sq0rKSF6hDpp34kvcul-OQCB60EDwb6KcOXAKZrx0dXOugoh2=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>阿爾姿</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCULLc5b5rzDNp9K-rtF8W5w" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【It Takes Two】最終大結局？到底是離婚呢？還是貼貼！ft. 歐妲【阿爾姿/惡獸時代】【#3】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'vwHYQYStEok')" /></td>
+	<td>7290</td>
+	<td>2022/02/06 03:44:06</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/kw5JnAdJwP_7FNo-lTyIA0YE2YwFWQjIS1DIuwc2KdeqY8ZOuhOvw5vGCK5o4TPy1cffrzVh8mw=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>希靈</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCM1nL55m_QImE0ZRqvGmWWQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>&#128150;【情人節24婆甜蜜接力】&#128150;｜暈爆就去睡糖分太高 請大家睡好睡滿｜【Healing希靈/VTuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BdqyuophBWk')" /></td>
+	<td>7193</td>
+	<td>2022/02/14 09:09:14</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/TFUGsxNMpH6a2VY_d8KAZXotNhUfoeAIV7_M8PCFzM5ReWp10vibots17LNjLPW7mBbf1WkdpA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>Alison Liddell</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCcsAKktaeHtsFFRc7urmMPA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【BLゲーム実況】NU: カーニバルやるZE【Alison】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'AMkNKAIcbic')" /></td>
+	<td>6802</td>
+	<td>2022/02/26 20:05:26</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/RBtmUpta8bzJNCGM5FZNDmonMEmEmN3gQqMi9U-FKmotESBoiMDIcDp924ySxlvoU-f6yhl6=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>三毛</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCPqYxut8IQxG4HAMrJx5ffQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>這是第一次兩「人」同台ㄇ? 熊頭進去當兵了怎麼辦 【4V腸談】【三毛毛毛 &amp; 泰多貝啞 (原虛擬熊頭)】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BMh2E1wAZ4M')" /></td>
+	<td>6709</td>
+	<td>2022/02/21 07:49:21</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQ7vcp9qrvt48RvdCiAa37uGWcBOaMahg9-_f6G=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>MK妹</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCO62chyehk6pX7OitrnJAUg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【夜に駆ける】粵語翻唱「墮進夜空」- MK妹</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'lk9WZffbwW4')" /></td>
+	<td>6452</td>
+	<td>2022/02/07 03:15:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/MiQztonerQ4V3LZNtDKdYFt1t6JxtzFvpD4x59ym7RJXUpsONuaKTh1BnO4Xouijdq-mr_s3Dg=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>雪奈ルリ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCJ1HOBKAjaZD7pNZvsJ8e_A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【雪奈ルリ】Vtuber一問一答自我介紹!</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'SA5IltbwYd0')" /></td>
+	<td>6425</td>
+	<td>2022/02/07 11:25:07</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ME_7QeBqrLgQs73eSyXcf8Opcg8gD7LkbDhPF5K4WnD1VuZLeLKQRDGl0KfjxsBc8H03QIEt5g=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>茜月しっぽ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQP1Ho8YEaWHDmjz1jiNfHA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【祝Vtuberデビュー】死神Vtuber茜月 しっぽビジュアルPV【EvilSpina】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'mtAUYoGKD-o')" /></td>
+	<td>6356</td>
+	<td>2022/02/02 03:00:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/fH29nckwyLLbH_dNOxnnRO55XMD0eEi1fXNSoaVUPIRN7CFHmrpBTau02QVL532l-4MZ6s2o0w=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>闇音ネル</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCymOeVRWRzjBrN_wfL7_xsg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【官方精華剪輯】聲音百變怪捏嚕 多個願望一次滿足 | 闇音ネル</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'o4yOV4t94Zc')" /></td>
+	<td>6331</td>
+	<td>2022/02/28 04:00:28</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLQsqxJO6uKw2jRKGjNsflhB_6_aFuVdNNkWPqE9=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>殷緋</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCaKCNIJID8zaXOZYCxjW3Yg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【突發！完結/真結局完成】 主播女孩重度依賴☆〞NEEDY GIRL OVERDOSE 大家不要吸毒啊，自鯊結局跟最慘結局都好痛QQ ......令人心情複雜的真結局【台v殷緋】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'V1XCzFYAuw0')" /></td>
+	<td>5919</td>
+	<td>2022/02/03 11:25:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/P2jw5Pw7Gy-oOsZ1ej3DrLMHy_ncCA4EYI1UTy8wWZzV7sp_xVUtuP9ZGgm4TjXfvlDeY6tj=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>香草奈若</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC4J0GZLM55qrFh2L-ZAb2LA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>大掃除抓到一隻勞贖 #Shorts</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'4BjeDkHWv-A')" /></td>
+	<td>5687</td>
+	<td>2022/02/03 03:00:03</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/ytc/AKedOLRd6AyTMeQ96h_8NQrv_YT9VOhJM0by0lc0f5WOJA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>綾瑞香</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCYuCbE3H9xmR8_HSFizYFYg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/ayamizuka" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【挖礦】ETH TONCOIN 雙挖 教學 實測 lolMiner 1.43 懶人包 RTX 3080 Ti</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'qWi7iiH4YFw')" /></td>
+	<td>5557</td>
+	<td>2022/02/05 15:33:05</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/jtDobrB4SaGlDgJsokgkSpUjgeB8vHrWJH2ZGrxFiNZ1jaX-h0idFMEPWiDJctuiVrt2Ig59vC0=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>晚安了</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCB55CHHE95ZJEX_jSDIAyjg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/thgindoog_live" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>【新春高難關卡】遊戲2通關攻略 傷害夠就可以順利過關! 普通夏露隊~</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'zf64iRdsuWY')" /></td>
+	<td>5247</td>
+	<td>2022/02/05 20:00:05</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/nvSBGO4ynSJTgsCj4h1UQqhhEo_Al4tBZOH35QZwwSXNFvRk4zgV4rJ5fHIM6_a5LmH97Te9Tw=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>稻乙緹</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCKe1Q0YIwT-hzrZs_uxGb2g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a><a href="https://www.twitch.tv/iitifox" rel="noopener noreferrer"><img class="TwitchImg"></img></a></div></div></td>
+	<td>情人節快樂！來晚了&gt; &lt; 來碗乙緹</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.Twitch,'1298877595')" /></td>
+	<td>5162</td>
+	<td>2022/02/15 23:51:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NeTnHF_-Y5GW1QOisNhTnckCqZ6XwWlzpXgZnM3IhJQ206fvkGRy_JeeOnAz65TNjV2zl6WMag=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>高雄林小姐</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCfwIUmAj5QKbaAxHoOR-23g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>烏克蘭宣布成立國際軍團! 林飛帆、林昶佐表現的機會來了! &#127827;20220227 #高雄林小姐 #Vtuber​​​​ #台灣Vtuber​​​ #台V​​</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'xIQ4UmBPUCw')" /></td>
+	<td>5081</td>
+	<td>2022/02/28 05:28:28</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/A18f6PglaYX1pXva6d8HZfrjD-ej_X5SXzW0DHjjkSjFWtL1xs-YwtJNab_HffxHIMkF-IqSfQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>月城九曜</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCeZSiI9Kcyld9AjLuUdNKkA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【雜談 Chat】就快要九千訂閱啦！今天可是有喵喵九九陪你上班的...幸福星期一唷&#128149;你上班、我陪你聊天和9000訂閱耐久！✨【等你下班台EP30】【月城九曜&#129505;&#128124;&#127995;  #149】【台V】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'jusu5lrABVU')" /></td>
+	<td>5039</td>
+	<td>2022/02/22 08:05:22</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/LvASYptHHd9HCeXZqMRwfkzqIt-0yn4h3-K6VGevUWhAu9--U_R5_VSboiP20kV-gOrxSpci=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>蕾娜‧塔拉薩</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCSWJ3xMIqzzGsiHH5qGDD2A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【官方精華剪輯】釣蝦之鬼蕾娜!? 看我的去去武器走!! | Eat With Leina精華</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'afQZYPy7bRc')" /></td>
+	<td>5002</td>
+	<td>2022/02/20 06:00:20</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/PfGrxN6rGCpfMvstl1vEk67Ik5u9G5221nbH_-eNuEXAF4cj9rjHQGBUhnBbGoKQ6LvAgeY-ug=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>蔡宜蓁</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCmkHW5H3YzSqSdKVmfR2Deg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【Candy Ch.】驗證本體的方式  喪屍|戰鬥|熱血|搞笑|原創動畫|遊戲|Vtuber</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'n9Z1LakZeCo')" /></td>
+	<td>4760</td>
+	<td>2022/02/13 04:00:13</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/hXtARGdv3R46CEN_agH3NfZffztvoqiR906qa-DmLFQcukW9DJ_4j9DPQA8otv6hyMnKm_J8hw=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>說書客</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCa6rKAjusYEugf3Y6sPGTFg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>情人節單身的你一個人？不如看愛情動畫吧！說仔情人節盤點看過的狗糧番、後宮番、胃痛番：情人節雜談</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'nXDo4p3IblA')" /></td>
+	<td>4635</td>
+	<td>2022/02/15 04:00:15</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/oOTvqfbgNK95Vjso9sYSwhyR-d4SqBtFlXiBgSFRyv2z8f--WSpOjNN-htO9x_BAG858f-F5=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>須多夜花</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>原來真的有妹妹&#127800;『&#127774;琉璃川歌晴&#127872;』#初配信｜Debut Stream｜#Renewlive</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'IavK86JsdEg')" /></td>
+	<td>4558</td>
+	<td>2022/02/02 07:56:02</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/tTiufxNGY3etPbsii85Rzt61grLQvMu347JzYMxIRX9wWkqPyGxzAQZpyY7ePjfC-8GzSLu5dQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>夜翎白丸</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCQqTiGWjT9T08YqlZKe5kPw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【原神】《三界路饗祭-文谷疑雲》速通躺分攻略 石板機關解謎▸マル白丸</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'kGeFw1IkymI')" /></td>
+	<td>4550</td>
+	<td>2022/02/17 23:48:17</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/KAgWd-ZZM-ef7q4kGQuFiX8_J09RB9MFg5Ey-Pb0FKe4anAvoDvT_BxqQEktDD-WRLBCddTseQ=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>色畜樂色</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCsceOEcyVYda0L2y6MReYOw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【初配信】奴隸翻身之路從這裡開始…？〈色畜樂色〉|ViSIR</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'74kKkhAksMM')" /></td>
+	<td>4342</td>
+	<td>2022/02/27 06:43:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/N1Vs_Eb8pBotNIUwZEWUSxb1Wn6ET702o_Sfqk_dnXthcDwzlYRECklO0A9SeA1c5X8a7OMVedI=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>櫻野露</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCgL6PS1vba90zrZW9xmiwng" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#艾爾登法環 攻略】【火系必拿】BOSS黃金樹的化身 最無腦打法，無傷無走位只需要原地站樁遠距打 |Elden RING|</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'UqyLoBFrZHA')" /></td>
+	<td>4318</td>
+	<td>2022/02/27 06:53:27</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/pKijahT5RpCEsKYQSv0qu9B1gDMSGXwHMzWOVA71ZXRrHdJ_-zs-uYUxtyPvWb6gYTpCHUrO3w=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>A1M1愛美</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCUjw5PLyOVI2pRiw0Ckn1wA" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【#初配信】初次見面&#128295;！我是AI少女A1M1愛美喔✨！【A1M1愛美/HKJPVTuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'6H5nNBykAGQ')" /></td>
+	<td>4194</td>
+	<td>2022/02/08 06:50:08</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/NX_EJeGAr9HZavqtEh2wyJq6oJ1mJTfxuBf-u0M0DPHw3tX3PJzxsFoFuev3cXdPO--HIlbNldI=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>銀河Galaxy</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCoNKCsX9tSxiuh9jznYxXfw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>僕が死のうと思ったのは / 歌ってみた【銀河Galaxy】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'vM8VwxyjbAo')" /></td>
+	<td>4174</td>
+	<td>2022/02/12 04:00:12</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/rSyl3b1Da2bkPu4F_xijY8PHWIStgGVp1uzMgrlDWrYkBoCO4zBM2qagy7xdF2DjwIJilZpr2A=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>巴蘭利維坦</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCUxIkkVP4EIIPhF8M1KRBjw" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【瑪利歐派對超級巨星】過年也不忘互相殘害的瑪利歐派對 feat.MLNAM、Alison Liddell艾莉森【Balaen Leviathan】#巴蘭海生館</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'DaejO_3SBg0')" /></td>
+	<td>4168</td>
+	<td>2022/02/04 09:05:04</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/crKt9EpDNulH_mMXCozXmacL7Tb7RROazYtFeS9lnapvC_yplU95DemkkLhmcPV4KIsfr1Uy=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>如月ルミィ</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCJcKh9mwJH4zhHsU4NDs54g" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【企劃】有時尚達人嗎？？來看看觀眾的服裝配搭吧！【HKVTuber/如月瑠美】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'BRD6RrLwnTs')" /></td>
+	<td>4075</td>
+	<td>2022/02/19 07:49:19</td>
+</tr><tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/UenVtXwdYe2izQq9MXt3ccIfUiwL445la2lojX8zuzQhSG90Cg_Bdxf70_3P1jaTlYoRL715RA=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>花見 伊歐莉</span><div class="channelLink"><a href="https://www.youtube.com/channel/UC0qs9rp6yc_VZlhmmIiZl5A" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>【自己紹介】Vtuber一問一答自己紹介【花見 伊歐莉 / 台灣Vtuber】</td>
+	<td><input type="button" value="顯示影片" onclick="ShowEmbedVideo(Site.YouTube,'yR8SCM4rgLc')" /></td>
+	<td>4046</td>
+	<td>2022/02/10 02:30:10</td>
+</tr>
+	</table>
+</body>
+
+<footer>
+	<div>Icons except GitHub, YouTube, and Twitch logos made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+</html>
