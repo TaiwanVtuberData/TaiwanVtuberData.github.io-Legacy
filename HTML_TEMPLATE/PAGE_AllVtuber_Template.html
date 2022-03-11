@@ -8,11 +8,18 @@
 
 	###CommonHeader
 
+	<span>排序方式：</span>
+	<select onchange="OnDropDownChangeEvent(this)">
+		<option value="/all/CombinedCount" ###CombinedCount>YouTube 訂閱人數 + Twitch 追隨人數</option>
+		<option value="/all/YouTubeSubscriberCount" ###YouTubeSubscriberCount>YouTube 訂閱人數</option>
+		<option value="/all/TwitchFollowerCount" ###TwitchFollowerCount>Twitch 追隨人數</option>
+	</select>
+
 	<table id="mainTable">
 		<thead>
 			<tr>
 				<th>名稱<br><input type="text" id="displayNameSearchBoxNameByChannel" onkeyup="SearchMainTableWithDelay([['displayNameSearchBoxNameByChannel',0],['displayNameSearchBoxNameByGroup', 3]])" placeholder="搜尋..."></th>
-				<th>YouTube 訂閱人數</th>
+				<th>###CountTableTitle</th>
 				<th>近 30 日最熱門影片</th>
 				<th>團體<br><input type="text" id="displayNameSearchBoxNameByGroup" onkeyup="SearchMainTableWithDelay([['displayNameSearchBoxNameByChannel',0],['displayNameSearchBoxNameByGroup', 3]])" placeholder="搜尋..."></th>
 				<th>國家</th>
