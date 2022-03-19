@@ -7,11 +7,11 @@
 	<base target="_blank">
 	<link rel="stylesheet" type="text/css" href="/css/style.css?v=11">
 	<script src="/script/commonScript.js?v=4"> </script>
-	<title>重大活動月曆 | 臺灣 Vtuber 列表</title>
+	<title>MoeLive | 臺灣 Vtuber 列表</title>
 </head>
 
 <body>
-	<h1>重大活動月曆 (由 Discord 群 <span class="highlightText">避難所</span> 提供)</h1>
+	<h1>團體 <span class="highlightText">MoeLive</span> 成員列表 (此網站仍在建置中)</h1>
 
 	<div id="videoModal" class="modal">
     <div class="modalContent">
@@ -63,8 +63,34 @@
     </div>
 </div>
 
-	<iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=a4tve6el13u84ntjtvb1kvob10%40group.calendar.google.com&ctz=Asia%2FTaipei"></iframe>
+	<table id="mainTable">
+		<thead>
+			<tr>
+				<th>名稱<br><input type="text" id="displayNameSearchBox" onkeyup="SearchMainTable([['displayNameSearchBox',0]])" placeholder="搜尋..."></th>
+				<th>YouTube 訂閱人數</th>
+				<th>近 30 日最熱門影片</th>
+				<th>團體</th>
+				<th>國家</th>
+			</tr>
+		</thead>
 
+		<colgroup>
+			<col span="1" style="width: 40%;">
+			<col span="1" style="width: 30%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+			<col span="1" style="width: 10%;">
+		</colgroup>
+
+		<tr>
+	<td><div class="displayName"><img class="profileImg" src="https://yt3.ggpht.com/v1UKNNdIfcK-iRpKL1PmDCesmELthF_OWI1YetJ6_vuSScJADgu9SCdEqCqd55zmuae-sL5x=s88-c-k-c0x00ffffff-no-rj" loading="lazy"><span>諾o犽</span><div class="channelLink"><a href="https://www.youtube.com/channel/UCk-gpCliarOQKm_ghr-9UPg" rel="noopener noreferrer"><img class="YouTubeImg"></img></a></div></div></td>
+	<td>無資料</td>
+	<td></td>
+	<td><a href="/group/MoeLive.html" target="_self">MoeLive</a></td>
+	<td>TW</td>
+</tr>
+
+	</table>
 </body>
 
 <footer>
